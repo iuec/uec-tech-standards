@@ -2,7 +2,7 @@
 title: ITK Frequently Asked Questions
 sidebar: overview_sidebar
 keywords: ITK, transfer_of_care, referrals
-permalink: referrals.html
+permalink: itk_faq.html
 toc: false
 folder: messaging
 ---
