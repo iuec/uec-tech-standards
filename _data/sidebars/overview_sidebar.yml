@@ -1,0 +1,103 @@
+entries:
+- title: Urgent & Emergency Care Technical Standards
+  version: v1.0.0
+  levels: one
+  folders:
+
+  - title: Getting Started
+    output: web
+    folderitems:
+    - title: Introduction
+      url: /index.html
+      output: web, pdf
+      type: homepage
+    - title: New Implementers
+      url: /holding_page.html
+      output: web, pdf
+
+  - title: Capabilities
+    output: web
+    folderitems:
+    - title: Ambulance Requests
+      url: /ambulance_requests.html
+      output: web, pdf
+    - title: Referrals / Transfer of Care
+      url: /referrals.html
+      output: web, pdf
+    - title: Endpoint Location
+      url: /endpoint_location.html
+      output: web, pdf
+    - title: Repeat Caller Service
+      url: /repeat_caller_service.html
+      output: web, pdf
+    - title: Post Event Messaging
+      url: /post_event_messaging.html
+      output: web, pdf
+
+  - title: Technical Specifications
+    output: web
+    folderitems:
+    - title: Overview
+      output: web
+      url: /holding_page.html
+    - title: Non-functional Requirements
+      url: /tech_non_func_requirements.html
+      output: web
+
+      subfolders:
+      - title: ITK Messaging
+        output: web
+        subfolderitems:
+        - title: Renewing Certificates
+          url: /renewing_certs.html
+          output: web
+        - title: PEM Suppression
+          url: /pem_suppression.html
+          output: web, pdf
+        - title: Frequently Asked Questions
+          output: web
+          url: /itk_faq.html
+
+      - title: Directory of Services
+        output: web
+        subfolderitems:
+        - title: DoS in NHS 111
+          url: /dos-in-iuc.html
+          output: web
+        - title: API Documentation
+          output: web
+          url: https://nhsd-a2si.github.io/dos-api-docs
+
+  - title: Implementation Guidance
+    output: web
+    folderitems:
+    - title: Testing Ambulance Messages
+      output: web
+      url: /testing_ambulance_messages.html
+
+  - title: Assurance
+    output: web
+    folderitems:
+    - title: Overview
+      url: /assurance_overview.html
+      output: web
+
+  - title: Getting Live
+    output: web
+    folderitems:
+    - title: Overview
+      url: /getting_live_overview.html
+      output: web
+
+  - title: Help and support
+    output: web
+    folderitems:
+    - title: Contact Details
+      url: /contact.html
+      output: web
+    - title: Frequently asked questions
+      url: /faq.md
+      output: web
+    - title: Glossary
+      url: /overview_glossary.html
+      output: web
