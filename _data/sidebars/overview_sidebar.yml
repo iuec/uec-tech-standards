@@ -11,6 +11,9 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
+    - title: Navigating this site
+      url: /holding_page.html
+      output: web
     - title: New Implementers
       url: /holding_page.html
       output: web, pdf
@@ -66,7 +69,7 @@ entries:
           output: web
         - title: API Documentation
           output: web
-          url: https://nhsd-a2si.github.io/dos-api-docs
+          url: "https://nhsd-a2si.github.io/dos-api-docs"
 
   - title: Implementation Guidance
     output: web
