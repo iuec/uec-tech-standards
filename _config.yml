@@ -2,10 +2,10 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Urgent & Emergency Care Technical Standards
+topnav_title: Urgent & Emergency Care Interoperability & Technical Standards
 # this appears on the top navigation bar next to the home button
 
-site_title: Urgent & Emergency Care Technical Standards
+site_title: Urgent & Emergency Care Interoperability & Technical Standards
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: NHS Digital
@@ -102,9 +102,9 @@ permalink: /:title/
 sitemap: false
 
 # needed for sitemap.xml file only
-url: https://nhsd-a2si.github.io/dos-api-docs/
+url: https://iuec.github.io/uec-tech-standards
 
-repository: nhsd-a2si/dos-api-docs
+repository: iuec/uec-tech-standards
 
 gist:
   noscript: false
