@@ -1,11 +1,11 @@
 ---
-title: Urgent & Emergency Care Technical & Interoperability Standards
+title: Urgent & Emergency Care Interoperability & Technical Standards
 keywords: homepage
 tags: [getting_started]
 sidebar: overview_sidebar
 permalink: index.html
 toc: true
-summary: Supporting Technical Standards for the NHS England Integrated Urgent Care Service Specification
+summary: Supporting Interoperability & Technology Standards for the NHS England Integrated Urgent Care Service Specification
 ---
 
 ## Introduction ##
