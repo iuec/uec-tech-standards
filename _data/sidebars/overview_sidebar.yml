@@ -1,6 +1,7 @@
 entries:
-- title: Urgent & Emergency Care Technical Standards
-  version: v1.0.0
+- title: Urgent & Emergency Care Interoperability & Technical Standards
+  version: v
+  2.0.0RC
   levels: one
   folders:
 
@@ -18,7 +19,7 @@ entries:
       url: /holding_page.html
       output: web, pdf
 
-  - title: Capabilities
+  - title: Current Capabilities
     output: web
     folderitems:
     - title: Ambulance Requests
@@ -36,7 +37,23 @@ entries:
     - title: Post Event Messaging
       url: /post_event_messaging.html
       output: web, pdf
-
+  
+  - title: Emerging Capabilities
+    output: web
+    folderitems:
+      - title: Clinical Decision Support Systems
+        url: /holding_page.html
+        output: web, pdf
+      - title: Access to patient records
+        url: /holding_page.html
+        output: web, pdf
+      - title: Appointment booking
+        url: /holding_page.html
+        output: web, pdf
+      - title: Live wait times
+        url: /holding_page.html
+        output: web, pdf
+  
   - title: Technical Specifications
     output: web
     folderitems:
