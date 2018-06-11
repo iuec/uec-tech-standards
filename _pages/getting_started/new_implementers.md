@@ -1,10 +1,10 @@
 ---
-title: Getting Live
+title: For new implementers
 sidebar: overview_sidebar
-keywords: implementation
-permalink: getting_live_overview.html
+keywords: guidance
+permalink: new_implementers.html
 toc: false
-folder: getting_live
+folder: getting_started
 ---
 
 {% include note.html content="This page is still under development." %}

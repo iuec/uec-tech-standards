@@ -1,7 +1,9 @@
 ---
-title: Non-functional Requirements
+title: Access to records
 sidebar: overview_sidebar
-permalink: tech_non_func_requirements.html
+permalink: access_to_records.html
+toc: false
+folder: emerging
 ---
 
 {% include note.html content="This page is still under development." %}

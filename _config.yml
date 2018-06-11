@@ -94,7 +94,7 @@ defaults:
 sidebars:
 - overview_sidebar
 
-description: "Documentation for the Directory of Services API suite"
+description: "Urgent and Emergency Care Interoperability and Technical Standards"
 # the description is used in the feed.xml file
 
 permalink: /:title/

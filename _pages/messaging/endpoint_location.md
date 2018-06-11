@@ -3,7 +3,7 @@ title: Endpoint Location
 sidebar: overview_sidebar
 keywords: ITK, endpoints
 permalink: endpoint_location.html
-toc: false
+toc: true
 folder: messaging
 ---
 
@@ -28,14 +28,14 @@ The following table details each attribute that is stored against an 'endpoint':
 | Priority / Order  | The priority / order is used to 'sort' the entire list of endpoints for a single service. |
 | Transport         | The transport type for an endpoint defines the transport method used for getting information to that endpoint (e.g. ITK, Email, Phone). |
 | Endpoint Address  | The endpoint address is the actual address identifier that the information will be sent to for that service. |
-| Interaction       | The interaction value denotes which ITK interaction sh≥÷/ould be used for the transmission of the information. |
+| Interaction       | The interaction value denotes which ITK interaction should be used for the transmission of the information. |
 | Format            | The endpoint format defines the format in which the information should be represented (e.g. CDA, HTML, PDF). |
 | Business Scenario | The business scenario defines the situation in which a particular endpoint should be used. Currently this can be **Primary** or **Copy**. |
 | Compressed        | The compressed flag is used for ITK messages and defines whether or not the endpoint can accept compressed ITK messages. Where the value is **True**, ITK messages should be sent with compression enabled. Where the value is **False** or not present, ITK messages should be sent uncompressed. |
 
 #### Payload Formats
 
-Not all transports support all formats - you can build these rules into your endpoint handling so as to avoid supporting unecessary combinations of transport / format. For example, you do not need to support the sending of a CDA XML document via Email.
+Not all transports support all formats - you can build these rules into your endpoint handling so as to avoid supporting unnecessary combinations of transport / format. For example, you do not need to support the sending of a CDA XML document via Email.
 
 The following table shows which formats are currently supported by which transports:
 
@@ -60,17 +60,17 @@ The following table shows which formats are currently supported by which transpo
 
 Where email is used for Transfer of Care messages (sending CDA messages via email instead of ITK), there is a specific list of email domains which should be supported; attempts to send person identifiable data (PID) to any other domain should be blocked by the sending system.
 
-The official list of acceptable domains for transferring person identifiable data (PID) is available on the HSCIC website here: [HSCIC - Sending secure email](http://systems.hscic.gov.uk/nhsmail/secure)
+The official list of acceptable domains for transferring person identifiable data (PID) can be obtained from the NHS Digital NHSMail team.
 
 It is possible that this list may change in the future. It is therefore recommended that system suppliers should make it easy to update the list of valid email domains in customer systems so as to avoid having to deploy new product releases if the list changes in the future.
 
-Systems using email to send urgent care messages should also conform to the "Secure email standard" also detailed on the [HSCIC - Sending secure email](http://systems.hscic.gov.uk/nhsmail/secure) page.
+Systems using email to send urgent care messages should also conform to the "Secure email standard" also detailed on the [HSCIC - Sending secure email](https://digital.nhs.uk/services/nhsmail/the-secure-email-standard) page.
 
 
 
 ## Endpoint Webservice (ServiceDetailsById)
 
-The ServiceDetailsById function is part of the Pathways DOS API - the definition can be found here: [https://www.pathwaysdos.nhs.uk/app/api/webservices?wsdl](https://www.pathwaysdos.nhs.uk/app/api/webservices?wsdl)
+The ServiceDetailsById function is part of the Pathways DOS API - the definition can be found here: [https://www.pathwaysdos.nhs.uk/app/api/webservices?wsdl=1.3](https://www.pathwaysdos.nhs.uk/app/api/webservices?wsdl=1.3)
 
 
 
@@ -95,13 +95,13 @@ The response from the ServiceByDetailsId API provides a list of 0 or more 'endpo
 
 #### Endpoint Ordering
 
-Upon retrieving a complete list of endpoints from the webservice, the consuming system should then order the returned list in ascending order using the Order attribute for each endpoint. Where there are multiple endpoints that meet a certain criteria (e.g. Primary busines scenario) the system uses the order to identify which endpoint should be attempted first (Order 1), and which should be used as a backup (Order 2).
+Upon retrieving a complete list of endpoints from the Webservice, the consuming system should then order the returned list in ascending order using the Order attribute for each endpoint. Where there are multiple endpoints that meet a certain criteria (e.g. Primary business scenario) the system uses the order to identify which endpoint should be attempted first (Order 1), and which should be used as a backup (Order 2).
 
 
 
 #### Endpoint Value Concatenated String
 
-The endpoint value is a concatenated string of endpoint attributes which are separated by a custom delimeter of `\|`
+The endpoint value is a concatenated string of endpoint attributes which are separated by a custom delimiter of `\|`
 
 The structure of the concatenated string is as follows:
 

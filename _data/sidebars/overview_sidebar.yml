@@ -1,22 +1,21 @@
 entries:
 - title: Urgent & Emergency Care Interoperability & Technical Standards
-  version: v
-  2.0.0RC
+  version: 2.0.0RC
   levels: one
   folders:
 
-  - title: Getting Started
+  - title: Overview
     output: web
     folderitems:
     - title: Introduction
       url: /index.html
       output: web, pdf
       type: homepage
-    - title: Navigating this site
-      url: /holding_page.html
+    - title: Using this site
+      url: /using_this_site.html
       output: web
-    - title: New Implementers
-      url: /holding_page.html
+    - title: For new implementers
+      url: /new_implementers.html
       output: web, pdf
 
   - title: Current Capabilities
@@ -28,38 +27,35 @@ entries:
     - title: Referrals / Transfer of Care
       url: /referrals.html
       output: web, pdf
-    - title: Endpoint Location
-      url: /endpoint_location.html
-      output: web, pdf
     - title: Repeat Caller Service
       url: /repeat_caller_service.html
+      output: web, pdf
+    - title: Patient Identification
+      url: /personal_demographics_service.html
       output: web, pdf
     - title: Post Event Messaging
       url: /post_event_messaging.html
       output: web, pdf
-  
+
   - title: Emerging Capabilities
     output: web
     folderitems:
       - title: Clinical Decision Support Systems
-        url: /holding_page.html
+        url: /cdss.html
         output: web, pdf
       - title: Access to patient records
-        url: /holding_page.html
+        url: /access_to_records.html
         output: web, pdf
       - title: Appointment booking
-        url: /holding_page.html
+        url: /appointments.html
         output: web, pdf
       - title: Live wait times
-        url: /holding_page.html
+        url: /live_wait_times.html
         output: web, pdf
-  
+
   - title: Technical Specifications
     output: web
     folderitems:
-    - title: Overview
-      output: web
-      url: /holding_page.html
     - title: Non-functional Requirements
       url: /tech_non_func_requirements.html
       output: web
@@ -68,27 +64,27 @@ entries:
       - title: ITK Messaging
         output: web
         subfolderitems:
+        - title: Endpoint Location
+          url: /endpoint_location.html
+          output: web, pdf
         - title: Renewing Certificates
           url: /renewing_certs.html
           output: web
         - title: PEM Suppression
           url: /pem_suppression.html
           output: web, pdf
-        - title: Frequently Asked Questions
+        - title: Troubleshooting
           output: web
-          url: /itk_faq.html
+          url: /itk_troubleshooting.html
 
       - title: Directory of Services
         output: web
         subfolderitems:
         - title: DoS in NHS 111
-          url: /dos-in-iuc.html
+          url: /dos_in_iuc.html
           output: web
-        - title: API Documentation
-          output: web
-          url: "https://nhsd-a2si.github.io/dos-api-docs"
 
-  - title: Implementation Guidance
+  - title: Implementation
     output: web
     folderitems:
     - title: Testing Ambulance Messages
@@ -116,7 +112,7 @@ entries:
       url: /contact.html
       output: web
     - title: Frequently asked questions
-      url: /faq.md
+      url: /faq.html
       output: web
     - title: Glossary
       url: /overview_glossary.html

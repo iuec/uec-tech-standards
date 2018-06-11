@@ -3,18 +3,20 @@ title: Repeat Caller Service
 sidebar: overview_sidebar
 keywords: ITK
 permalink: repeat_caller_service.html
-toc: false
+toc: true
 folder: national_services
 ---
 
 ## What is the Repeat Caller Service?
-The Repeat Caller Service is a national service operated by HSCIC and is a core part of the Integrated Urgent Care national architecture.
+The Repeat Caller Service is a national service operated by NHS Digital and is a core part of the Integrated Urgent Care national architecture.
+
+The Repeat Caller Service exists to ensure that NHS 111 professionals assessing a patient's need will have access to the encounter records of calls made within the previous 96 hours, where the patient has called 3 or more times.
 
 ### Functionality
 The current functions provided by the Repeat Caller Service (RCS) is as follows:
 
-- Respond to NHS 111 Repeat Caller Queries at the start of every NHS 111 encounter
-- Receive NHS 111 CDA submissions at the end of every NHS 111 encounter
+- Respond to NHS 111 Repeat Caller queries at the start of every NHS 111 encounter
+- Receive NHS 111 Clinical Document Architecture (CDA) submissions at the end of every NHS 111 encounter
 
 
 ## How does it work?
@@ -27,7 +29,7 @@ If a caller's identity has not been verified against the PDS, recorded demograph
 - Verified NHS Number (only included if person is verified against the PDS)
 - First Name
 - Last Name
-- Date Of Birth
+- Date of Birth
 - Gender
 - Postcode
 
@@ -54,14 +56,16 @@ Systems should support both Repeat Caller Queries and CDA submissions at the end
 
 ### Querying The RCS
 
-Any system, that is used to manage people who are making first contact with Integrated Urgent Care, should query the Repeat Caller Service to identify whether that person has previously made contact with the Integrated Urgent Care service.
+Any system, that is used to manage people who are making their first contact with Integrated Urgent Care, should query the Repeat Caller Service to identify whether that person has previously made contact with the Integrated Urgent Care service.
 
 **If a caller's identity has been verified against the Personal Demographics Service (PDS), their NHS number should be included in the query and will be used as the primary search term.**
 
 **If a person's identity has not been verified against the PDS, their NHS number should not be included within the query - the query should only include recorded demographic details.**
 
-If a person is identified as having called twice previously within the preceeding 96 hours the service then they should be transferred to a clinician as a minimum level of priority (anything of a higher priority should be followed).
+If a person is identified as having called NHS 111 twice previously within the preceding 96 hours then they should be transferred to a clinician as a minimum level of priority (if a higher priority is recommended then that should take precedence).
 
+#### Patients referred via 111 Online
+For patients referred to Integrated Urgent Care from 111 Online (or any other online service), the Provider shall ensure that a Repeat Caller query is performed after the patient identity has been confirmed. If this has not been completed by the Online Digital Service, it must be performed within the receiving clinical workflow system.
 
 ### Submitting To The RCS
 
@@ -70,7 +74,7 @@ If a person is identified as having called twice previously within the preceedin
 ### Managing Failure
 **If a submission attempt is unsuccessful, the system must continue trying to submit the document for 96 hours.**
 
-**Systems should continue to retry the submission unless the queued submission is explcitly removed from the submission queue by a user.**
+**Systems should continue to retry the submission unless the queued submission is explicitly removed from the submission queue by a user.**
 
 
 
@@ -88,13 +92,12 @@ In the event that Repeat Caller Service queries are disabled, the system should 
 - The following settings should be configurable in the system without requiring new development / releases:
   - Ability to Enable / Disable Repeat Caller Service interactions
   - Endpoint URL for the Repeat Caller Service (endpoints for Submissions and Queries should be separately configured)
-  - ​
 
 ### Submission Interface
 #### Retry Logic
 - If a submission attempt is unsuccessful, the submission should be queued to retry the submission.
-- Systems should continue to retry the submission until a reasonable number of attempts have failed, or until submission is removed from the queue by a user.
-- Systems should implement retry logic which increases the amount of time between retries with each subsequent retry. This is to ensure that retries attempts do not generate
+- Systems should continue to retry the submission for up to 96 hours from the initial attempt, or until submission is removed from the queue by a user.
+- Systems should implement ["Exponential Backoff"](https://en.wikipedia.org/wiki/Exponential_backoff) logic for retry attempts to avoid creating an unnecessary load on the service during and following periods of interruption.
 
 #### Monitoring
-- Systems should appropriate users to failure of submissions, and provide them with appropriate tools to monitor and respond to issues.
+- Systems should notify appropriate users where there submissions fail, and provide them with appropriate tools to monitor and respond to issues.

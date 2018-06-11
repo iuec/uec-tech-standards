@@ -1,9 +1,11 @@
 ---
 title: Directory of Services in Integrated Urgent Care
 sidebar: overview_sidebar
-permalink: dos-in-iuc.html
+keywords: DOS
+permalink: dos_in_iuc.html
+toc: false
+folder: national_services
 ---
+{% include note.html content="This page is still under development." %}
 
-## Sorry!
-
-{% include note.html content="This page is still under construction - please check back soon." %}
+You can view the draft [DoS API documentation here](https://nhsd-a2si.github.io/dos-api-docs)

@@ -1,10 +1,10 @@
 ---
-title: Getting Live
+title: Using this site
 sidebar: overview_sidebar
-keywords: implementation
-permalink: getting_live_overview.html
+keywords: guidance
+permalink: using_this_site.html
 toc: false
-folder: getting_live
+folder: getting_started
 ---
 
 {% include note.html content="This page is still under development." %}

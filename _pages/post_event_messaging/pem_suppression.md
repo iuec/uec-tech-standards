@@ -3,7 +3,7 @@ title: PEM Suppression
 sidebar: overview_sidebar
 keywords: ITK, pem, discharge
 permalink: pem_suppression.html
-toc: false
+toc: true
 folder: messaging
 ---
 At the end of an patient journey within Integrated Urgent Care (IUC), a patient's GP practice should be notified, messages should only be sent when an encounter with the IUC service has concluded and no call backs or further care is going to be provided by the service.

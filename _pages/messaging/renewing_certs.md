@@ -3,7 +3,7 @@ title: Renewing TLS MA Certificates for ITK Messaging
 sidebar: overview_sidebar
 keywords: ITK, certificates, security
 permalink: renewing_certs.html
-toc: false
+toc: true
 folder: messaging
 ---
 ITK certificates provide the security and identification element of existing Integrated Urgent Care interoperability. They are used to provide Mutual Authentication between two communicating parties. Live services operate using spine certificates issued to endpoints on the oneoneone.nhs.uk NHS sub-domain.

@@ -1,7 +1,9 @@
 ---
-title: Non-functional Requirements
+title: Appointments
 sidebar: overview_sidebar
-permalink: tech_non_func_requirements.html
+permalink: appointments.html
+toc: false
+folder: emerging
 ---
 
 {% include note.html content="This page is still under development." %}
