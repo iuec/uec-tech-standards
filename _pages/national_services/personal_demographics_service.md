@@ -35,7 +35,7 @@ A copy of the MiM specifications is also available here:
 [https://data.developer.nhs.uk/dms/mim/4.2.00/Index.htm](https://data.developer.nhs.uk/dms/mim/4.2.00/Index.htm)
 
 ## Spine Mini Services (SMS)
-Advanced PDS tracing is identified as a requirement in the NHS England specification, however a more restricted form of PDS searching through SMS is available which may be sufficient in simpler use cases.
+Advanced PDS tracing is identified as a requirement in the NHS England Integrated Urgent Care Service (IUC) Specification, however a more restricted form of PDS searching through SMS is available which may be sufficient in simpler use cases.
 
 The SMS PDS offers a read-only interface to PDS, which only returns a single result or nothing at all – sufficient input search criteria must be supplied to differentiate multiple matches and target a single individual.
 
