@@ -11,7 +11,7 @@ All encounters with the Integrated Urgent Care service must be followed up with 
 
 ## Requirements
 
-### ITK should be use where possible
+### ITK should be used where possible
 All areas must have plans in place to implement ITK within the GP systems. ITK is proven to reduce the workload on GP’s, as the current practice of using DTS increases workload on NHS 111, GP’s, and increases the amount of faxing within NHS 111 service in particular for Out of Area calls
 
 ### "For Action"  messages should contain the DoS Service ID
