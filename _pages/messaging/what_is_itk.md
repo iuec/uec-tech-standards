@@ -9,7 +9,9 @@ folder: messaging
 
 The acronym 'ITK' gets used a lot within the healthcare technology world.
 
-It stands for **Interoperability Toolkit**, and the official NHS Digital page about ITK can be found at (https://digital.nhs.uk/interoperability-toolkit)
+It stands for **Interoperability Toolkit**, and the official NHS Digital page about ITK can be found at [https://digital.nhs.uk/interoperability-toolkit](https://digital.nhs.uk/interoperability-toolkit)
+
+Further information for developers can be found here [https://data.developer.nhs.uk/architecture/itk](https://data.developer.nhs.uk/architecture/itk), and here [https://developer.nhs.uk/testcentre/itk](https://developer.nhs.uk/testcentre/itk)
 
 ## What is ITK?
 
