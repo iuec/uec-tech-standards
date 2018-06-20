@@ -4,4 +4,4 @@ sidebar: overview_sidebar
 permalink: contact.html
 ---
 
-{% include note.html content="This page is still under development." %}
+If you have any queries about this content, please email the following mailbox: [uec.integration@nhs.net](mailto:uec.integration@nhs.net)
