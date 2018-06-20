@@ -24,6 +24,9 @@ entries:
     - title: Ambulance Requests
       url: /ambulance_requests.html
       output: web, pdf
+    - title: Intelligent Data Tool
+      url: /intelligent_data_tools.html
+      output: web, pdf
     - title: Referrals / Transfer of Care
       url: /referrals.html
       output: web, pdf
