@@ -12,4 +12,4 @@ This site provides technical standards and guidance for those who commission, pr
 
 These Interoperability & Technical Standards support the [NHS England Integrated Urgent Care Service Specification](https://www.england.nhs.uk/wp-content/uploads/2014/06/Integrated-Urgent-Care-Service-Specification.pdf)
 
-If you have any queries about this content, please email the following mailbox: [uec.integration@nhs.net](mailto:uec.integration@nhs.net)
+If you have any queries about this content, please email the following mailbox: [uecintegration@nhs.net](mailto:uecintegration@nhs.net)

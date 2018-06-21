@@ -6,7 +6,7 @@ permalink: personal_demographics_service.html
 toc: true
 folder: national_services
 ---
-{% include note.html content="This page is still under development." %}
+{% include note.html content="The content for this page is currently under development and will be published in due course. If in the meantime you have any queries please contact uecintegration@nhs.net." %}
 
 ## Using the Personal Demographics Service (PDS)
 PDS is the national electronic database of NHS patient details such as name, address, date of birth and NHS Number (known as demographic information)<sup>1</sup>.  

@@ -6,13 +6,13 @@ permalink: ambulance_requests.html
 toc: true
 folder: messaging
 ---
-{% include note.html content="This page is still under development." %}
+{% include note.html content="The content for this page is currently under development and will be published in due course. If in the meantime you have any queries please contact uecintegration@nhs.net." %}
 
 Integrated Urgent Care services have the ability to directly request an ambulance for a patient where necessary.
 
-A message specification for Ambulance Requests is defined as part of the NHS 111 ITK Domain Message Specification. NHS 111 services, which are using NHS Pathways as a triage too$
+A message specification for Ambulance Requests is defined as part of the NHS 111 ITK Domain Message Specification. NHS 111 services, which are using NHS Pathways as a triage tool.
 
-These electronic ambulance requests are defined in the [NHS 111 ITK Domain Message Specification](https://isd.hscic.gov.uk/trud3/user/authenticated/group/0/pack/1/subpack/192/rel$
+These electronic ambulance requests are defined in the [NHS 111 ITK Domain Message Specification](https://isd.digital.nhs.uk/trud3/user/authenticated/group/0/pack/34/subpack/192/releases)
 
 
 ### Identifying the correct ambulance service
