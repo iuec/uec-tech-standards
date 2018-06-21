@@ -13,3 +13,11 @@ This site provides technical standards and guidance for those who commission, pr
 These Interoperability & Technical Standards support the [NHS England Integrated Urgent Care Service Specification](https://www.england.nhs.uk/wp-content/uploads/2014/06/Integrated-Urgent-Care-Service-Specification.pdf)
 
 If you have any queries about this content, please email the following mailbox: [uecintegration@nhs.net](mailto:uecintegration@nhs.net)
+
+### References
+
+1. [https://www.england.nhs.uk/urgent-emergency-care/about-uec/](https://www.england.nhs.uk/urgent-emergency-care/about-uec/)
+2. [https://www.nhs.uk/NHSEngland/AboutNHSservices/Emergencyandurgentcareservices/Pages/urgent-care-overview.aspx](https://www.nhs.uk/NHSEngland/AboutNHSservices/Emergencyandurgentcareservices/Pages/urgent-care-overview.aspx)
+3. [https://www.england.nhs.uk/urgent-emergency-care/nhs-111/resources/](https://www.england.nhs.uk/urgent-emergency-care/nhs-111/resources/)
+4. [https://www.england.nhs.uk/wp-content/uploads/2014/06/Integrated-Urgent-Care-Service-Specification.pdf](https://www.england.nhs.uk/wp-content/uploads/2014/06/Integrated-Urgent-Care-Service-Specification.pdf)
+5. [https://www.england.nhs.uk/wp-content/uploads/2015/10/integrtd-urgnt-care-comms-standrds-oct15.pdf](https://www.england.nhs.uk/wp-content/uploads/2015/10/integrtd-urgnt-care-comms-standrds-oct15.pdf)
