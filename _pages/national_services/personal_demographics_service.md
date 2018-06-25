@@ -1,15 +1,14 @@
 ---
-title: Personal Demographics Service
+title: Personal Identification
 sidebar: overview_sidebar
 keywords: ITK
 permalink: personal_demographics_service.html
 toc: true
 folder: national_services
 ---
-{% include note.html content="The content for this page is currently under development and will be published in due course. If in the meantime you have any queries please contact uecintegration@nhs.net." %}
 
 ## Using the Personal Demographics Service (PDS)
-PDS is the national electronic database of NHS patient details such as name, address, date of birth and NHS Number (known as demographic information)<sup>1</sup>.  
+PDS is the national electronic database of NHS patient details such as name, address, date of birth and NHS Number (known as demographic information)<sup>1</sup>. The PDS should be used to identify patients when they present to urgent care services.
 
 In a UEC context, PDS allows the provider to confirm a patient’s demographics including their name, date of birth, sex, the GP surgery at which they are currently registered, and their current home address. This is an essential enabler for interoperability between services and enables providers to send Post Event Messages (PEMs) to the patient’s registered GP surgery<sup>2</sup>.
 

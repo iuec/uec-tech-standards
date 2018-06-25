@@ -6,7 +6,7 @@ permalink: ambulance_requests.html
 toc: true
 folder: messaging
 ---
-{% include note.html content="The content for this page is currently under development and will be published in due course. If in the meantime you have any queries please contact uecintegration@nhs.net." %}
+{% include note-furtherupdates.html %}
 
 Integrated Urgent Care services have the ability to directly request an ambulance for a patient where necessary.
 

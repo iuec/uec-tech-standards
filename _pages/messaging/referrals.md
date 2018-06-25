@@ -7,7 +7,7 @@ toc: false
 folder: messaging
 ---
 
-{% include note.html content="The content for this page is currently under development and will be published in due course. If in the meantime you have any queries please contact uecintegration@nhs.net." %}
+{% include note-furtherupdates.html %}
 
 The current deployed specification for NHS 111 Referrals / Transfer of Care can be found here: [https://isd.digital.nhs.uk/trud3/user/authenticated/group/0/pack/34/subpack/192/releases](https://isd.digital.nhs.uk/trud3/user/authenticated/group/0/pack/34/subpack/192/releases)
 

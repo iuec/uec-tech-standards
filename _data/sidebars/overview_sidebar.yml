@@ -87,19 +87,15 @@ entries:
           url: /dos_in_iuc.html
           output: web
 
-  - title: Implementation
-    output: web
-    folderitems:
-    - title: Testing Ambulance Messages
-      output: web
-      url: /testing_ambulance_messages.html
-
   - title: Assurance
     output: web
     folderitems:
     - title: Overview
       url: /assurance_overview.html
       output: web
+    - title: Testing Ambulance Messages
+      output: web
+      url: /testing_ambulance_messages.html
 
   - title: Getting Live
     output: web

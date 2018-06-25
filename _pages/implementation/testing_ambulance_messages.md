@@ -6,7 +6,7 @@ permalink: testing_ambulance_messages.html
 toc: false
 folder: implementation
 ---
-{% include note.html content="The content for this page is currently under development and will be published in due course. If in the meantime you have any queries please contact uecintegration@nhs.net." %}
+{% include note-furtherupdates.html %}
 
 # Testing Ambulance Requests
 
@@ -14,11 +14,9 @@ It is important that you have completed thorough testing of ambulance interopera
 
 *Note: Testing ambulance links can be time-consuming, so it is important that you allow for this testing in your implementation plan.*  
 
-## 1. Map your landscape
+## Map your landscape
 
 In order to plan your testing approach, you need to map out your interoperability landscape. You can think of this as being like a web of 'nodes' and 'connectors'.  
-
-<image of nodes and connectors>  
 
 The 'nodes' are your 'organisational entities' - the organisation, its people, and its IT systems. Within our landscape this might be an NHS 111 provider, its call-handlers and clinicians, and its clinical case management system.  
 
