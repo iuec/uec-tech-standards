@@ -1,8 +1,8 @@
 ---
-title: For new implementers
+title: Getting Started
 sidebar: overview_sidebar
 keywords: guidance
-permalink: new_implementers.html
+permalink: getting_started.html
 toc: false
 folder: getting_started
 ---

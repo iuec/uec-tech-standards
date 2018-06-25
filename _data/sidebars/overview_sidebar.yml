@@ -14,8 +14,8 @@ entries:
     - title: Using this site
       url: /using_this_site.html
       output: web
-    - title: For new implementers
-      url: /new_implementers.html
+    - title: Getting Started
+      url: /getting_started.html
       output: web, pdf
 
   - title: Current Capabilities
