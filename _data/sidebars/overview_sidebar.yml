@@ -36,6 +36,9 @@ entries:
     - title: Patient Identification
       url: /personal_demographics_service.html
       output: web, pdf
+    - title: Summary Care Record (SCR)
+      url: /summary_care_record.html
+      output: web, pdf
     - title: Post Event Messaging
       url: /post_event_messaging.html
       output: web, pdf
