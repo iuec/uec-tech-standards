@@ -64,8 +64,16 @@ entries:
 
   - title: Technical Specifications
     output: web
+    folderitems:
+    - title: Minimum Data Set
+      url: /iuc_minimum_dataset.html
+      output: web, pdf
+      
+    - title: Non-functional Requirements
+      url: /tech_non_func_requirements.html
+      output: web
 
-    subfolders:
+      subfolders:
       - title: Directory of Services
         output: web
         subfolderitems:
@@ -89,14 +97,6 @@ entries:
           output: web
           url: /itk_troubleshooting.html
 
-    folderitems:
-    - title: Minimum Data Set
-      url: /iuc_minimum_dataset.html
-      output: web, pdf
-      
-    - title: Non-functional Requirements
-      url: /tech_non_func_requirements.html
-      output: web
 
 
   - title: Assurance
