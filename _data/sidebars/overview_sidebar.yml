@@ -24,8 +24,17 @@ entries:
     - title: Ambulance Requests
       url: /ambulance_requests.html
       output: web, pdf
+    - title: Electronic Prescribing
+      url: /electronic_prescribing.html
+      output: web, pdf
     - title: Intelligent Data Tool
       url: /intelligent_data_tool.html
+      output: web, pdf
+    - title: Patient Identification
+      url: /personal_demographics_service.html
+      output: web, pdf
+    - title: Post Event Messaging
+      url: /post_event_messaging.html
       output: web, pdf
     - title: Referrals / Transfer of Care
       url: /referrals.html
@@ -33,14 +42,8 @@ entries:
     - title: Repeat Caller Service
       url: /repeat_caller_service.html
       output: web, pdf
-    - title: Patient Identification
-      url: /personal_demographics_service.html
-      output: web, pdf
-    - title: Summary Care Record (SCR)
+    - title: Summary Care Records
       url: /summary_care_record.html
-      output: web, pdf
-    - title: Post Event Messaging
-      url: /post_event_messaging.html
       output: web, pdf
 
   - title: Emerging Capabilities
