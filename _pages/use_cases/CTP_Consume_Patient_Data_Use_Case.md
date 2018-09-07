@@ -137,26 +137,26 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
   </tr>
   <tr>
     <td>Trigger</td>
-    <td>User conducts triage/consultation and reaches a point where the EMS determines thatclinical data about the patient’s history is required.</td>
-    <td><ul><li>Initiate call to a “Get Records” API passing relevantcredentials and a patient identifier (e.g. NHS Number).</li></ul> </td>
+    <td>User conducts triage/consultation and reaches a point where the EMS determines that clinical data about the patient’s history is required.</td>
+    <td><ul><li>Initiate call to a “Get Records” API passing relevant credentials and a patient identifier (e.g. NHS Number).</li></ul> </td>
   </tr>
   <tr>
     <td>1</td>
-    <td>Begintriage or consultation following the standard operating procedures.</td>
+    <td>Begin triage or consultation following the standard operating procedures.</td>
     <td><ul>
 
-    <li>       Call an integration API to locate and retrieve patient data</li><li>       Retrieve and apply structured data items to personalise thetriage.</li><li>       Update triage logic based on patient data if applicable, e.g.mitigate risk of over-triage or under-triage.</li><li>       Generate applicable patient risk flags and alerts to display to user.</li>
+    <li>       Call an integration API to locate and retrieve patient data</li><li>Retrieve and apply structured data items to personalise the triage.</li><li>Update triage logic based on patient data if applicable, e.g. mitigate risk of over-triage or under-triage.</li><li>Generate applicable patient risk flags and alerts to display to user.</li>
        </ul></td>
   </tr>
   <tr>
     <td>2</td>
-    <td>PerformPersonalised Triage / Consultation following the standard operatingprocedures.Acknowledgesystem responses and the relevant updates using patient data. </td>
-    <td><ul><li>       Dynamically consume patient data in triage logic, in conjunctionwith responses provided by the patient and healthcare professional staff duringtriage/consultation.</li><li>       Automatically answer questions using available patient data andskip ahead to the next question.</li><li>       Auto complete questions using available patient data, andclearly reflect these actions for consideration by clinically trainedusers.  </li><li>       Raise flags and alerts and present relevant patient informationas and when required.</li><li>       Provide clear indication that the information was obtained fromthe patient record, including provenance.</li></ul></td>
+    <td>Perform Personalised Triage / Consultation following the standard operating procedures. Acknowledge system responses and the relevant updates using patient data. </td>
+    <td><ul><li>Dynamically consume patient data in triage logic, in conjunction with responses provided by the patient and healthcare professional staff during triage/consultation.</li><li>Automatically answer questions using available patient data and skip ahead to the next question.</li><li>Auto complete questions using available patient data, and clearly reflect these actions for consideration by clinically trained users.  </li><li>Raise flags and alerts and present relevant patient information as and when required.</li><li>Provide clear indication that the information was obtained from the patient record, including provenance.</li></ul></td>
   </tr>
   <tr>
     <td>3</td>
-    <td>Usercompletes triage/consultation supported by automated consumption of patientdata by the EMS and CDSS.</td>
-    <td><ul><li>       Integration links to sources of patient data are terminated.</li></ul></td>
+    <td>User completes triage/consultation supported by automated consumption of patient data by the EMS and CDSS.</td>
+    <td><ul><li>Integration links to sources of patient data are terminated.</li></ul></td>
   </tr>
   <tr>
     <td>End</td>
@@ -191,7 +191,7 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
   </tr>
   <tr>
     <td>3.a</td>
-    <td>Usercompletes triage/consultation using manually captured input only.</td>
+    <td>User completes triage/consultation using manually captured input only.</td>
     <td><li>None</li></td>
   </tr>
   <tr>
@@ -336,27 +336,27 @@ Of the many data items that could be pulled from the patient records, the follow
   </tr>
   <tr>
     <td> </td>
-    <td>Guideto the General Data Protection Regulation (GDPR)</td>
+    <td>Guide to the General Data Protection Regulation (GDPR)</td>
     <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/</a> </td>
   </tr>
   <tr>
     <td> </td>
-    <td>Onlyauthorized clinicians can trigger the CDSS to access and consume GP heldPatient Data.</td>
+    <td>Only authorized clinicians can trigger the CDSS to access and consume GP held Patient Data.</td>
     <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
   </tr>
   <tr>
     <td> </td>
-    <td>PatientData may only be viewed and utilized in direct patient care</td>
+    <td>Patient Data may only be viewed and utilized in direct patient care</td>
     <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
   </tr>
   <tr>
     <td> </td>
-    <td>Patientconsent must be obtained before the system can access and consume patientinformation.</td>
+    <td>Patient consent must be obtained before the system can access and consume patient information.</td>
     <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
   </tr>
   <tr>
     <td> </td>
-    <td>NHSEngland Data Protection Policy</td>
+    <td>NHS England Data Protection Policy</td>
     <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://www.england.nhs.uk/wp-content/uploads/2016/12/data-protection-policy-v3-1.pdf</a> </td>
   </tr>
 </table>
