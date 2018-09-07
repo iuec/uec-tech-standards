@@ -11,8 +11,10 @@ folder: use_cases
 
 # 1   Introduction
 Consume Patient Record Data
-**Type**:   System Use Case
-**Level**:   Sea Level (Goal obtained by a single actor in a single IT session, mid-level business process with sub-processes).
+
+Type:   System Use Case
+
+Level:   Sea Level (Goal obtained by a single actor in a single IT session, mid-level business process with sub-processes).
 
 ## 1.1 Business Context
 
@@ -164,13 +166,108 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
 </table>
 
 ## 2.2 Alternative Flow - 1a
-`Table`
+
+<table>
+  <tr>
+    <th colspan="3">Flow Identifier:  1a - Patient record not found (New Patients, incorrect patient registration, invalid NHS number, record not shared…etc.)</th>
+  </tr>
+  <tr>
+    <td>Step</td>
+    <td>User Action</td>
+    <td>System Response</td>
+  </tr>
+  <tr>
+    <td>1.a</td>
+    <td>None</td>
+    <td>EMSfails to locate any patient data or records pertinent to the current triage.
+    <ul><li>Provide feedback that the patient records could not be found/records found are empty etc.</li>
+    <li>Integration links to sources of patient data are terminated.</li></ul></td>
+  </tr>
+  <tr>
+    <td>2.a</td>
+    <td>Acknowledge that no patient data was returned. Manually capture responses to the assessment questions relating to patient clinical history. Continue following the standard operating procedures.</td>
+    <td><ul><li>Record the manually captured responses.</li>
+    <li>Clearly indicate where answers to questions that could have been completed using data from the patient record have been captured manually.</li></ul></td>
+  </tr>
+  <tr>
+    <td>3.a</td>
+    <td>Usercompletes triage/consultation using manually captured input only.</td>
+    <td><li>None</li></td>
+  </tr>
+  <tr>
+    <td>On Exit</td>
+    <td>Use Case Ends</td>
+    <td> </td>
+  </tr>
+</table>
+
+
 
 ## 2.3 Alternative Flow - 2b
-`Table`
+<table>
+  <tr>
+    <th colspan="3">Flow Identifier:  Patient Record has been found but is not accessible</th>
+  </tr>
+  <tr>
+    <td>Step</td>
+    <td>User Action</td>
+    <td>System Response</td>
+  </tr>
+  <tr>
+    <td>1.b</td>
+    <td>None</td>
+    <td>The EMS locates the record, but the record is not accessible, e.g. sealed records.</td>
+  </tr>
+  <tr>
+    <td>2.b </td>
+    <td>Acknowledge the system response. Continue following the standard operating procedures.</td>
+    <td><ul><li>Records that record could not be accessed.</li>
+    <li>Alert the user that patient records are not accessible.</li>
+    <li>Then close integration session.</li></ul></td>
+  </tr>
+  <tr>
+    <td>3.b</td>
+    <td>User completes triage/consultation using manually captured input only.</td>
+    <td><ul><li>None</li></ul></td>
+  </tr>
+  <tr>
+    <td>On Exit</td>
+    <td>Use Case Ends</td>
+    <td> </td>
+  </tr>
+</table>
 
 ## 2.4 Exception Flows
-`Table`
+<table>
+  <tr>
+    <th colspan="3">Flow Identifier:  Connections Disrupted</th>
+  </tr>
+  <tr>
+    <td>Step</td>
+    <td>User Action</td>
+    <td>System Response</td>
+  </tr>
+  <tr>
+    <td>1.c</td>
+    <td>None</td>
+    <td>The EMS connects to the data source but loses the connection before the data can be accessed and consumed by the EMS and CDSS.</td>
+  </tr>
+  <tr>
+    <td>2.c</td>
+    <td>Acknowledge the system response. Continue following the standard operating procedures.</td>
+    <td>Alert user that the connection has been disrupted and attempt reconnection.  Alert the user on successful reconnection. If the user completes the triage/consultation before the connection is re-established, the EMS must abandon attempts to reconnect to the data source. </td>
+  </tr>
+  <tr>
+    <td>3.c</td>
+    <td>User completes triage/consultation using manually captured input only.</td>
+    <td>If a re-connection was successful, close the close integration session.</td>
+  </tr>
+  <tr>
+    <td>On Exit</td>
+    <td>Use Case Ends</td>
+    <td> </td>
+  </tr>
+</table>
 
 # 3   Activity Diagram
 
