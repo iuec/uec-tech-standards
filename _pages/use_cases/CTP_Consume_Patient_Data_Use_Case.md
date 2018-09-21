@@ -9,24 +9,24 @@ folder: use_cases
 {% include note-furtherupdates.html %}
 
 
-# 1   Introduction
+# Introduction
 Consume Patient Record Data
 
 Type:   System Use Case
 
 Level:   Sea Level (Goal obtained by a single actor in a single IT session, mid-level business process with sub-processes).
 
-## 1.1 Business Context
+## Business Context
 
-### 1.1.1   Brief Description
+### Brief Description
 The Clinical Triage Platform (CTP) programme seeks to improve the triaging capability in Urgent and Emergency Care (UEC) settings by providing tools and services to support next generation triaging capability better suited to address individual patient needs. Patients are currently triaged and assessed without a view of their medical history, leading to triage that is said to be too generic. In order to triage patients effectively and efficiently, the UEC Encounter Management System (EMS) and any Clinical Decision Support System (CDSS) it uses need to consider and consume patient data from various sources.
 
-The patient data could come from any number of national or local sources which link in with patient care record systems providing information on all aspects of a patient’s medical history which might be relevant at different stages throughout the patient’s UEC encounter. In this use case we propose that EMS and CDSS will consume available patient information from any source which meets the standards and specifications defined by the CTP programme, and in the Pre-Conditions in Section 1.4, and will comply with the General Data Protection Regulation (GDPR).
+The patient data could come from any number of national or local sources which link in with patient care record systems providing information on all aspects of a patient’s medical history which might be relevant at different stages throughout the patient’s UEC encounter. In this use case we propose that EMS and CDSS will consume available patient information from any source which meets the standards and specifications defined by the CTP programme, and in the <a href="#pre-conditions">Pre-Conditions</a>, will comply with the General Data Protection Regulation (GDPR).
 
 The clinical data consumed by the EMS will be transient, as patient medical histories may change from day to day. Therefore, there would be no requirement or benefit in holding patient data within the system as the patient’s medical condition can change quickly and the data will become out of date. This use case is therefore only concerned with real time access of the patient’s medical information, at the point of triage (including self-triage and clinical triage) and clinical consultation.
 
-### 1.1.2   Business Goals and Benefits
-Current UEC Service Providers have raised the requirement to access patient data during triage. They have stated that the service and patients would benefit greatly from the EMS and CDSS having access to the patient’s medical history to help understand the needs of the individual within the collective patient population. Having patients personal medical history populated in or consumed by the CDSS will promote the delivery of appropriate disposition more quickly than at present.
+### Business Goals and Benefits
+Current UEC Service Providers have raised the requirement to access patient data during triage. They have stated that the service and patients would benefit greatly from the EMS and CDSS having access to the patient’s medical history to help understand the needs of the individual within the collective patient population. Having a patient's personal medical history populated in or consumed by the CDSS will promote the delivery of an appropriate disposition more quickly than at present.
 
 The FYFV states that the patient population in England is too diverse for a ‘one size fits all’ care model to apply everywhere, and that the NHS has to keep up with changes in patient healthcare needs and preferences. This can be achieved by personalising the provision of care by using all available information about the patient.
 
@@ -43,15 +43,17 @@ By allowing the system to consume patient data in a meaningful way, the burden f
 -   Support the consult and complete model; there would be little or no need to pass patients between clinicians or between settings to clarify their symptoms, as the CDSS would be able to triage the current concern while considering any underlying patient conditions and comorbidities.
 -   Improved patient experience driven by the understanding and considering each individual and their needs, while meeting their expectations by using their health and care information to their benefit.
 
-### 1.1.3   Business Area
+### Business Area
 The business area being modelled in this use case is the consumption of patient health and social care data by systems that support decision making in UEC, a key output of the Personalised Triage workstream of the CTP programme. The use case relates to personalisation of the patient journey. Some elements of triage, clinical consultation and treatment decisions can be supported by the consumption of patient data as explained in this use case. This use case is dependent on wider CTP technical interoperability requirements and standards to facilitate local and national access of patient records in order to effectively support patients across the nation.
-### 1.1.4   System under Design (SuD)
+
+### System under Design (SuD)
 One or more CDSS used by the EMS will support Clinicians and Non-Clinicians in assessing patient needs, taking into consideration known facts about the patient’s health. The personalisation can also to be applied to CDSS that support self-triage tools. The CDSS will primarily need access to patient information held on electronic patient care record systems. The EMS, Self-Triage tools and patient care record systems will need to communicate in a manner that enables access to patient data in a format that can be consumed by the CDSS, resulting in some useful output; such as:
 -   System generated alerts flags indicating potential risks relating to the patient’s health (e.g. indicating that a patient has a long-term condition that needs to be considered in their UEC encounter).
 -   Automatic answering or pre-populating answers to questions within triage paths by automatically retrieving and applying clinically coded data from the patient’s care records.  Depending on the User skill-set or clinical safety rules around the EMS, further verification of the data may be required/supported.
 
 Using patient data to improve triage is not a new concept with some 111 service providers having previously provided patient data to their clinicians for triage purposes. Data sharing between healthcare service providers in UIC has been achieved in the past but it has been limited to local solutions. The CTP approach is unique in that it is an endeavour to provide EMS and CDSS integration with patient data sets on multiple levels both nationally and locally, and it also introduces the automated consumption of patient data by the CDSS.
-### 1.1.5   Assumptions
+
+### Assumptions
 -   System suppliers should use a standardised mechanism to identify patients, it is anticipated that the systems will use the Personal Demographics Service (PDS) to uniquely identify the patient and link them to their available care records.
 -   Data sharing will be facilitated at national level.
 -   Rules in the integration service must be respected by the EMS, e.g. sealed and sensitive records will not be shared, but the system will be made aware that they exist.
@@ -60,19 +62,19 @@ Using patient data to improve triage is not a new concept with some 111 service 
 -   Data will conform to agreed terminology standards and a standard Health information model.
 -   GPs will move to SNOMED CT by end of 2018, and other care settings will follow suit.
 
-## 1.2 Actors
+## Actors
 
-### 1.2.1   Primary Actors
+### Primary Actors
 -   System User (Clinician, Non-Clinician, Patient in Self-Triage)
 
-### 1.2.2   Secondary Actors
+### Secondary Actors
 -   Patient (As self or Patient Proxy e.g. parent, carer etc.)
 -   Care Record System
 
-## 1.3 Trigger
+## Trigger
 Patient data will be sought by the CDSS via the EMS at one or many points during a patient’s UEC encounter. For example, the CDSS may include questions within its triage logic about aspects of the patient’s medical history which is relevant to the patient’s presenting complaint or reason for contact. The EMS will automatically trigger calls to the relevant APIs and retrieve the patient data for automated consumption where appropriate.
 
-## 1.4 Pre-Conditions
+## Pre-Conditions
 -   Patient has gone through identification verification including retrieving their NHS Number.
 -   Where the patient is using a self- triage tool, the tool will have verified the patient’s identity through some self-identification protocols.
 -   The healthcare professional is engaged in patient triage at the point in time when the medical history is required; talking to a patient or their representative.
@@ -81,8 +83,9 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
 -   Consent to access the patient Care Record has been obtained either during this patient journey or from pre-arranged authorisation e.g. patient has opted into record sharing options at GP record level, i.e. UEC access to patient records has been pre-authorised in accordance with applicable legislation and (GDPR).
 -   Information received from the Care Record system is structured, or can be structured following transformation, to a pre-defined specification.
 
-## 1.5 Post-Conditions
-### 1.5.1   On Success
+## Post-Conditions
+
+### On Success
 -   Structured patient data is retrieved and consumed by the CDSS. The patient data is used to achieve the following functionality within the CDSS and the EMS:
   - Automated pre-population of data fields.
   - Automatic answering of questions.
@@ -92,44 +95,44 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
 -   In the case of non-clinical triage, the triage journey is completed with the aid of the patient data, and the patient is referred to another service (Disposition) or transferred for further clinical assessment (Consultation).
 -   In the case of clinical assessment, the clinician will be granted access to information from the patient care record data, and supported by data consumption, e.g. flags, in their clinical decision making until the assessment is completed, or until the clinician transfers the patient onward to another care setting.
 
-### 1.5.2   On Failure:
+### On Failure:
 -   Triage continues without consideration of the patient data.
 -   The reason for failure is displayed to the EMS system user, with an appropriate and informative error message.
 -   A declined or failed request for access to the patient data is recorded.
 
-### 1.5.3   Guaranteed:
+### Guaranteed:
 -   The patient’s need will be assessed, with or without the use of their record data.
 -   Attempts to access and use of the data are audited, whether they resulted in success or failure, in accordance with GDPR.
 
 
-## 1.6 ‘Includes’ Use Cases
+## ‘Includes’ Use Cases
 -   Access Patient Record << includes >> Obtain Patient Consent.
 -   Consume Patient Care Record Data << includes >> Call integration API.
 -   Perform Personalised Triage Assessment << includes >> Consume Patient Care Record Data.
 -   Perform Personalised Clinical Consultation << includes >> Consume Patient Care Record Data.
 
-## 1.7 ‘Extends’ Use Cases
+## ‘Extends’ Use Cases
 -   Consume Patient Care Record Data << extends >> Access Patient Record.
 
-## 1.8 Local View Use Case Diagram
+## Local View Use Case Diagram
+<p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_local_view.png" alt="Figure 1 - Use Case Consume Patient Data" title="Figure 1 - Use Case Consume Patient Data" style="width:75%"></p>
 
-<p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_local_view.png" alt="Tasks" title="View Results Screen" style="width:75%"></p>
-
-` Figure 1 - Use Case Consume Patient Data `
+<p>Figure 1 - Use Case Consume Patient Data</p>
 
 
-# 2   Flow of Events
+# Flow of Events
+<p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_event_flow.png" alt="Figure 2: Input Data Sequence Flow" title="Figure 2: Input Data Sequence Flow" style="width:75%"></p>
 
-<p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_event_flow.png" alt="Tasks" title="View Results Screen" style="width:75%"></p>
+<p>Figure 2: Input Data Sequence Flow</p>
 
-`Figure 2: Input Data Sequence Flow`
-
-## 2.1 Basic Flow
-
+## Basic Flow
 <table>
-  <tr>
-    <th colspan="3">Flow Identifier:  System Driven Personalisation</th>
-  </tr>
+<thead>
+<tr>
+  <th colspan="3">Flow Identifier:  System Driven Personalisation</th>
+</tr>
+</thead>
+
   <tr>
     <td>Step</td>
     <td>User Action</td>
@@ -165,12 +168,14 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
   </tr>
 </table>
 
-## 2.2 Alternative Flow - 1a
-
+## Alternative Flow - 1a
 <table>
-  <tr>
-    <th colspan="3">Flow Identifier:  1a - Patient record not found (New Patients, incorrect patient registration, invalid NHS number, record not shared…etc.)</th>
-  </tr>
+<thead>
+<tr>
+  <th colspan="3">Flow Identifier:  1a - Patient record not found (New Patients, incorrect patient registration, invalid NHS number, record not shared…etc.)</th>
+</tr>
+</thead>
+
   <tr>
     <td>Step</td>
     <td>User Action</td>
@@ -203,11 +208,14 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
 
 
 
-## 2.3 Alternative Flow - 2b
+## Alternative Flow - 2b
 <table>
-  <tr>
-    <th colspan="3">Flow Identifier:  Patient Record has been found but is not accessible</th>
-  </tr>
+<thead>
+<tr>
+  <th colspan="3">Flow Identifier:  Patient Record has been found but is not accessible</th>
+</tr>
+</thead>
+
   <tr>
     <td>Step</td>
     <td>User Action</td>
@@ -237,11 +245,14 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
   </tr>
 </table>
 
-## 2.4 Exception Flows
+## Exception Flows
 <table>
-  <tr>
-    <th colspan="3">Flow Identifier:  Connections Disrupted</th>
-  </tr>
+<thead>
+<tr>
+  <th colspan="3">Flow Identifier:  Connections Disrupted</th>
+</tr>
+</thead>
+
   <tr>
     <td>Step</td>
     <td>User Action</td>
@@ -269,17 +280,17 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
   </tr>
 </table>
 
-# 3   Activity Diagram
+# Activity Diagram
 
-<p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_activity_diagram.png" alt="Tasks" title="View Results Screen" style="width:75%"></p>
-`Figure 3 – Input Data Consumption Activity Diagram`
+<p style="text-align:center;"><a href="images/ctp_consume_patient_data_use_case_activity_diagram_large.png"><img src="images/ctp_consume_patient_data_use_case_activity_diagram.png" alt="Figure 3 – Input Data Consumption Activity Diagram" title="Figure 3 – Input Data Consumption Activity Diagram" style="width:75%"></a></p>
+<p>Figure 3 – Input Data Consumption Activity Diagram</p>
 
-# 4   Entity Diagrams
+# Entity Diagrams
 
-<p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_entity_diagram.png" alt="Tasks" title="View Results Screen" style="width:75%"></p>
-`Figure 4 – Entity Relationship Diagram`
+<p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_entity_diagram.png" alt="Figure 4 – Entity Relationship Diagram" title="Figure 4 – Entity Relationship Diagram" style="width:75%"></p>
+<p>Figure 4 – Entity Relationship Diagram</p>
 
-# 5   Data Items
+# Data Items
 Of the many data items that could be pulled from the patient records, the following have been identified, through CTP engagement with Clinicians in UEC as useful and relevant to triage and patient assessment in a UEC setting:
 -   Top six (rated as most important by Clinicians):
     -   Allergies / Adverse Reactions
@@ -305,13 +316,16 @@ Of the many data items that could be pulled from the patient records, the follow
     -   Female Genital Mutilation (FGM)
     -   Social Circumstances
 
-# 6   Information Items
+# Information Items
 <table>
-  <tr>
-    <th>Ref<br></th>
-    <th>Title<br></th>
-    <th>Link<br></th>
-  </tr>
+<thead>
+<tr>
+  <th>Ref<br></th>
+  <th>Title<br></th>
+  <th>Link<br></th>
+</tr>
+</thead>
+
   <tr>
     <td></td>
     <td>Integrated Urgent Care Service Specification</td>
@@ -326,15 +340,18 @@ Of the many data items that could be pulled from the patient records, the follow
 
 
 
-# 7   Business Rules
+# Business Rules
 
 <table>
-  <tr>
-    <th>Ref</th>
-    <th>Title</th>
-    <th>Link</th>
-  </tr>
-  <tr>
+<thead>
+<tr>
+  <th>Ref</th>
+  <th>Title</th>
+  <th>Link</th>
+</tr>
+
+</thead>
+<tr>
     <td> </td>
     <td>Guide to the General Data Protection Regulation (GDPR)</td>
     <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/</a> </td>
@@ -342,21 +359,24 @@ Of the many data items that could be pulled from the patient records, the follow
   <tr>
     <td> </td>
     <td>Only authorized clinicians can trigger the CDSS to access and consume GP held Patient Data.</td>
-    <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
+    <td><a href="https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
   </tr>
   <tr>
     <td> </td>
     <td>Patient Data may only be viewed and utilized in direct patient care</td>
-    <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
+    <td><a href="https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
   </tr>
   <tr>
     <td> </td>
     <td>Patient consent must be obtained before the system can access and consume patient information.</td>
-    <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
+    <td><a href="https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
   </tr>
   <tr>
     <td> </td>
     <td>NHS England Data Protection Policy</td>
-    <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://www.england.nhs.uk/wp-content/uploads/2016/12/data-protection-policy-v3-1.pdf</a> </td>
+    <td><a href="https://www.england.nhs.uk/wp-content/uploads/2016/12/data-protection-policy-v3-1.pdf">https://www.england.nhs.uk/wp-content/uploads/2016/12/data-protection-policy-v3-1.pdf</a> </td>
   </tr>
 </table>
+
+# Original use case
+This use case is a reformatted version of the <a href="_pages/use_cases/CTP_Consume_Patient_Data_Use_Case.docx">Consume Patient Data Use Case</a> developed by the NHS Digital CTP team.

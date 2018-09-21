@@ -52,9 +52,18 @@ entries:
       - title: Clinical Decision Support Systems
         url: /cdss.html
         output: web, pdf
-      - title: Access to patient records
-        url: /access_to_records.html
-        output: web, pdf
+
+        subfolders:
+        - title: Access to patient records
+          output: web
+          subfolderitems:
+          - title: Overview
+            url: /access_to_records.html
+            output: web
+          - title: Consume Patient Data Use Case
+            url: /CTP_Consume_Patient_Data_Use_Case.html
+            output: web
+
       - title: Appointment booking
         url: /appointments.html
         output: web, pdf
@@ -68,7 +77,7 @@ entries:
     - title: Minimum Data Set
       url: /iuc_minimum_dataset.html
       output: web, pdf
-      
+
     - title: Non-functional Requirements
       url: /tech_non_func_requirements.html
       output: web
