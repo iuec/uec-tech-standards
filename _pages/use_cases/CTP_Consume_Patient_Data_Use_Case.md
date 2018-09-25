@@ -6,7 +6,6 @@ permalink: CTP_Consume_Patient_Data_Use_Case.html
 toc: true
 folder: use_cases
 ---
-{% include note-furtherupdates.html %}
 
 
 # Introduction
@@ -26,7 +25,7 @@ The patient data could come from any number of national or local sources which l
 The clinical data consumed by the EMS will be transient, as patient medical histories may change from day to day. Therefore, there would be no requirement or benefit in holding patient data within the system as the patient’s medical condition can change quickly and the data will become out of date. This use case is therefore only concerned with real time access of the patient’s medical information, at the point of triage (including self-triage and clinical triage) and clinical consultation.
 
 ### Business Goals and Benefits
-Current UEC Service Providers have raised the requirement to access patient data during triage. They have stated that the service and patients would benefit greatly from the EMS and CDSS having access to the patient’s medical history to help understand the needs of the individual within the collective patient population. Having a patient's personal medical history populated in or consumed by the CDSS will promote the delivery of an appropriate disposition more quickly than at present.
+Current UEC Service Providers have raised the requirement to access patient data during triage. They have stated that the service and patients would benefit greatly from the EMS and CDSS having access to the patient’s medical history to help understand the needs of the individual within the collective patient population. Findings from analysis and research by the CTP programme have indicated that having a patient's personal medical history populated in or consumed by the CDSS could potentially promote the delivery of an appropriate disposition more quickly than at present.
 
 The FYFV states that the patient population in England is too diverse for a ‘one size fits all’ care model to apply everywhere, and that the NHS has to keep up with changes in patient healthcare needs and preferences. This can be achieved by personalising the provision of care by using all available information about the patient.
 
@@ -51,7 +50,7 @@ One or more CDSS used by the EMS will support Clinicians and Non-Clinicians in a
 -   System generated alerts flags indicating potential risks relating to the patient’s health (e.g. indicating that a patient has a long-term condition that needs to be considered in their UEC encounter).
 -   Automatic answering or pre-populating answers to questions within triage paths by automatically retrieving and applying clinically coded data from the patient’s care records.  Depending on the User skill-set or clinical safety rules around the EMS, further verification of the data may be required/supported.
 
-Using patient data to improve triage is not a new concept with some 111 service providers having previously provided patient data to their clinicians for triage purposes. Data sharing between healthcare service providers in UIC has been achieved in the past but it has been limited to local solutions. The CTP approach is unique in that it is an endeavour to provide EMS and CDSS integration with patient data sets on multiple levels both nationally and locally, and it also introduces the automated consumption of patient data by the CDSS.
+Using patient data to improve triage is not a new concept with some 111 service providers having previously provided patient data to their clinicians for triage purposes. Data sharing between healthcare service providers in IUC has been achieved in the past but it has been limited to local solutions. The CTP approach is unique in that it is an endeavour to provide EMS and CDSS integration with patient data sets on multiple levels both nationally and locally, and it also introduces the automated consumption of patient data by the CDSS.
 
 ### Assumptions
 -   System suppliers should use a standardised mechanism to identify patients, it is anticipated that the systems will use the Personal Demographics Service (PDS) to uniquely identify the patient and link them to their available care records.
@@ -148,7 +147,7 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
     <td>Begin triage or consultation following the standard operating procedures.</td>
     <td><ul>
 
-    <li>       Call an integration API to locate and retrieve patient data</li><li>Retrieve and apply structured data items to personalise the triage.</li><li>Update triage logic based on patient data if applicable, e.g. mitigate risk of over-triage or under-triage.</li><li>Generate applicable patient risk flags and alerts to display to user.</li>
+    <li>Call an integration API to locate and retrieve patient data</li><li>Retrieve and apply structured data items to personalise the triage.</li><li>Update triage logic based on patient data if applicable, e.g. mitigate risk of over-triage or under-triage.</li><li>Generate applicable patient risk flags and alerts to display to user.</li>
        </ul></td>
   </tr>
   <tr>
@@ -281,12 +280,10 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
 </table>
 
 # Activity Diagram
-
 <p style="text-align:center;"><a href="images/ctp_consume_patient_data_use_case_activity_diagram_large.png"><img src="images/ctp_consume_patient_data_use_case_activity_diagram.png" alt="Figure 3 – Input Data Consumption Activity Diagram" title="Figure 3 – Input Data Consumption Activity Diagram" style="width:75%"></a></p>
 <p>Figure 3 – Input Data Consumption Activity Diagram</p>
 
 # Entity Diagrams
-
 <p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_entity_diagram.png" alt="Figure 4 – Entity Relationship Diagram" title="Figure 4 – Entity Relationship Diagram" style="width:75%"></p>
 <p>Figure 4 – Entity Relationship Diagram</p>
 
@@ -327,12 +324,12 @@ Of the many data items that could be pulled from the patient records, the follow
 </thead>
 
   <tr>
-    <td></td>
+    <td>6.1</td>
     <td>Integrated Urgent Care Service Specification</td>
     <td><a href="https://www.england.nhs.uk/wp-content/uploads/2014/06/Integrated-Urgent-Care-Service-Specification.pdf">https://www.england.nhs.uk/wp-content/uploads/2014/06/Integrated-Urgent-Care-Service-Specification.pdf</a></td>
   </tr>
   <tr>
-    <td></td>
+    <td>6.2</td>
     <td>NHS Digital data dictionary</td>
     <td><a href="http://www.datadictionary.nhs.uk">http://www.datadictionary.nhs.uk</a></td>
   </tr>
@@ -341,7 +338,6 @@ Of the many data items that could be pulled from the patient records, the follow
 
 
 # Business Rules
-
 <table>
 <thead>
 <tr>
@@ -352,27 +348,27 @@ Of the many data items that could be pulled from the patient records, the follow
 
 </thead>
 <tr>
-    <td> </td>
+    <td>7.1</td>
     <td>Guide to the General Data Protection Regulation (GDPR)</td>
     <td><a href="https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/">https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/</a> </td>
   </tr>
   <tr>
-    <td> </td>
+    <td>7.2</td>
     <td>Only authorized clinicians can trigger the CDSS to access and consume GP held Patient Data.</td>
     <td><a href="https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
   </tr>
   <tr>
-    <td> </td>
+    <td>7.3</td>
     <td>Patient Data may only be viewed and utilized in direct patient care</td>
     <td><a href="https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
   </tr>
   <tr>
-    <td> </td>
+    <td>7.4</td>
     <td>Patient consent must be obtained before the system can access and consume patient information.</td>
     <td><a href="https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/">https://www.england.nhs.uk/contact-us/pub-scheme/pol-proc/</a></td>
   </tr>
   <tr>
-    <td> </td>
+    <td>7.5</td>
     <td>NHS England Data Protection Policy</td>
     <td><a href="https://www.england.nhs.uk/wp-content/uploads/2016/12/data-protection-policy-v3-1.pdf">https://www.england.nhs.uk/wp-content/uploads/2016/12/data-protection-policy-v3-1.pdf</a> </td>
   </tr>
@@ -380,3 +376,74 @@ Of the many data items that could be pulled from the patient records, the follow
 
 # Original use case
 This use case is a reformatted version of the <a href="_pages/use_cases/CTP_Consume_Patient_Data_Use_Case.docx">Consume Patient Data Use Case</a> developed by the NHS Digital CTP team.
+
+
+# Glossary
+<table>
+  <thead>
+  <tr>
+    <th>Term / Abbreviation</th>
+    <th>What it stands for</th>
+  </tr>
+  </thead>
+  <tr>
+    <td>Actor</td>
+    <td>Role or system involved in the system </td>
+  </tr>
+  <tr>
+    <td>CTP</td>
+    <td>Clinical Triage Platform</td>
+  </tr>
+  <tr>
+    <td>Extend</td>
+    <td>A generalization relationship where an extending use case continues the behaviour of a base use case when certain conditions are met.</td>
+  </tr>
+  <tr>
+    <td>FYFV</td>
+    <td>Five Year Forward View</td>
+  </tr>
+  <tr>
+    <td>GDPR</td>
+    <td>General Data Protection Regulation </td>
+  </tr>
+  <tr>
+    <td>Generalize</td>
+    <td>A relationship which indicates when something is a subset of some other element. </td>
+  </tr>
+  <tr>
+    <td>GP</td>
+    <td>General Practitioner </td>
+  </tr>
+  <tr>
+    <td>GPSoC</td>
+    <td>GP System of Choice</td>
+  </tr>
+  <tr>
+    <td>Include Use Case</td>
+    <td>Also known as a “Uses” relationship is a generalization relationship denoting the inclusion of the behaviour described by another use case, where one use case has a dependency with another use case that it triggers or uses.</td>
+  </tr>
+  <tr>
+    <td>Input Data</td>
+    <td>Information sourced from systems and databases external to the CTP for use within the CTP.</td>
+  </tr>
+  <tr>
+    <td>PIA</td>
+    <td>Privacy Impact Assessment </td>
+  </tr>
+  <tr>
+    <td>Post-Condition</td>
+    <td>The state of an element after the use case is acted on.</td>
+  </tr>
+  <tr>
+    <td>Pre-Condition</td>
+    <td>The state of an element of the system before the use case occurs.</td>
+  </tr>
+  <tr>
+    <td>Trigger</td>
+    <td>The event or action that starts the process. Usually the result of an input into the system or a time-based event.</td>
+  </tr>
+  <tr>
+    <td>UEC</td>
+    <td>Urgent and Emergency Care</td>
+  </tr>
+</table>
