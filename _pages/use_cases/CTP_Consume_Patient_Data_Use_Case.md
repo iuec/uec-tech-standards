@@ -8,7 +8,7 @@ folder: use_cases
 ---
 
 
-# Introduction
+## Introduction
 Consume Patient Record Data
 
 Type:   System Use Case
@@ -53,7 +53,7 @@ One or more CDSS used by the EMS will support Clinicians and Non-Clinicians in a
 Using patient data to improve triage is not a new concept with some 111 service providers having previously provided patient data to their clinicians for triage purposes. Data sharing between healthcare service providers in IUC has been achieved in the past but it has been limited to local solutions. The CTP approach is unique in that it is an endeavour to provide EMS and CDSS integration with patient data sets on multiple levels both nationally and locally, and it also introduces the automated consumption of patient data by the CDSS.
 
 ### Assumptions
--   System suppliers should use a standardised mechanism to identify patients, it is anticipated that the systems will use the Personal Demographics Service (PDS) to uniquely identify the patient and link them to their available care records.
+-   System suppliers should use a standardised mechanism to identify patients, it is anticipated that the systems will use the <a href="/personal_demographics_service.html">Personal Demographics Service (PDS)</a> to uniquely identify the patient and link them to their available care records.
 -   Data sharing will be facilitated at national level.
 -   Rules in the integration service must be respected by the EMS, e.g. sealed and sensitive records will not be shared, but the system will be made aware that they exist.
 -   The future UEC encounter management systems will support the use of more than one CDSS in any service setting to support specialist triage and clinical consultation needs.
@@ -119,7 +119,7 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
 <p>Figure 1 - Use Case Consume Patient Data</p>
 
 
-# Flow of Events
+## Flow of Events
 <p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_event_flow.png" alt="Figure 2: Input Data Sequence Flow" title="Figure 2: Input Data Sequence Flow" style="width:75%"></p>
 
 <p>Figure 2: Input Data Sequence Flow</p>
@@ -279,15 +279,15 @@ Patient data will be sought by the CDSS via the EMS at one or many points during
   </tr>
 </table>
 
-# Activity Diagram
+## Activity Diagram
 <p style="text-align:center;"><a href="images/ctp_consume_patient_data_use_case_activity_diagram_large.png"><img src="images/ctp_consume_patient_data_use_case_activity_diagram.png" alt="Figure 3 – Input Data Consumption Activity Diagram" title="Figure 3 – Input Data Consumption Activity Diagram" style="width:75%"></a></p>
 <p>Figure 3 – Input Data Consumption Activity Diagram</p>
 
-# Entity Diagrams
+## Entity Diagrams
 <p style="text-align:center;"><img src="images/ctp_consume_patient_data_use_case_entity_diagram.png" alt="Figure 4 – Entity Relationship Diagram" title="Figure 4 – Entity Relationship Diagram" style="width:75%"></p>
 <p>Figure 4 – Entity Relationship Diagram</p>
 
-# Data Items
+## Data Items
 Of the many data items that could be pulled from the patient records, the following have been identified, through CTP engagement with Clinicians in UEC as useful and relevant to triage and patient assessment in a UEC setting:
 -   Top six (rated as most important by Clinicians):
     -   Allergies / Adverse Reactions
@@ -313,7 +313,7 @@ Of the many data items that could be pulled from the patient records, the follow
     -   Female Genital Mutilation (FGM)
     -   Social Circumstances
 
-# Information Items
+## Information Items
 <table>
 <thead>
 <tr>
@@ -337,7 +337,7 @@ Of the many data items that could be pulled from the patient records, the follow
 
 
 
-# Business Rules
+## Business Rules
 <table>
 <thead>
 <tr>
@@ -374,11 +374,11 @@ Of the many data items that could be pulled from the patient records, the follow
   </tr>
 </table>
 
-# Original use case
+## Original use case
 This use case is a reformatted version of the <a href="_pages/use_cases/CTP_Consume_Patient_Data_Use_Case.docx">Consume Patient Data Use Case</a> developed by the NHS Digital CTP team.
 
 
-# Glossary
+## Glossary
 <table>
   <thead>
   <tr>
