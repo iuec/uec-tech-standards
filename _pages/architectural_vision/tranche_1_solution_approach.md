@@ -8,8 +8,6 @@ toc_h3: true
 folder: architectural_vision
 ---
 
-{% include note-notpublished.html %}
-
 ## Introduction
 
 ###	Background
