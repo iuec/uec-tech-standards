@@ -3,13 +3,14 @@ title: Tranche 1 Solution Approach
 sidebar: overview_sidebar
 keywords: architecture
 permalink: tranche_1_solution_approach.html
-toc: true
+toc: false
+toc_h3: true
 folder: architectural_vision
 ---
 
 {% include note-notpublished.html %}
 
-## Introduction - T1 approach
+## Introduction
 
 ###	Background
 The Clinical Triage Platform (CTP) programme supports the delivery of the key recommendations and drivers for change that resulted from a number of NHS strategies, policies, frameworks and reviews, including the NIB Health & Care 2020 framework, the Urgent and Emergency Care Review, and the Five Year Forward View. To achieve the transformation of Urgent and Emergency Care (UEC) people need to be directed or connected with the right service to meet their needs and not be sent or conveyed to high end dispositions such as Accident and Emergency (A&E) or GP’s unless absolutely necessary.
@@ -65,7 +66,7 @@ The first tranche of delivery for the Clinical Triage Platform programme will de
 The process to final delivery of programme benefits is outlined in the sections in this paper.  The process consists of the following five steps:
 <ol>
 <li>
-NHS Digital will define the scope of tranche 1 – this has been done, and is detailed in section 4 of this paper
+NHS Digital will define the scope of tranche 1 – this has been done, and is detailed in the <a href="#scope-definition">scope definition</a> section
 </li>
 <li>NHS Digital will define and publish a specification (by the end of September 2018) which will allow CDSS and EMS systems to work together.  </li>
 <li>
@@ -96,18 +97,21 @@ This staged release approach allows the initial delivery of CTP to provide the c
 To implement this approach, the architecture must be designed with future growth in mind and enables future increments to “fail fast” without detriment to the existing capability and accommodate inevitable changes to the roadmap towards the target state over time.
 
 ###	Overview
-`table`
 
-<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_evolution_of_ctp.png"><img src="images/ctp_tranche_1_solution_approach_evolution_of_ctp.png" alt="Table 1: Evolution of CTP" title="Table 1: Evolution of CTP" style="width:75%"></a></p>
-
+<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_evolution_of_ctp.png"><img src="images/ctp_tranche_1_solution_approach_evolution_of_ctp.png" alt="Table 1: Evolution of CTP" title="Table 1: Evolution of CTP" style="width:75%"></a>
+<br>
 Table 1: Evolution of CTP
+</p>
+
 
 The CTP roadmap currently has three tranches of delivery, as illustrated below.
 
 ### Tranche 1 – Enable
 
-<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_1.png"><img src="images/ctp_tranche_1_solution_approach_tranche_1.png" alt="Figure 1: Tranche 1" title="Figure 1: Tranche 1" style="width:75%"></a></p>
+<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_1.png"><img src="images/ctp_tranche_1_solution_approach_tranche_1.png" alt="Figure 1: Tranche 1" title="Figure 1: Tranche 1" style="width:75%"></a>
+<br>
 Figure 1: Tranche 1
+</p>
 
 In tranche 1, the initial work to input data for personalisation of triage will be implemented through interoperability standards to provide access to records.  The CDSS triage logic will be decoupled from the Encounter Management Systems.
 
@@ -115,31 +119,39 @@ Personalisation of the triage process will be piloted.
 
 ### Tranche 2 – Improve
 
-<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_2.png"><img src="images/ctp_tranche_1_solution_approach_tranche_2.png" alt="Figure 2: Tranche 2" title="Figure 2: Tranche 2" style="width:75%"></a></p>
+<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_2.png"><img src="images/ctp_tranche_1_solution_approach_tranche_2.png" alt="Figure 2: Tranche 2" title="Figure 2: Tranche 2" style="width:75%"></a>
+<br>
 Figure 2: Tranche 2
+</p>
 
 In tranche 2, the Access to Service Information programme will provide a national appointment broker for dispositions.  Clinical data will be extended through the Access to Records programme to include more sources of clinical information, including local records.  Third party CDSS, compliant to the decoupling API, will be available as an alternative to Pathways.
 
 Predictive Modelling of Patient Risk will be piloted during this phase.
 
 ###	Tranche 3 – Innovate
-<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_3.png"><img src="images/ctp_tranche_1_solution_approach_tranche_3.png" alt="Figure 3: Tranche 3" title="Figure 3: Tranche 3" style="width:75%"></a></p>
+<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_3.png"><img src="images/ctp_tranche_1_solution_approach_tranche_3.png" alt="Figure 3: Tranche 3" title="Figure 3: Tranche 3" style="width:75%"></a>
+<br>
 Figure 3: Tranche 3
+</p>
 
 During the third tranche, triage logic in CDSS will be more widely used by other UEC care settings.  The PMPR service will be available to all services, and updates to clinical content will be driven by innovative processes such as NLP.  Triage outcomes will be easily shared to all UEC end-points, providing a seamless journey for patients as they move from initial contact to resolution.
 
 ## Scope Definition
 The scope definition of tranche 1 of the CTP is given below.  The scope of tranche 1 is the decoupling of the CDSS from the EMS and use of personalised information during triage where available.
 
-<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_1.png"><img src="images/ctp_tranche_1_solution_approach_tranche_1.png" alt="Figure 4: Tranche 1" title="Figure 4: Tranche 1" style="width:75%"></a></p>
+<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_1.png"><img src="images/ctp_tranche_1_solution_approach_tranche_1.png" alt="Figure 4: Tranche 1" title="Figure 4: Tranche 1" style="width:75%"></a>
+<br>
 Figure 4: Tranche 1
+</p>
 
 In tranche 1, the initial work to input data for personalisation of triage will be implemented through interoperability standards to provide access to records.  This is applicable where structured data sets exist.  The CDSS triage logic will be decoupled from the Host Provider systems.  Personalisation of the triage process will be piloted.
 
 ###	Architecture Overview
 
-<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_1_architecture.png"><img src="images/ctp_tranche_1_solution_approach_tranche_1_architecture.png" alt="Figure 4: Tranche 1" title="Figure 4: Tranche 1" style="width:75%"></a></p>
+<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_1_architecture.png"><img src="images/ctp_tranche_1_solution_approach_tranche_1_architecture.png" alt="Figure 4: Tranche 1" title="Figure 4: Tranche 1" style="width:75%"></a>
+<br>
 Figure 5: Tranche 1 Architecture
+</p>
 
 The figure above shows the technical architecture outline of the CTP solution architecture in tranche 1.
 
@@ -183,8 +195,10 @@ The sections below describe the activities being undertaken for each of the plat
 ### CDSS Decoupling
 There are three phases of work in the CDSS decoupling workstream – work to prepare an initial draft of the specification, work to ratify the draft with appropriate groups and then publishing the specification.  This is illustrated in Figure 6 below:
 
-<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach__CDSS_decoupling.png"><img src="images/ctp_tranche_1_solution_approach__CDSS_decoupling.png" alt="Figure 6: CDSS Decoupling" title="Figure 6: CDSS Decoupling" style="width:75%"></a></p>
+<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach__CDSS_decoupling.png"><img src="images/ctp_tranche_1_solution_approach__CDSS_decoupling.png" alt="Figure 6: CDSS Decoupling" title="Figure 6: CDSS Decoupling" style="width:75%"></a>
+<br>
 Figure 6: CDSS Decoupling
+</p>
 
 #### Proofs of Concept
 A PoC to test a decoupled CDSS working with a separate EMS (or test harness) and a second CDSS has been defined and shared with existing CDSS suppliers that support a telephony channel.  The programme will work with as many of the suppliers as possible in parallel to test both existing integration approaches, and the HL7 FHIR standard for CDS interoperability.
@@ -209,7 +223,7 @@ For full details of the Decoupling Proof of Concept, see CDSS Proof of Concept v
 Following the successful proofs of concept, and the other stages below, the specification will be made available for suppliers to develop against.
 
 #### Passing of structured data for personalisation
-The specification for decoupling will cover the data required by the CDSS.  Although most of this information will be supplied by the patient, some may come from existing sources of data (see section 5.2 for full details) and the specification will include this structured data.
+The specification for decoupling will cover the data required by the CDSS.  Although most of this information will be supplied by the patient, some may come from existing sources of data (see the <a href="#personalisation-of-triage">Personalisation of Triage</a> section for full details) and the specification will include this structured data.
 
 #### End user engagement
 The wider user community of service providers and commissioners will be engaged to ensure that the proposed technology specification will meet the operational needs of providers and commissioners.
@@ -224,8 +238,10 @@ The agreed initial release of the specification for CDSS decoupling will be publ
 ### Personalisation of Triage
 The personalisation of triage stream has two elements – one is testing to see if personalising the triage process is possible and leads to improvement, and the other is the identification and testing of structured patient data sources’.
 
-<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_personalisation_of_triage.png"><img src="images/ctp_tranche_1_solution_approach_personalisation_of_triage.png" alt="Figure 7: Personalisation of Triage" title="Figure 7: Personalisation of Triage" style="width:75%"></a></p>
+<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_personalisation_of_triage.png"><img src="images/ctp_tranche_1_solution_approach_personalisation_of_triage.png" alt="Figure 7: Personalisation of Triage" title="Figure 7: Personalisation of Triage" style="width:75%"></a>
+<br>
 Figure 7: Personalisation of Triage
+</p>
 
 
 #### Proof of Concept
@@ -272,12 +288,12 @@ The key areas that will be addressed during the process are outlined below.
 Technical assurance, performed by NHS Digital, will test that a system is conformant with the specification as published.  Each specification will include the necessary assurance process.
 
 ### Clinical Assurance
-There are two main areas for clinical assurance. The first relates to assurance of the clinical content of the CDSS and its use in practice and the second relates to compliance with the relevant regulations and standards e.g. `Medical Device Regulations and DCB0129  Clinical Risk Management: its Application in the Manufacture of Health IT Systems`.
+There are two main areas for clinical assurance. The first relates to assurance of the clinical content of the CDSS and its use in practice and the second relates to compliance with the relevant regulations and standards e.g. <a href="https://www.gov.uk/guidance/medical-devices-eu-regulations-for-mdr-and-ivdr">Medical Device Regulations</a> and <a href="https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems">DCB0129 Clinical Risk Management: its Application in the Manufacture of Health IT Systems</a>.
 
 The clinical assurance process will be agreed by the Digital Urgent and Emergency Care (DUEC) board.
 
 ### IG Assurance
-Information Governance assurance covers the information security and standards for the system components.  IG assurance will be aligned with the NHS Data Security & Protection Toolkit, and must also be compliant with relevant legislation – including GDPR, and patient consent to share.
+Information Governance assurance covers the information security and standards for the system components.  IG assurance will be aligned with the <a href="https://digital.nhs.uk/data-and-information/looking-after-information/data-security-and-information-governance/data-security-and-protection-toolkit">NHS Data Security & Protection Toolkit</a>, and must also be compliant with relevant legislation – including GDPR, and patient consent to share.
 
 ### Commercial assurance
 In order to be listed on the framework, the supplier will need to undergo appropriate commercial assurance.  This is being led by the CTP team, and will be aligned with existing commercial assurance processes used within the NHS.
@@ -330,14 +346,14 @@ NHS Digital are a system supplier (and also perform service management & release
 NHS Digital deliver technical standards and capabilities to enable health and care professionals to share and access patient information across all care settings.
 <ul>
 	<li>
-		https://digital.nhs.uk/about-nhs-digital/our-work/transforming-health-and-care-through-technology/integrated-care-domain-d/interoperability-and-architecture
+		<a href="https://digital.nhs.uk/about-nhs-digital/our-work/transforming-health-and-care-through-technology/integrated-care-domain-d/interoperability-and-architecture">https://digital.nhs.uk/about-nhs-digital/our-work/transforming-health-and-care-through-technology/integrated-care-domain-d/interoperability-and-architecture</a>
 	</li>
 </ul>
 ### INTEROpen community
 An OPEN collaboration of individuals, industry, standards organisations and health and care providers, who have agreed to work together to accelerate the development of open standards for interoperability in the health and social care sector.
 <ul>
 	<li>
-		http://www.interopen.org/standards-development-overview/
+		<a href="http://www.interopen.org/standards-development-overview/">http://www.interopen.org/standards-development-overview/</a>
 	</li>
 </ul>
 
@@ -345,24 +361,24 @@ An OPEN collaboration of individuals, industry, standards organisations and heal
 The NHS England Interoperability Handbook is one of a number of resources being published by NHS England to support the Interoperability Strategy. It includes criteria by which procured and commissioned solutions should be assessed, including openness.
 <ul>
 	<li>
-		https://www.england.nhs.uk/wp-content/uploads/2017/03/interoperabilty-handbk.pdf
+		<a href="https://www.england.nhs.uk/wp-content/uploads/2017/03/interoperabilty-handbk.pdf">https://www.england.nhs.uk/wp-content/uploads/2017/03/interoperabilty-handbk.pdf</a>
 	</li>
 	<li>
-		https://www.england.nhs.uk/digitaltechnology/info-revolution/health-and-care-data/interoperability/
+		<a href="https://www.england.nhs.uk/digitaltechnology/info-revolution/health-and-care-data/interoperability/">https://www.england.nhs.uk/digitaltechnology/info-revolution/health-and-care-data/interoperability/</a>
 	</li>
 </ul>
 ### GOV.UK
 A cabinet office policy paper published in April 2018 explains how the government selects open standards for software interoperability, data and document formats in government IT. It also guides departments on how to implement open standards.
 <ul>
 <li>
-	https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles
+	<a href="https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles">https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles</a>
 </li>
 </ul>
 ### The open group
 The Open Group use collaborative working groups to develop open, vendor-neutral, technology standards. Their processes for developing standards is open and published:
 <ul>
 	<li>
-		https://www.opengroup.org/standardsprocess/
+		<a href="https://www.opengroup.org/standardsprocess/">https://www.opengroup.org/standardsprocess/</a>
 	</li>
 </ul>
 
@@ -372,7 +388,8 @@ ISA<sup>2</sup> the European Commission programme supporting the development of 
 	<li>
 		The European Interoperability Framework (EIF)<br>
 		Provides specific guidance on how to set up interoperable digital public services, including recommendations on improving governance of interoperability services, establish cross-organisational relationships, and streamline processes supporting end-to-end digital services.<br>
-		<a href="https://ec.europa.eu/isa2/eif_en https://ec.europa.eu/isa2/sites/isa/files/eif_brochure_final.pdf">https://ec.europa.eu/isa2/eif_en https://ec.europa.eu/isa2/sites/isa/files/eif_brochure_final.pdf</a>
+		<a href="https://ec.europa.eu/isa2/eif_en">https://ec.europa.eu/isa2/eif_en</a>
+		<br><a href="https://ec.europa.eu/isa2/sites/isa/files/eif_brochure_final.pdf">https://ec.europa.eu/isa2/sites/isa/files/eif_brochure_final.pdf</a>
 	</li>
 
 <li>
@@ -385,19 +402,20 @@ ISA<sup>2</sup> the European Commission programme supporting the development of 
 ## Appendix C.	General Process
 The following process steps cover the generic solution approach, which is followed for each workstream, in each tranche.  The rest of the document covers the detailed activities in each step for CTP tranche 1.  The process is illustrated in Figure 8:
 
-<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_1_solution_approach_process.png"><img src="images/ctp_tranche_1_solution_approach_tranche_1_solution_approach_process.png" alt="Figure 8: Solution Approach Process" title="Figure 8: Solution Approach Process" style="width:75%"></a></p>
-Figure 8: Solution Approach Process
+<p style="text-align:center;"><a href="images/ctp_tranche_1_solution_approach_tranche_1_solution_approach_process.png"><img src="images/ctp_tranche_1_solution_approach_tranche_1_solution_approach_process.png" alt="Figure 8: Solution Approach Process" title="Figure 8: Solution Approach Process" style="width:75%"></a>
+<br>Figure 8: Solution Approach Process
+</p>
 
 
 ### Define Scope
-The CTP programme will define the scope of the tranche of delivery.  This will be done using the industry standard approach aligned to TOGAF.  In general terms, the scope will be defined based on a logical progression towards the final state of the solution, with a feasible delivery approach, meeting appropriate requirements to deliver benefits.
+The CTP programme will define the scope of the tranche of delivery.  This will be done using the industry standard approach aligned to The Open Group Architecture Framework (TOGAF).  In general terms, the scope will be defined based on a logical progression towards the final state of the solution, with a feasible delivery approach, meeting appropriate requirements to deliver benefits.
 
 Given the scope of the delivery tranche, the programme will also define which platform components and workstreams are in scope.  A platform component is typically a single system or application, but may sometimes be just part of a system if the system is very large.
 
 ### Create Specifications
 For each platform component in scope, the CTP programme will develop a set of specifications which can be used by system suppliers to develop the components needed by the platform.  The process of developing specifications may vary depending on the component in scope.  There will typically be multiple groups involved in the development of specifications, including the CTP programme, system suppliers, service providers and standards groups such as InterOPEN and PRSB.
 
-The specifications will be published to the market following normal process – typically this will be on the developer.nhs.uk website.
+The specifications will be published to the market following the normal process – typically this will be on the developer.nhs.uk website.
 
 ### Develop Platform components
 Following the publication of the specifications, suppliers will develop platform components based on the specifications.  Suppliers will also develop to other requirements, as defined in their own market engagement processes.
@@ -454,7 +472,7 @@ The approach is defined and will be adapted to each tranche based on the followi
 		</td>
 	</tr>
 </table>
-
+<br>
 
 
 <table style="width:90%">
@@ -498,7 +516,7 @@ The approach is defined and will be adapted to each tranche based on the followi
 		</td>
 	</tr>
 </table>
-
+<br>
 
 
 <table style="width:90%">
@@ -540,7 +558,7 @@ The approach is defined and will be adapted to each tranche based on the followi
 		</td>
 	</tr>
 </table>
-
+<br>
 
 <table style="width:90%">
 	<thead>
@@ -579,7 +597,7 @@ The approach is defined and will be adapted to each tranche based on the followi
 		</td>
 	</tr>
 </table>
-
+<br>
 
 
 <table style="width:90%">
