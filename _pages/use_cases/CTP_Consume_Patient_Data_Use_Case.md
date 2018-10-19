@@ -53,7 +53,7 @@ One or more CDSS used by the EMS will support Clinicians and Non-Clinicians in a
 Using patient data to improve triage is not a new concept with some 111 service providers having previously provided patient data to their clinicians for triage purposes. Data sharing between healthcare service providers in IUC has been achieved in the past but it has been limited to local solutions. The CTP approach is unique in that it is an endeavour to provide EMS and CDSS integration with patient data sets on multiple levels both nationally and locally, and it also introduces the automated consumption of patient data by the CDSS.
 
 ### Assumptions
--   System suppliers should use a standardised mechanism to identify patients, it is anticipated that the systems will use the [Personal Demographics Service (PDS)]({{ site.baseurl }}{% link _pages/national_services/personal_demographics_service.md %}) to uniquely identify the patient and link them to their available care records.
+-   System suppliers should use a standardised mechanism to identify patients, it is anticipated that the systems will use the [Personal Demographics Service (PDS)]({{ personal_demographics_service.md %}) to uniquely identify the patient and link them to their available care records.
 -   Data sharing will be facilitated at national level.
 -   Rules in the integration service must be respected by the EMS, e.g. sealed and sensitive records will not be shared, but the system will be made aware that they exist.
 -   The future UEC encounter management systems will support the use of more than one CDSS in any service setting to support specialist triage and clinical consultation needs.
