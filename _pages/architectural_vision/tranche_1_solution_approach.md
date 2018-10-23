@@ -66,7 +66,7 @@ The process to final delivery of programme benefits is outlined in the sections 
 <li>
 NHS Digital will define the scope of tranche 1 – this has been done, and is detailed in the <a href="#scope-definition">scope definition</a> section
 </li>
-<li>NHS Digital will define and publish a specification (by the end of September 2018) which will allow CDSS and EMS systems to work together.  </li>
+<li>NHS Digital will develop a specification with suppliers which will allow CDSS and EMS systems to work together.</li>
 <li>
 Following the publishing of this specification, system suppliers will be able to develop new versions of their applications (or entirely new applications) in line with the new specification.
 </li>
@@ -216,7 +216,7 @@ This criterion will be met if at least one CDSS supplier demonstrates the capabi
 
 Following the conclusion of the PoCs, an assessment exercise will drive the first draft of the specification.
 
-For full details of the Decoupling Proof of Concept, see CDSS Proof of Concept v1.0.
+For full details of the Decoupling Proof of Concept, see <a href="_pages/architectural_vision/CDSS_Proof_of_Concept_FINAL_v.1.0.docx">CDSS Proof of Concept v1.0</a>.
 
 Following the successful proofs of concept, and the other stages below, the specification will be made available for suppliers to develop against.
 
@@ -253,7 +253,8 @@ The primary success criteria for the PoC will be establishing which of the requi
 The POC should establish the Personalised Data Specifications baseline for CTP against which future CDSS should be implemented. These data specifications will incorporate the learning from integrating structured records within the test environment and the modification of triage pathways or consultations based on patient data within the supplier CDSS.  Further details on the format for this specification will be contained within the CTP Data Specification documentation.
 ##### Personalised Triage Pathways
 The PoC should look to demonstrate which care pathways and consultation scenarios exhibit the best examples for the incorporation of personalised data to directly inform triage. There is no quantity associated with this success criteria although it is expected there will be a number of pathways identified which can then be either examined in future PoCs or built upon by suppliers as part of their product offering.  Identifying the care pathways amenable to personalisation will drive market innovation and the development of new products.
-For full details of the Personalisation Proof of Concept, see Personalised Triage SUPPLIER Proof of Concept v1.0
+For full details of the Personalisation Proof of Concept, see <a href="/_pages/architectural_vision/Personalised_Triage_SUPPLIER_Proof_of_Concept_v2.0.docx">Personalised Triage SUPPLIER Proof of Concept v2.0</a>
+
 #### Pilots of existing structured data sources
 The programme is working with a set of existing providers of structured clinical data (including the Medical Interoperability Gateway and Redwood technology) to identify how clinical structured data that could be of use in improving the triage process (such as conditions) can be made available to service provider implementations.  This will also feed into the initial specification.
 #### Acccess to Records
