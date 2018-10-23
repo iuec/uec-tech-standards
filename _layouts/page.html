@@ -45,8 +45,12 @@ layout: default
    {% include twittershare.html %}
 
     {% unless page.toc == false %}
-    {% include toc.html %}
+      {% include toc.html %}
     {% endunless %}
+
+    {% if page.toc_h3 == true %}
+      {% include toc_h3.html %}
+    {% endif %}
 
   {{content}}
 

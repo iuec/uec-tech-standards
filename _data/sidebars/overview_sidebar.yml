@@ -71,6 +71,17 @@ entries:
         url: /live_wait_times.html
         output: web, pdf
 
+  - title: Architectural Vision
+    output: web
+    folderitems:
+      - title: Overview
+        url: /architectural_vision.html
+        output: web, pdf
+
+      - title: Tranche 1 Solution Approach
+        url: /tranche_1_solution_approach.html
+        output: web, pdf
+
   - title: Technical Specifications
     output: web
     folderitems:
