@@ -7,4 +7,4 @@ toc: false
 folder: architectural_vision
 ---
 
-{% include note-notpublished.html %}
+The CTP architecture will be developed across a series of delivery tranches.  The tranches will build to the end state of the platform in a practical and understandable way.  The architecture vision for the first delivery tranche is available below
