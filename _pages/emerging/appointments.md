@@ -6,4 +6,7 @@ toc: false
 folder: emerging
 ---
 
-{% include note-notpublished.html %}
+The UEC appointment booking standard is an open standard supporting booking across many care settings.
+It utilises the CareConnect FHIR messaging standard and is being published in the form of a website.
+
+[Access the appointment booking API documentation](https://developer.nhs.uk/apis/uec-appointments/)
