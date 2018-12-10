@@ -24,6 +24,18 @@ entries:
     - title: Ambulance Requests
       url: /ambulance_requests.html
       output: web, pdf
+
+      subfolders:
+      - title: Directory of Services
+        output: web
+        subfolderitems:
+        - title: DoS in NHS 111
+          url: /dos_in_iuc.html
+          output: web
+        - title: Endpoint Location
+          url: /endpoint_location.html
+          output: web, pdf
+
     - title: Electronic Prescribing
       url: /electronic_prescribing.html
       output: web, pdf
@@ -33,9 +45,18 @@ entries:
     - title: Patient Identification
       url: /personal_demographics_service.html
       output: web, pdf
-    - title: Post Event Messaging
-      url: /post_event_messaging.html
-      output: web, pdf
+
+      subfolders:
+      - title: Post Event Messaging
+        output: web
+        subfolderitems:
+        - title: Post Event Messaging
+          url: /post_event_messaging.html
+          output: web, pdf
+        - title: PEM Suppression
+          url: /pem_suppression.html
+          output: web, pdf
+
     - title: Referrals / Transfer of Care
       url: /referrals.html
       output: web, pdf
@@ -92,30 +113,33 @@ entries:
     #   url: /tech_non_func_requirements.html
     #   output: web
 
-      subfolders:
-      - title: Directory of Services
-        output: web
-        subfolderitems:
-        - title: DoS in NHS 111
-          url: /dos_in_iuc.html
-          output: web
+      # subfolders:
+      # - title: Directory of Services
+      #   output: web
+      #   subfolderitems:
+      #   - title: DoS in NHS 111
+      #     url: /dos_in_iuc.html
+      #     output: web
 
+      subfolders:
       - title: ITK Messaging
         output: web
         subfolderitems:
-        - title: Endpoint Location
-          url: /endpoint_location.html
-          output: web, pdf
+        - title: Overview
+          url: /itk_overview.html
+          output: web
+        - title: Current ITK messaging within Urgent and Emergency Care
+          url: /itk_messaging_within_uec.html
+          output: web
+        - title: Release Candidates for ITK messaging within Urgent and Emergency Care
+          url: /itk_release_candidates_uec.html
+          output: web
         - title: Renewing Certificates
           url: /renewing_certs.html
           output: web
-        - title: PEM Suppression
-          url: /pem_suppression.html
-          output: web, pdf
-        - title: Troubleshooting
-          output: web
-          url: /itk_troubleshooting.html
-
+        # - title: Troubleshooting
+        #   output: web
+        #   url: /itk_troubleshooting.html
 
 
   - title: Assurance
