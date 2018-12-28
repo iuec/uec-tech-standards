@@ -56,14 +56,6 @@ The resource above provides a high-level introduction to ITK and also describes 
 ### Compatibility maturity
 Interoperability between systems is impacted by having differing levels of maturity at the ITK CDA Sender and Receiving applications.
 
-`table`
-<thead>
-<tr>
-  <th colspan="3">Flow Identifier:  Patient Record has been found but is not accessible</th>
-</tr>
-</thead>
-
-
 <style media="screen">
   .darkgrey{background-color:#777!important;color: white;}
   .lightcyan{background-color:#daeef3;}
@@ -73,8 +65,8 @@ Interoperability between systems is impacted by having differing levels of matur
   .cellwidth100 td{
     width:100px;
   }
-  .text-center{
-    text-align:center!important
+  .text-center td{
+    text-align:center;
   }
 </style>
 
@@ -104,6 +96,9 @@ Interoperability between systems is impacted by having differing levels of matur
     <td>View body, processes coded text sections and process coded entries</td>
   </tr>
 </table>
+
+
+
 
 <table class="cellwidth100 text-center" style="">
   <tr class="darkgrey">
