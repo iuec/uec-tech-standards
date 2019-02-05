@@ -1,6 +1,6 @@
 entries:
 - title: Urgent & Emergency Care Interoperability & Technical Standards
-  version: 2.0.0RC
+  version: 2.0.1 RC
   levels: one
   folders:
 
@@ -11,153 +11,102 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
-    # - title: Using this site
-    #   url: /using_this_site.html
-    #   output: web
-    # - title: Getting Started
-    #   url: /getting_started.html
-    #   output: web, pdf
 
-  - title: Current Capabilities
+  - title: Business capabilities
     output: web
     folderitems:
-    - title: Ambulance Requests
-      url: /ambulance_requests.html
-      output: web, pdf
-
-      subfolders:
-      - title: Directory of Services
-        output: web
-        subfolderitems:
-        - title: DoS in NHS 111
-          url: /dos_in_iuc.html
-          output: web
-        - title: Endpoint Location
-          url: /endpoint_location.html
-          output: web, pdf
-
-    - title: Electronic Prescribing
-      url: /electronic_prescribing.html
-      output: web, pdf
-    - title: Intelligent Data Tool
-      url: /intelligent_data_tool.html
-      output: web, pdf
-    - title: Patient Identification
+    - title: Patient identification
       url: /personal_demographics_service.html
       output: web, pdf
 
       subfolders:
-      - title: Post Event Messaging
+
+      - title: Access patient information
         output: web
         subfolderitems:
+        - title: Consume Patient Data Use Case
+          url: /CTP_Consume_Patient_Data_Use_Case.html
+          output: web
+        - title: Summary Care Records
+          url: /summary_care_record.html
+          output: web, pdf
+
+      - title: Clinical consultation
+        output: web
+        subfolderitems:
+        - title: Tranche 1 Solution Approach
+          url: /tranche_1_solution_approach.html
+          output: web, pdf
+
+      - title: Complete encounter
+        output: web
+        subfolderitems:
+        - title: Ambulance Requests
+          url: /ambulance_requests.html
+          output: web, pdf
+        - title: Appointment booking
+          url: /appointments.html
+          output: web, pdf
+        - title: DoS in NHS 111
+          url: /dos_in_iuc.html
+          output: web
+        - title: Electronic Prescribing
+          url: /electronic_prescribing.html
+          output: web, pdf
+        - title: Endpoint Location
+          url: /endpoint_location.html
+          output: web, pdf
+        - title: Referral and transfer of care
+          url: /referrals.html
+          output: web
+        - title: Live wait times
+          url: /live_wait_times.html
+          output: web, pdf
+
+      - title: Outcome data
+        output: web
+        subfolderitems:
+        - title: Intelligent Data Tool
+          url: /intelligent_data_tool.html
+          output: web, pdf
+        - title: Minimum Data Set
+          url: /iuc_minimum_dataset.html
+          output: web, pdf
         - title: Post Event Messaging
           url: /post_event_messaging.html
           output: web, pdf
         - title: PEM Suppression
           url: /pem_suppression.html
           output: web, pdf
+        - title: Repeat Caller Service
+          url: /repeat_caller_service.html
+          output: web, pdf
 
-    - title: Referrals / Transfer of Care
-      url: /referrals.html
-      output: web, pdf
-    - title: Repeat Caller Service
-      url: /repeat_caller_service.html
-      output: web, pdf
-    - title: Summary Care Records
-      url: /summary_care_record.html
-      output: web, pdf
-
-  - title: Emerging Capabilities
+  - title: Interoperability
     output: web
     folderitems:
-      # - title: Clinical Decision Support Systems
-      #   url: /cdss.html
-      #   output: web, pdf
-          - title: Appointment booking
-            url: /appointments.html
-            output: web, pdf
-      # - title: Live wait times
-      #   url: /live_wait_times.html
-      #   output: web, pdf
-
-        # subfolders:
-        # - title: Access to patient records
-        #   output: web
-        #   subfolderitems:
-          # - title: Overview
-          #   url: /access_to_records.html
-          #   output: web
-          - title: Consume Patient Data Use Case
-            url: /CTP_Consume_Patient_Data_Use_Case.html
-            output: web
-
-  - title: Architectural Vision
-    output: web
-    folderitems:
-      - title: Overview
-        url: /architectural_vision.html
-        output: web, pdf
-
-      - title: Tranche 1 Solution Approach
-        url: /tranche_1_solution_approach.html
-        output: web, pdf
-
-  - title: Technical Specifications
-    output: web
-    folderitems:
-    - title: Minimum Data Set
-      url: /iuc_minimum_dataset.html
-      output: web, pdf
-
-    # - title: Non-functional Requirements
-    #   url: /tech_non_func_requirements.html
-    #   output: web
-
-      # subfolders:
-      # - title: Directory of Services
-      #   output: web
-      #   subfolderitems:
-      #   - title: DoS in NHS 111
-      #     url: /dos_in_iuc.html
-      #     output: web
-
-      subfolders:
-      - title: ITK Messaging
-        output: web
-        subfolderitems:
-        - title: Overview
-          url: /itk_overview.html
-          output: web
-        - title: Current ITK messaging within Urgent and Emergency Care
-          url: /itk_messaging_within_uec.html
-          output: web
-        - title: Release Candidates for ITK messaging within Urgent and Emergency Care
-          url: /itk_release_candidates_uec.html
-          output: web
-        - title: Renewing Certificates
-          url: /renewing_certs.html
-          output: web
-        # - title: Troubleshooting
-        #   output: web
-        #   url: /itk_troubleshooting.html
-
-
-  - title: Assurance
-    output: web
-    folderitems:
-    - title: Overview
-      url: /assurance_overview.html
+    - title: ITK Messaging
+      url: /itk_overview.html
       output: web
+    - title: Current ITK messaging within UEC
+      url: /itk_messaging_within_uec.html
+      output: web
+    - title: Release Candidates for ITK messaging within UEC
+      url: /itk_release_candidates_uec.html
+      output: web
+    - title: Renewing Certificates
+      url: /renewing_certs.html
+      output: web
+    - title: Troubleshooting
+      output: web
+      url: /itk_troubleshooting.html
+
+  - title: Assurance and getting live
+    output: web
+    folderitems:
     - title: Testing Ambulance Messages
       output: web
       url: /testing_ambulance_messages.html
-
-  - title: Getting Live
-    output: web
-    folderitems:
-    - title: Overview
-      url: /getting_live_overview.html
-      output: web
 
   - title: Help and support
     output: web
@@ -165,9 +114,6 @@ entries:
     - title: Contact Details
       url: /contact.html
       output: web
-    # - title: Frequently asked questions
-    #   url: /faq.html
-    #   output: web
     - title: Glossary
       url: /overview_glossary.html
       output: web
