@@ -1,1 +1,1 @@
-# dos-api-docs
+# UEC Tech Standards
