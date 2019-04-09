@@ -85,21 +85,33 @@ entries:
   - title: Interoperability
     output: web
     folderitems:
-    - title: ITK Messaging
-      url: /itk_overview.html
-      output: web
-    - title: Current ITK messaging within UEC
-      url: /itk_messaging_within_uec.html
-      output: web
-    - title: Release Candidates for ITK messaging within UEC
-      url: /itk_release_candidates_uec.html
-      output: web
-    - title: Renewing Certificates
-      url: /renewing_certs.html
-      output: web
-    - title: Troubleshooting
-      output: web
-      url: /itk_troubleshooting.html
+    - title: Appointment booking API
+      url: /appointments.html
+      output: web, pdf
+    - title: Clinical Decision Support API
+      url: clinical_decision_support_api.html
+      output: web, pdf
+
+      subfolders:
+
+      - title: ITK Messaging
+        output: web
+        subfolderitems:
+        - title: ITK overview
+          url: /itk_overview.html
+          output: web
+        - title: Current ITK messaging within UEC
+          url: /itk_messaging_within_uec.html
+          output: web
+        - title: Release Candidates for ITK messaging within UEC
+          url: /itk_release_candidates_uec.html
+          output: web
+        - title: Renewing Certificates
+          url: /renewing_certs.html
+          output: web
+        - title: Troubleshooting
+          output: web
+          url: /itk_troubleshooting.html
 
   - title: Assurance and getting live
     output: web
