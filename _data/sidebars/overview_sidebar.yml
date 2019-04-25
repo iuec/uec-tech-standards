@@ -88,11 +88,19 @@ entries:
     - title: Appointment booking API
       url: /appointments.html
       output: web, pdf
-    - title: Clinical Decision Support API
-      url: clinical_decision_support_api.html
-      output: web, pdf
 
       subfolders:
+
+      - title: Clinical Decision Support API
+        output: web, pdf
+
+        subfolderitems:
+        - title: Clinical Decision Support API
+          url: clinical_decision_support_api.html
+          output: web, pdf
+        - title: Demo implementation
+          url: cds-api-demo-implementation.html
+          output: web, pdf
 
       - title: ITK Messaging
         output: web
