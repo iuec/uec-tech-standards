@@ -10,15 +10,13 @@ folder: emerging
 For suppliers interested in understanding more about the CDS-API, a working demo of an Encounter Management System compliant to the [CDS-API standard](https://developer.nhs.uk/apis/cds-api/) is available at [http://uecdi-tom-emsui.s3-website.eu-west-2.amazonaws.com](http://uecdi-tom-emsui.s3-website.eu-west-2.amazonaws.com).
 
 ### Credentials to access the solution
-`TODO: confirm credentials`
-- Username: Guest
-- Password: xxx
+- Username: nhs-user
+- Password: password
 
 ### Using the application
 
 Once logged in, the home page will be displayed
 
-`TODO: Update with current image`
 <p style="text-align:center;"><a href="images/ems-demo-homepage.png"><img src="images/ems-demo-homepage.png" alt="The EMS Test Harness home page" title="The EMS Test Harness home page" style="max-width:100%"></a></p>
 
 This gives a selection of patients and CDSS suppliers. The list of suppliers can be changed by going to Admin > Manage CDSS Suppliers. New suppliers can be added, removed or altered (using the Edit button). New scenarios can be added when editing a supplier but please note that new scenarios will not work unless the scenario is also added into the supplier stub database.
