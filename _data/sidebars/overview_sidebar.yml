@@ -98,7 +98,7 @@ entries:
         - title: Clinical Decision Support API
           url: clinical_decision_support_api.html
           output: web, pdf
-        - title: Demo implementation
+        - title: CDS API Demo implementation
           url: cds-api-demo-implementation.html
           output: web, pdf
 
