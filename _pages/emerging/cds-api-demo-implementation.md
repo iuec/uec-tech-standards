@@ -55,8 +55,9 @@ Update the `src/main/resources/application.properties` file to point to the data
 
 #### Credentials to access the EMS solution
 
-Username: admin
-Password: password
+- Username: admin
+- Password: password
+
 Logging in as admin will provide access to an Admin menu with extra test harness configuration options such as user management, CDSS Supplier management, environment settings and audit logs.
 
 
