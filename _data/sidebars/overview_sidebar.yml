@@ -34,8 +34,14 @@ entries:
       - title: Clinical consultation
         output: web
         subfolderitems:
-        - title: Tranche 1 Solution Approach
-          url: /tranche_1_solution_approach.html
+        - title: Clinical Decision Support API Overview
+          url: /cds-api-overview.html
+          output: web, pdf
+        - title: CDS API developer guidelines
+          url: /cds-api-developer-guidelines.html
+          output: web, pdf
+        - title: CDS API message examples
+          url: /cds-api-message-examples.html
           output: web, pdf
 
       - title: Complete encounter

@@ -12,12 +12,16 @@ For suppliers interested in understanding more about the CDS-API, working demos 
 
 The EMS is responsible for invoking the decision support process on the CDSS. The EMS will typically also manage elements like user authentication, workflow and user interactions.
 
-The EMS Test Harness application aims to provide the minimum functionality required be compliant to the CDS API specification. The EMS MUST be able to:
+The EMS Test Harness application aims to provide the minimum functionality required be compliant to the CDS API specification.
+
+The EMS MUST be able to:
 
 * Initiate the selection of a `ServiceDefinition`
 * Initiate the evaluation of a `ServiceDefinition`
 * Read appropriate resources from the CDSS (e.g. `Questionnaire`)
 * Write appropriate resources (e.g. `QuestionnaireResponse`)
+
+<br>
 The Encounter Management System MAY:
 
 * Write resources which are not core (e.g. `Condition`)
@@ -28,7 +32,7 @@ This repository is in active development. To access the version compliant to 1.0
 
 ### EMS Test Harness - setup and build instructions
 
-#### Pre-requsities
+#### Pre-requisites
 
 Install nodejs and npm if they are not already on your machine.
 
@@ -67,13 +71,13 @@ Once logged in, the home page will be displayed
 
 <p style="text-align:center;"><a href="images/ems-demo-homepage.png"><img src="images/ems-demo-homepage.png" alt="The EMS Test Harness home page" title="The EMS Test Harness home page" style="max-width:100%"></a></p>
 
-This gives a selection of patients and CDSS suppliers. The list of suppliers can be changed by going to Admin > Manage CDSS Suppliers. New suppliers can be added, removed or altered (using the Edit button). New scenarios can be added when editing a supplier but please note that new scenarios will not work unless the scenario is also added into the supplier stub database.
+This gives a selection of patients and CDSS suppliers. The list of suppliers can be changed by going to Admin > Manage CDSS Suppliers. New suppliers can be added, removed or altered (using the Edit button). New scenarios can be added when editing a supplier but please note that new scenarios will not work unless the scenario is also added into the supplier CDSS database.
 
 To run through a scenario you must
 - Begin on the Home page
 - Select a patient by clicking on one of their names
-- Select a test stub
-- Once a stub is selected the user is given a list of service definitions
+- Select a test CDSS
+- Once a CDSS is selected the user is given a list of service definitions
 - Select the service definition you wish to run and click the Launch button.
 
 When running through a scenario you will be presented with a series of questions. Answer the questions and click Continue until the scenario ends. Previous answers may be amended using the Back button. When the scenario ends the user is shown a suggested action or care plan. Start over by clicking on the Home link at the top of the page and selecting a new patient and supplier.
