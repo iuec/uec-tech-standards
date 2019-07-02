@@ -8,29 +8,29 @@ folder: business_capabilities
 
 ## General
 ### Should I send interim (draft) results?
-There can be value in the CDSS providing an early view of the decision, even when more information would help to refine the decision.  This can be done by populating the result element of the GuidanceResponse, but marking the status as ‘draft’.  This enables the EMS to advise the user, who can then act appropriately, according to local process.
+There can be value in the CDSS providing an early view of the decision, even when more information would help to refine the decision.  This can be done by populating the result element of the `GuidanceResponse`, but marking the status as ‘draft’.  This enables the EMS to advise the user, who can then act appropriately, according to local process.
 
 ### What happens if a patient has multiple presenting conditions?
-If a patient has multiple presenting conditions, each of which is managed by a separate ServiceDefinition, then the EMS can invoke more than one ServiceDefinition evaluation and these can be processed in parallel.  From the CDSS perspective, each is a separate journey, and it is up to the EMS to manage the presentation of information to the user.
+If a patient has multiple presenting conditions, each of which is managed by a separate `ServiceDefinition`, then the EMS can invoke more than one `ServiceDefinition` evaluation and these can be processed in parallel.  From the CDSS perspective, each is a separate journey, and it is up to the EMS to manage the presentation of information to the user.
 
 ### Can I make a referral request while continuing the triage?  For example, dispatching an ambulance?
-Yes, this can be done by populating the result, and setting the status of the result to final, while setting the status of the GuidanceResponse to dataRequested or dataRequired.  If the referral request is also the end of the triage, then the GuidanceResponse.status will be final.
+Yes, this can be done by populating the result, and setting the status of the result to final, while setting the status of the `GuidanceResponse` to dataRequested or dataRequired.  If the referral request is also the end of the triage, then the `GuidanceResponse.status` will be final.
 
 ### As the CDSS, can I move the user to a different journey?
-Yes.  The CDSS may have constructed internal logic such that a certain set of answers in a journey mean that the current ServiceDefinition is no longer appropriate, and that a different ServiceDefinition should be used.  For example, a patient may have started on a ServiceDefinition based on a presenting complaint of joint pain, but the patient’s answers indicate that the problem is more serious, and that a  ServiceDefinition designed for broken bones is more appropriate.  When this happens, the CDSS can direct the EMS to a new ServiceDefinition by sending back an ActivityDefinition in the GuidanceResponse, where the ActivityDefinition has the trigger of the new ServiceDefinition (which can then be found by the EMS).
+Yes.  The CDSS may have constructed internal logic such that a certain set of answers in a journey mean that the current `ServiceDefinition` is no longer appropriate, and that a different `ServiceDefinition` should be used.  For example, a patient may have started on a `ServiceDefinition` based on a presenting complaint of joint pain, but the patient’s answers indicate that the problem is more serious, and that a `ServiceDefinition` designed for broken bones is more appropriate.  When this happens, the CDSS can direct the EMS to a new `ServiceDefinition` by sending back an `ActivityDefinition` in the `GuidanceResponse`, where the `ActivityDefinition` has the trigger of the new `ServiceDefinition` (which can then be found by the EMS).
 
 ## Evaluation
 ### How do I start the decision support process?
-Asking a Clinical Decision Support System (CDSS) for a decision is done by invoking the $evaluate operation on a ServiceDefinition.  A CDSS will publish at least one ServiceDefinition, and can publish many different ServiceDefinitions – each of which is appropriate for a different clinical decision.  The CDSS will send back a GuidanceResponse as the reply to an $evaluate operation.
+Asking a Clinical Decision Support System (CDSS) for a decision is done by invoking the $evaluate operation on a `ServiceDefinition`.  A CDSS will publish at least one `ServiceDefinition`, and can publish many different `ServiceDefinition`s` – each of which is appropriate for a different clinical decision.  The CDSS will send back a `GuidanceResponse` as the reply to an $evaluate operation.
 
-### How do I know which ServiceDefinition to choose?
-When the CDSS publishes a ServiceDefinition, the ServiceDefinition will have elements which describe how the ServiceDefinition can be used.  The description of where in the clinical process a ServiceDefinition sits is described in the ServiceDefinition.trigger.  This element will hold all the data conditions which need to be satisfied for the ServiceDefinition to be chosen.
+### How do I know which `ServiceDefinition` to choose?
+When the CDSS publishes a `ServiceDefinition`, the `ServiceDefinition` will have elements which describe how the `ServiceDefinition` can be used.  The description of where in the clinical process a `ServiceDefinition` sits is described in the `ServiceDefinition.trigger`.  This element will hold all the data conditions which need to be satisfied for the `ServiceDefinition` to be chosen.
 
-### What if there are multiple ServiceDefinitions that fit the data available?
-During a given patient journey, there may be points where there is more than one ServiceDefinition available.  Any one CDSS should avoid this situation, but if a provider has more than one CDSS available, there may be situations where more than one CDSS can provide an appropriate ServiceDefinition.  In this case, it will be up to local providers on how to choose between the available ServiceDefinitions.
+### What if there are multiple `ServiceDefinition`s that fit the data available?
+During a given patient journey, there may be points where there is more than one `ServiceDefinition` available.  Any one CDSS should avoid this situation, but if a provider has more than one CDSS available, there may be situations where more than one CDSS can provide an appropriate `ServiceDefinition`.  In this case, it will be up to local providers on how to choose between the available `ServiceDefinition```s`.
 
 ### What if the CDSS needs more information?
-In a typical UEC triage journey, the CDSS will need to get information from the patient by asking questions.  This is provided by putting the next question to be asked in the GuidanceResponse, and the Encounter Management System (EMS) providing the patient’s answer in the next $evaluate operation.
+In a typical UEC triage journey, the CDSS will need to get information from the patient by asking questions.  This is provided by putting the next question to be asked in the `GuidanceResponse`, and the Encounter Management System (EMS) providing the patient’s answer in the next $evaluate operation.
 
 ## FHIR Primer
 ### What are resources?
@@ -98,6 +98,7 @@ If a set of questions should be displayed together, this can be shown through cr
 
 ### How do I ask a question where the user has to click on an image?
 
+```javascript
     {
            "linkId": "41",
 
@@ -112,6 +113,7 @@ If a set of questions should be displayed together, this can be shown through cr
                "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeIAAAG9CAIAAABGU+LWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZcSURBVHhe7dihFQJBEAXBPTxEgIGHIRUkUV4CZIW7AMBsEH1QZeZH0GKWsW4D/sPncZwL9uMwLwBJMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2QJtMAaTINkCbTAGkyDZAm0wBpMg2Qtox1mxN+3en+nAv2Y3mfb3PCr7u+LnPBfnh6AKTJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNECaTAOkyTRAmkwDpMk0QJpMA6TJNEDYGF8mbwqxIIQ3SwAAAABJRU5ErkJggg=="
            }
        }
+```
 
 ### Is this the pattern for "image" type questions?
 Yes - the image is the attachment, and the EMS sends back the co-ordinate click point as a string (hence the string type) which the CDSS can then 'map' to the image to ascertain the actual 'answer'/selection
@@ -119,6 +121,7 @@ Yes - the image is the attachment, and the EMS sends back the co-ordinate click 
 ### How do I give contextual information for the question?
 Contextual information can be carried as linked extensions, coded as type ‘context’
 
+```javascript
         {
           "resourceType": "Questionnaire",
           "id": "43",
@@ -242,9 +245,11 @@ Contextual information can be carried as linked extensions, coded as type ‘con
             }
           ]
         }
+```
 
 ### How do I specify DataRequirements
 
+```javascript
     {
       "resourceType": "DataRequirement",
       "id": "DR1",
@@ -292,3 +297,4 @@ Contextual information can be carried as linked extensions, coded as type ‘con
         "valueCoding": "http://snomed.info/sct"
       }
     }
+```

@@ -24,9 +24,9 @@ entries:
       - title: Access patient information
         output: web
         subfolderitems:
-        - title: Consume Patient Data Use Case
-          url: /CTP_Consume_Patient_Data_Use_Case.html
-          output: web
+        # - title: Consume Patient Data Use Case
+        #   url: /CTP_Consume_Patient_Data_Use_Case.html
+        #   output: web
         - title: Summary Care Records
           url: /summary_care_record.html
           output: web, pdf
@@ -34,14 +34,17 @@ entries:
       - title: Clinical consultation
         output: web
         subfolderitems:
-        - title: Clinical Decision Support API Overview
+        - title: CDS API Overview
           url: /cds-api-overview.html
           output: web, pdf
         - title: CDS API developer guidelines
           url: /cds-api-developer-guidelines.html
           output: web, pdf
-        - title: CDS API message examples
-          url: /cds-api-message-examples.html
+        - title: CDS API demo implementation
+          url: cds-api-demo-implementation.html
+          output: web, pdf
+        - title: CDS API examples
+          url: /cds-api-examples.html
           output: web, pdf
 
       - title: Complete encounter
@@ -99,13 +102,9 @@ entries:
 
       - title: Clinical Decision Support API
         output: web, pdf
-
         subfolderitems:
         - title: Clinical Decision Support API
           url: clinical_decision_support_api.html
-          output: web, pdf
-        - title: CDS API Demo implementation
-          url: cds-api-demo-implementation.html
           output: web, pdf
 
       - title: ITK Messaging

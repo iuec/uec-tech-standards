@@ -3,7 +3,7 @@ title: Clinical Decision Support API Demo Implementation
 sidebar: overview_sidebar
 permalink: cds-api-demo-implementation.html
 toc: true
-folder: emerging
+folder: business_capabilities
 ---
 
 For suppliers interested in understanding more about the CDS-API, working demos of an Encounter Management System (EMS) and a Clinical Decision Support System (CDSS) compliant to the [CDS-API specification](https://developer.nhs.uk/apis/cds-api/) are available as Git repositories for running in a self hosted environment.

@@ -40,7 +40,7 @@ A logical flow for the patient journey related interactions  between the EMS and
 
 <table>
     <tr>
-        <td>
+        <td style="width:100px;">
             Start
         </td>
         <td>
