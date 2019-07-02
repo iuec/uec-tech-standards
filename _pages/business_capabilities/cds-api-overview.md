@@ -31,11 +31,13 @@ The actions on outcome are carried by EMS system users outside of the CDS API in
 
 ## EMS and CDSS interaction using Open standards 
 
-`TODO insert image: EMS CDSS Sample Operational representation`
+`TODO`
+`- insert image: EMS CDSS Sample Operational representation`
+`- add links for FHIR  STU3 and CDS API Implementation guide`
 
-The key requirement is to build APIs such that the two disparate systems interact, and by which the EMS can call the CDSS and get responses back through the API, following the HL7 FHIR standard detailed in the CDSS API specification Implementation Guide v1.1 (add links for FHIR  STU3 and CDS API Implementation guide)  
+The key requirement is to build APIs such that the two disparate systems interact, and by which the EMS can call the CDSS and get responses back through the API, following the HL7 FHIR standard detailed in the CDSS API specification Implementation Guide v1.1.  
 
-A logical flow for the patient journey related interactions  between the EMS and the CDSS for triage could be as described below- 
+A logical flow for the patient journey related interactions between the EMS and the CDSS for triage could be as described below- 
 
 
 <table>
