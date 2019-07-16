@@ -2,13 +2,44 @@
 title: Clinical Decision Support API developer guidelines
 sidebar: overview_sidebar
 permalink: cds-api-developer-guidelines.html
-toc: true
 folder: business_capabilities
 ---
 
+<style type="text/css">
+  pre.highlight{
+    max-height: 500px;
+    overflow: scroll;
+  }
+</style>
+
+<!-- Restrict table of contents to H2 elements -->
+
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+
+});
+</script>
+
+<div id="toc"></div>
+
+
+
+
 ## General
 ### Should I send interim (draft) results?
-There can be value in the CDSS providing an early view of the decision, even when more information would help to refine the decision.  This can be done by populating the result element of the `GuidanceResponse`, but marking the status as ‘draft’.  This enables the EMS to advise the user, who can then act appropriately, according to local process.
+There can be value in the CDSS providing an early view of the decision, even when more information would help to refine the decision.  This can be done by populating the result element of the `GuidanceResponse`, but marking the status as ‘draft’.  This enables the EMS to advise the system user, who can then act appropriately, according to local process.
 
 ### What happens if a patient has multiple presenting conditions?
 If a patient has multiple presenting conditions, each of which is managed by a separate `ServiceDefinition`, then the EMS can invoke more than one `ServiceDefinition` evaluation and these can be processed in parallel.  From the CDSS perspective, each is a separate journey, and it is up to the EMS to manage the presentation of information to the user.
@@ -17,20 +48,26 @@ If a patient has multiple presenting conditions, each of which is managed by a s
 Yes, this can be done by populating the result, and setting the status of the result to final, while setting the status of the `GuidanceResponse` to dataRequested or dataRequired.  If the referral request is also the end of the triage, then the `GuidanceResponse.status` will be final.
 
 ### As the CDSS, can I move the user to a different journey?
-Yes.  The CDSS may have constructed internal logic such that a certain set of answers in a journey mean that the current `ServiceDefinition` is no longer appropriate, and that a different `ServiceDefinition` should be used.  For example, a patient may have started on a `ServiceDefinition` based on a presenting complaint of joint pain, but the patient’s answers indicate that the problem is more serious, and that a `ServiceDefinition` designed for broken bones is more appropriate.  When this happens, the CDSS can direct the EMS to a new `ServiceDefinition` by sending back an `ActivityDefinition` in the `GuidanceResponse`, where the `ActivityDefinition` has the trigger of the new `ServiceDefinition` (which can then be found by the EMS).
+Yes.  The CDSS may have constructed internal logic such that a certain set of answers in a journey mean that the current `ServiceDefinition` is no longer appropriate, and that a different `ServiceDefinition` should be used.  For example, a patient may have started on a `ServiceDefinition` based on a presenting complaint of joint pain, but the patient’s answers indicate that the problem is more serious, and that a  `ServiceDefinition` designed for broken bones is more appropriate.  When this happens, the CDSS can direct the EMS to a new `ServiceDefinition` by sending back an `ActivityDefinition` in the `GuidanceResponse`, where the `ActivityDefinition` has the trigger of the new `ServiceDefinition` (which can then be found by the EMS).
 
 ## Evaluation
-### How do I start the decision support process?
-Asking a Clinical Decision Support System (CDSS) for a decision is done by invoking the $evaluate operation on a `ServiceDefinition`.  A CDSS will publish at least one `ServiceDefinition`, and can publish many different `ServiceDefinition`s` – each of which is appropriate for a different clinical decision.  The CDSS will send back a `GuidanceResponse` as the reply to an $evaluate operation.
+How do I start the decision support process?
+Asking a Clinical Decision Support System (CDSS) for a decision is done by invoking the `$evaluate` operation on a `ServiceDefinition`.  A CDSS will publish at least one `ServiceDefinition`, and can publish many different `ServiceDefinitions` – each of which is appropriate for a different clinical decision.  The CDSS will send back a `GuidanceResponse` as the reply to an `$evaluate` operation.
 
-### How do I know which `ServiceDefinition` to choose?
+### How do I know which ServiceDefinition to choose?
 When the CDSS publishes a `ServiceDefinition`, the `ServiceDefinition` will have elements which describe how the `ServiceDefinition` can be used.  The description of where in the clinical process a `ServiceDefinition` sits is described in the `ServiceDefinition.trigger`.  This element will hold all the data conditions which need to be satisfied for the `ServiceDefinition` to be chosen.
 
-### What if there are multiple `ServiceDefinition`s that fit the data available?
-During a given patient journey, there may be points where there is more than one `ServiceDefinition` available.  Any one CDSS should avoid this situation, but if a provider has more than one CDSS available, there may be situations where more than one CDSS can provide an appropriate `ServiceDefinition`.  In this case, it will be up to local providers on how to choose between the available `ServiceDefinition```s`.
+<!-- ### What if there are multiple ServiceDefinitions that fit the data available?
+During a given patient journey, there may be points where there is more than one `ServiceDefinition` available.  Any one CDSS should avoid this situation, but if a provider has more than one CDSS available, there may be situations where more than one CDSS can provide an appropriate `ServiceDefinition`.  In this case, it will be up to local providers on how to choose between the available `ServiceDefinitions`. -->
 
 ### What if the CDSS needs more information?
-In a typical UEC triage journey, the CDSS will need to get information from the patient by asking questions.  This is provided by putting the next question to be asked in the `GuidanceResponse`, and the Encounter Management System (EMS) providing the patient’s answer in the next $evaluate operation.
+In a typical UEC triage journey, the CDSS will need to get information from the patient by asking questions.  This is provided by putting the next question to be asked in the `GuidanceResponse`, and the Encounter Management System (EMS) providing the patient’s answer in the next `$evaluate` operation.
+
+<!-- 
+EMS
+How can I capture site safety information?
+Flag (need to elaborate?) 
+-->
 
 ## FHIR Primer
 ### What are resources?
@@ -49,26 +86,28 @@ Each system should be able to work with contained and referenced resources, with
 
 
 ## Elements
-<!-- How is the presenting complaint identified?
-tbc -->
+### How is the presenting complaint identified?
+Initially it is identified by asking the patient so would have to be a SD with a null trigger OR use some kind of 'funnel/filter' like the use of a body map in Pathways, where you click on the abdomen for example, and are offered the pathways/service definitions related to Abdominal presenting complaints and select from there. It could equally be done with questioning the patient. In the 111 and 999 systems, the presenting complaint is always Free Text so it captures the patient's words.
 
 ### What is a chief concern?  How is it identified?
 The Chief Concern is the thing (normally a condition or diagnosis) which the CDSS is most concerned about, given the information received.  This will be driving the recommendation where this is needed.  Typically, CDSS start with the most urgent or most dangerous concerns, and are seeking information to try to eliminate the most significant concerns.
 
 When a CDSS recommends a consultation, the clinician performing the consultation will often be helped by seeing the chief concern which has driven the recommendation.
 
-The chief concern is carried in the …. The CDSS can also provide other concerns which have not been eliminated, but which are less significant than the chief concern.  These secondary concerns are carried in the ….
+
+The chief concern is carried in the reasonReference element in the `Referralrequest` resource. The CDSS can also provide other concerns which have not been eliminated, but which are less significant than the chief concern.  These secondary concerns are carried in the supportingInfo element in the `Referralrequest` resource.
 
 ### What is the diagnostic discriminator?  How is it identified?
 When the CDSS recommends a consultation, there may be a specific activity which needs to be performed at the consultation, so that the chief concern can be ruled in or out.  For example, if the chief concern of the CDSS is a fracture, the activity needed is an x-ray.  This activity is the diagnostic discriminator.
 
 The diagnostic discriminator can be used when searching for the best service to perform the consultation, where the service must be able to carry out the activity in the diagnostic discriminator.  For example, where the diagnostic discriminator is an x-ray of the suspected fracture, the filter for the service can look for services which have x-ray facilities.
 
-The diagnostic discriminator is carried in the …..
+The diagnostic discriminator is carried in the ProcedureRequest element in the `ReferralRequest` resource.
 
-## Questions
+
+## Questionnaire resource
 ### How do I represent a choice question?
-Many of the questions presented during a triage process are ‘closed’ questions, where the patient is asked to choose one of a set of limited options.  There are two ways of representing this in the Questionnaire resource.  The first way is to create an item for the question, and then have items for each of the possible choices, associated to the question item.  Since this is quite cumbersome, there is a shortcut, where the question item is marked as a ‘choice’ type item, and the possible options are then listed in the item.option element.
+Many of the questions presented during a triage process are ‘closed’ questions, where the patient is asked to choose one of a set of limited options.  There are two ways of representing this in the `Questionnaire` resource.  The first way is to create an item for the question, and then have items for each of the possible choices, associated to the question item.  Since this is quite cumbersome, there is a shortcut, where the question item is marked as a ‘choice’ type item, and the possible options are then listed in the item.option element.
 
 ### How do I represent a multiple choice question?
 Where the patient can select more than one choice (for example, a question like “Are you taking any of the following medications?”), the options must be listed out as separate items where the item.repeats property of the question is set to true.
@@ -82,13 +121,13 @@ This can be represented through the Questionnaire extension option-exclusive [ht
 Yes, there is a standard set for this, which is commonly used in triage – see [https://www.hl7.org/fhir/stu3/questionnaire.html#2.38.5.7](https://www.hl7.org/fhir/stu3/questionnaire.html#2.38.5.7) for full details.
 
 ### How do I represent required versus optional?
-If a question is optional, and doesn’t need a response, set the item.required as false.  If the question must be answered, set this as true.
+If a question is optional, and doesn’t need a response, set the `item.required` as false.  If the question must be answered, set this as true.
 
 ### How do I represent that the user didn’t answer an optional question?
-If the user doesn’t answer an optional question, this element is simply not populated in the QuestionnaireResponse.
+If the user doesn’t answer an optional question, this element is simply not populated in the `QuestionnaireResponse`.
 
 <!-- ### Are there limits on lengths of question or answer options?
-I got nothing. -->
+tbc -->
 
 ### What type of questions can I ask?
 As well as choice type questions, the EMS must be able to support questions which can be answered by text, by numbers (whole or decimal), by date, by a blob (e.g. a picture supplied by the patient of the wound) or as a Boolean (true|false).
@@ -100,20 +139,16 @@ If a set of questions should be displayed together, this can be shown through cr
 
 ```javascript
     {
-           "linkId": "41",
-
-           "text": "Which colour do you prefer: red, blue, green or yellow?",
-
-           "type": "string",
-
-           "required": true,
-
-           "initialAttachment": {
-
-               "url": "data:image/png;base64,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"
-           }
-       }
+     "linkId": "41",
+     "text": "Which colour do you prefer: red, blue, green or yellow?",
+     "type": "string",
+     "required": true,
+     "initialAttachment": {
+     "url": "data:image/png;base64,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"
+      }
+    }
 ```
+
 
 ### Is this the pattern for "image" type questions?
 Yes - the image is the attachment, and the EMS sends back the co-ordinate click point as a string (hence the string type) which the CDSS can then 'map' to the image to ascertain the actual 'answer'/selection
@@ -121,133 +156,142 @@ Yes - the image is the attachment, and the EMS sends back the co-ordinate click 
 ### How do I give contextual information for the question?
 Contextual information can be carried as linked extensions, coded as type ‘context’
 
+
 ```javascript
+    {
+      "resourceType": "Questionnaire",
+      "id": "43",
+      "status": "active",
+      "item": [
         {
-          "resourceType": "Questionnaire",
-          "id": "43",
-          "status": "active",
+          "linkId": "42",
+          "text": "Over the past 2 weeks, how often have you been bothered by any of the following problems?",
+          "type": "group",
           "item": [
             {
-              "linkId": "42",
-              "text": "Over the past 2 weeks, how often have you been bothered by any of the following problems?",
-              "type": "group",
-              "item": [
+              "linkId": "43",
+              "text": "Feeling down, depressed, or hopeless",
+              "type": "choice",
+              "required": true,
+              "option": [
                 {
-                  "linkId": "43",
-                  "text": "Feeling down, depressed, or hopeless",
-                  "type": "choice",
-                  "required": true,
-                  "option": [
-                    {
-                      "valueCoding": {
-                        "code": "1",
-                        "display": "Not at all"
-                      }
-                    },
-                    {
-                      "valueCoding": {
-                        "code": "2",
-                        "display": "Several days"
-                      }
-                    },
-                    {
-                      "valueCoding": {
-                        "code": "3",
-                        "display": "More than half the days"
-                      }
-                    },
-                    {
-                      "valueCoding": {
-                        "code": "4",
-                        "display": "Nearly every day"
-                      }
-                    }
-                  ]
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Not at all"
+                  }
                 },
                 {
-                  "linkId": "44",
-                  "text": "Little interest or pleasure in doing things",
-                  "type": "choice",
-                  "required": true,
-                  "option": [
-                    {
-                      "valueCoding": {
-                        "code": "1",
-                        "display": "Not at all"
-                      }
-                    },
-                    {
-                      "valueCoding": {
-                        "code": "2",
-                        "display": "Several days"
-                      }
-                    },
-                    {
-                      "valueCoding": {
-                        "code": "3",
-                        "display": "More than half the days"
-                      }
-                    },
-                    {
-                      "valueCoding": {
-                        "code": "4",
-                        "display": "Nearly every day"
-                      }
-                    }
-                  ]
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Several days"
+                  }
                 },
                 {
-                  "extension": [
-                    {
-                      "url": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
-                      "valueCoding": {
-                        "system": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
-                        "code": "context",
-                        "display": "42"
-                      }
-                    }
-                  ],
-                  "linkId": "42",
-                  "text": "The text provides guidance on how the information should be or will be handled for a specific question",
-                  "type": "display"
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "More than half the days"
+                  }
                 },
                 {
-                  "extension": [
-                    {
-                      "url": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
-                      "valueCoding": {
-                        "system": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
-                        "code": "context",
-                        "display": "43"
-                      }
-                    }
-                  ],
-                  "linkId": "43",
-                  "text": "The text provides guidance on how the information should be or will be handled for a specific question",
-                  "type": "display"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
-                      "valueCoding": {
-                        "system": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
-                        "code": "context",
-                        "display": "1"
-                      }
-                    }
-                  ],
-                  "linkId": "43",
-                  "text": "The text provides guidance on how the information should be or will be handled for a specific answer",
-                  "type": "display"
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "Nearly every day"
+                  }
                 }
               ]
+            },
+            {
+              "linkId": "44",
+              "text": "Little interest or pleasure in doing things",
+              "type": "choice",
+              "required": true,
+              "option": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Not at all"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Several days"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "More than half the days"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "Nearly every day"
+                  }
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
+                  "valueCoding": {
+                    "system": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
+                    "code": "context",
+                    "display": "42"
+                  }
+                }
+              ],
+              "linkId": "42",
+              "text": "The text provides guidance on how the information should be or will be handled for a specific question",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
+                  "valueCoding": {
+                    "system": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
+                    "code": "context",
+                    "display": "43"
+                  }
+                }
+              ],
+              "linkId": "43",
+              "text": "The text provides guidance on how the information should be or will be handled for a specific question",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
+                  "valueCoding": {
+                    "system": "https://www.hl7.org/fhir/extension-questionnaire-displaycategory",
+                    "code": "context",
+                    "display": "1"
+                  }
+                }
+              ],
+              "linkId": "43",
+              "text": "The text provides guidance on how the information should be or will be handled for a specific answer",
+              "type": "display"
             }
           ]
         }
+      ]
+    }
 ```
 
 ### How do I specify DataRequirements
+
+- There is no profile in the first DataRequirement (the QuestionnaireResponse) as we are (currently) using the STU3 profile for QuestionnaireResponse
+- The FHIR profiles for the CDS API are to be available in future iterations 
+- There is no requirement for the Questionnaire - the CDS doesn't need this, it just needs the QuestionnaireResponse, and we can identify the type of QuestionnaireResponse by saying that it has to be a response to the Questionnaire called "#PRE_STD_AD_DISCLAIMERS"
+- The second DataRequirement (for the practice) shows that this must be an Organization, further specificed as a CareConnect Organization, where the Organization.identifier must be part of the ValueSet of odsOrganisationCode - that is, that it must be an ODS organisation
+- The patient, their age, and their gender are all specified independently
+- The valueCode for the gender is the Gender finding - could also be the UK reference set for Gender - 991391000000109
+
 
 ```javascript
     {
@@ -255,16 +299,16 @@ Contextual information can be carried as linked extensions, coded as type ‘con
       "id": "DR1",
       "type": "QuestionnaireResponse",
       "codeFilter": {
-        "path": "questionnaire.identifier",
-        "valueCode": "#PRE_STD_AD_DISCLAIMERS"
-      }
+      "path": "questionnaire.identifier",
+      "valueCode": "#PRE_STD_AD_DISCLAIMERS"
+    }
     },
     {
       "resourceType": "DataRequirement",
       "id": "DR2",
       "type": "Patient",
       "profile": [
-        "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1"
+      "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1"
       ]
     },
     {
@@ -272,12 +316,12 @@ Contextual information can be carried as linked extensions, coded as type ‘con
       "id": "DR3",
       "type": "Organization",
       "profile": [
-        "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1"
+      "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1"
       ],
       "codeFilter": {
-        "path": "identifier",
-        "valueSetString": "odsOrganisationCode"
-      }
+      "path": "identifier",
+      "valueSetString": "odsOrganisationCode"
+    }
     },
     {
       "resourceType": "DataRequirement",
@@ -289,12 +333,17 @@ Contextual information can be carried as linked extensions, coded as type ‘con
       "id": "DR5",
       "type": "Observation",
       "profile": [
-        "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
+      "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1"
       ],
       "codeFilter": {
-        "path": "code",
-        "valueCode": "365873007",
-        "valueCoding": "http://snomed.info/sct"
-      }
+      "path": "code",
+      "valueCode": "365873007",
+      "valueCoding": "http://snomed.info/sct"
     }
+    }
+
 ```
+
+
+
+
