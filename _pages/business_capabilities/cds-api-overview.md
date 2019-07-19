@@ -75,7 +75,7 @@ A simplified patient journey through any UEC channel
 
 The scope of the CDS API encompasses the interactions between the EMS and CDSS using open standards.
 
-<p style="text-align:center;"><img src="/images/cds-api-operational-representation.png" alt="EMS CDSS Sample Operational representation" title="EMS CDSS Sample Operational representation" style="width:50%">
+<p style="text-align:center;"><img src="/images/cds-api-operational-representation.png" alt="EMS CDSS Sample Operational representation" title="EMS CDSS Sample Operational representation" style="width:80%">
 <br>
 EMS CDSS Sample Operational representation
 </p>
@@ -146,7 +146,7 @@ Below is a generic example workflow for the patient journey related interactions
 </table>
 Note: The EMS will typically also manage elements like user authentication, workflow and user interactions which are considered 'out of scope' from the CDS API usage point of view 
 
-
+<!-- 
 ## Messaging architecture overview 
 
 <p style="text-align:center;"><a href="/images/cds-api-uec-system-architecture.png"><img src="/images/cds-api-uec-system-architecture.png" alt="Messaging architecture simplified representation" title="Messaging architecture simplified representation" style="width:75%"></a>
@@ -181,3 +181,4 @@ ITK - [Interoperability Toolkit](https://developer.nhs.uk/apis/uec-tech-standard
 EMS - Encounter Management System
 
 CDSS - Clinical Decision Support System
+ -->

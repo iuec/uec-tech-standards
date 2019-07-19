@@ -135,7 +135,7 @@ As well as choice type questions, the EMS must be able to support questions whic
 ### Can I group questions together?
 If a set of questions should be displayed together, this can be shown through creating a ‘header’ item, which has the .type of ‘group’
 
-### How do I ask a question where the user has to click on an image?
+<!-- ### How do I ask a question where the user has to click on an image?
 
 ```javascript
     {
@@ -152,7 +152,7 @@ If a set of questions should be displayed together, this can be shown through cr
 
 ### Is this the pattern for "image" type questions?
 Yes - the image is the attachment, and the EMS sends back the co-ordinate click point as a string (hence the string type) which the CDSS can then 'map' to the image to ascertain the actual 'answer'/selection
-
+ -->
 ### How do I give contextual information for the question?
 Contextual information can be carried as linked extensions, coded as type ‘context’
 
