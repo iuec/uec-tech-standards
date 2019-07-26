@@ -26,49 +26,106 @@ By reporting consistent data we will be able to analyse blind spots between syst
 The aim of the CDS API is to enable EMS and CDSS interactions to support the inter-operable triage of a patient. This is with a view to give care providers the greatest choice and enable a personalised and seamless triage journey for a patient, using open standards. 
 
 
-## CDS API in Patient Journey 
+## CDS API in a patient journey 
 The patient Journey starts when a patient contacts the NHS service with a health issue.  
 
-<p style="text-align:center;"><img src="/images/cds-api-simplified-patient-journey.png" alt="A simplified patient journey through any UEC channel" title="A simplified patient journey through any UEC channel" style="width:90%">
+<p style="text-align:center;"><img src="/images/cds-api-simplified-patient-journey.png" alt="A simplified patient journey through any UEC channel" title="A simplified patient journey through any UEC channel" style="width:100%">
 <br>
 A simplified patient journey through any UEC channel
 </p>
+<!-- 
+<p>The patient contacts an NHS service.</p>
+
+<p>The system user initiates this as a patient encounter on the EMS. <br>
+    Note that this contact may be self-directed (to 111, 999, GP out of hours service, emergency department) or as a result of being transferred from another care setting (disposition outcome). <br>
+    Contact may be through a variety of channels (phone, face to face, video call). <br>
+    Contact may also be through a third party (phoning on behalf of...)</p>
+
+<p>At the start of the contact, the EMS establishes the reason for contact.</p>
+
+<p>The patient is triaged to determine the health need. Triage may be conducted by a non-clinical call handler, a clinician, or both. Some triage may be automated (using IVR, chatbots, robots or other AI agents). Usually a Clinical Decision Support tool helps in this clinical triage and assessment.</p>
+
+<p>Following triage, the CDSS recommends a triage outcome. <br> 
+    The outcome can be one of many recommendations for the patient: <br><br>
+
+    <strong>Redirection for further assessment</strong> <br>
+    for example, call being transferred to a clinician for further triage and assessment.
+    <br>
+    Or Call back from clinician agreed. <br><br>
+
+    <strong>Referral</strong> <br><br>
+    Have an ambulance dispatched (note that this is a special form of transfer)
+    <br>
+    Or referral to other service for example, to pharmacy or GP <br><br>
+
+    <strong>Care advice</strong> <br>
+    for example, the Patient be given self-care instructions
+    <br>
+    These recommendation are carried by EMS system users outside of the CDS API interactions and as such the role of the CDS API ends here. 
+</p>
+ -->
 
 
-<table>
+ <table>
     <tr>
-        <td><p>The patient contacts an NHS service.</p></td>
+        <td>
+            <p>The patient contacts an NHS service. Contact may be
+                <ul>
+                    <li>
+                        Self-directed (to 111, 999, GP out of hours service, emergency department) or as a result of being transferred from another care setting (disposition outcome). 
+                    </li>
+                    <li>
+                        Through a variety of channels (phone, face to face, video call).
+                    </li>
+                    <li>
+                        Through a third party (phoning on behalf of...)
+                    </li>
+                </ul>
+            </p>
+        </td>
     </tr>
     <tr>
-        <td><p>The system user initiates this as a patient encounter on the EMS. Note that this may either be self-directed (111, 999, some GP OoH, ED) or as a result of being transferred from another any care setting (disposition outcome). Contact may be through a wide variety of channels, including phone, face to face, video call. Contact may also be through a third party (e.g. phoning on behalf of…)</p></td>
+        <td><p>The system user initiates this as a patient encounter on the EMS.</p>
+        </td>
     </tr>
 
     <tr>
         <td><p>At the start of the contact, the EMS establishes the reason for contact.</p></td>
     </tr>
     <tr>
-        <td><p>The patient is triaged to determine the health need. Triage may be conducted by either a non-clinical call handler, or a clinician, or both. Some triage may be automated (e.g. using IVR, chatbots, robots or other AI agents). Usually a Clinical Decision Support tool helps in this clinical triage and assessment.</p></td>
+        <td><p>The patient is triaged to determine the health need. <br>
+        Triage may be conducted by a non-clinical call handler, a clinician, or both. Some triage may be automated (using IVR, chatbots or other AI agents). Usually a Clinical Decision Support tool helps in this clinical triage and assessment.</p></td>
     </tr>
     <tr>
-        <td><p>Following triage, the CDSS recommends a triage outcome. <br> These can be one of many recommendations for the patients: <br><br>
+        <td><p>Following triage, the CDSS recommends a triage outcome. <br> 
 
-        <strong>Redirection for further assessment</strong> <br>
-        for example, call being transferred to a clinician for further triage and assessment.
-        <br>
-        Or Call back from clinician agreed. <br><br>
+            <ul>
+                <li>
+                    Redirection for further assessment <br>
+                    For example, a call being transferred to a clinician for further triage and assessment or call back from clinician agreed.
+                </li>
 
-        <strong>Referral</strong> <br><br>
-        Have an ambulance dispatched (note that this is a special form of transfer)
-        <br>
-        Or referral to other service for example, to pharmacy or GP <br><br>
+                <li>
+                    Referral <br>
+                    Have an ambulance dispatched (note that this is a special form of transfer)
+                    <br>
+                    or referral to other service, for example to pharmacy or GP.
+                </li>
+                
+                <li>
+                    Care advice <br>
+                    For example, providing the patient with self-care instructions
+                    <br>
+                </li>
 
-        <strong>Care advice</strong> <br>
-        for example, the Patient be given self-care instructions
-        <br>
-        These recommendation are carried by EMS system users outside of the CDS API interactions and as such the role of the CDS API ends here. 
-        </p></td>
-    </tr>
+            </ul>
+                    These recommendation are carried by EMS system users outside of the CDS API interactions and as such the role of the CDS API ends here. 
+        </p>
+    </td>
+</tr>
 </table>
+
+
 
 
 ## Scope
@@ -80,7 +137,7 @@ The scope of the CDS API encompasses the interactions between the EMS and CDSS u
 EMS CDSS Sample Operational representation
 </p>
 
-The key requirement is to build APIs such that the two disparate systems interact, and by which the EMS can call the CDSS and get responses back through the API, following the HL7 FHIR standard detailed in the [CDSS API specification Implementation Guide v1.1](https://developer.nhs.uk/apis/cds-api-1-1-0/). 
+The key requirement is to build APIs such that the two disparate systems interact, and by which the EMS can call the CDSS and get responses back through the API, following the HL7 FHIR standard detailed in the [CDSS API specification Implementation Guide v1.0](https://developer.nhs.uk/apis/cds-api-1-0-0/). 
 
 Below is a generic example workflow for the patient journey related interactions between the EMS and the CDSS for triage:
 
@@ -90,8 +147,8 @@ Below is a generic example workflow for the patient journey related interactions
             Start
         </td>
         <td>
-            The Patient approaches an NHS Service  with a complaint needing urgent attention, marks the start of the patient encounter. This could be through any channel explained above. 
-
+            The patient approaching an NHS Service with a complaint needing urgent attention, marks the start of the patient encounter. This could be through any channel explained above. 
+            <br>
             The EMS will drive the start of the patient journey on the system.
         </td>
     </tr>
@@ -100,7 +157,7 @@ Below is a generic example workflow for the patient journey related interactions
             Step 1
         </td>
         <td>
-            The CDS API specification defines how the CDSS can be called by EMS to start a triage. 
+            The CDS API specification defines how the CDSS can be called by the EMS to start a triage. 
         </td>
     </tr>
     <tr>
@@ -108,7 +165,7 @@ Below is a generic example workflow for the patient journey related interactions
             Step 2
         </td>
         <td>
-            The CDSS in return will pose questions to be answered by the patient through EMS.
+            The CDSS in return will pose questions to be answered by the patient through the EMS.
             <br>
             The CDSS should be able to make use of information already collected.
         </td>
@@ -140,11 +197,12 @@ Below is a generic example workflow for the patient journey related interactions
             End
         </td>
         <td>
-            Patient journey transferred back and continues from the EMS
+            The patient journey continues from the EMS
         </td>
     </tr>
 </table>
-Note: The EMS will typically also manage elements like user authentication, workflow and user interactions which are considered 'out of scope' from the CDS API usage point of view 
+
+The EMS will typically also manage elements like user authentication, workflow and user interactions which are considered 'out of scope' from the CDS API usage point of view.
 
 <!-- 
 ## Messaging architecture overview 
