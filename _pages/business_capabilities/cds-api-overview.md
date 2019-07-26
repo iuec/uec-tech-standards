@@ -33,42 +33,11 @@ The patient Journey starts when a patient contacts the NHS service with a health
 <br>
 A simplified patient journey through any UEC channel
 </p>
-<!-- 
-<p>The patient contacts an NHS service.</p>
-
-<p>The system user initiates this as a patient encounter on the EMS. <br>
-    Note that this contact may be self-directed (to 111, 999, GP out of hours service, emergency department) or as a result of being transferred from another care setting (disposition outcome). <br>
-    Contact may be through a variety of channels (phone, face to face, video call). <br>
-    Contact may also be through a third party (phoning on behalf of...)</p>
-
-<p>At the start of the contact, the EMS establishes the reason for contact.</p>
-
-<p>The patient is triaged to determine the health need. Triage may be conducted by a non-clinical call handler, a clinician, or both. Some triage may be automated (using IVR, chatbots, robots or other AI agents). Usually a Clinical Decision Support tool helps in this clinical triage and assessment.</p>
-
-<p>Following triage, the CDSS recommends a triage outcome. <br> 
-    The outcome can be one of many recommendations for the patient: <br><br>
-
-    <strong>Redirection for further assessment</strong> <br>
-    for example, call being transferred to a clinician for further triage and assessment.
-    <br>
-    Or Call back from clinician agreed. <br><br>
-
-    <strong>Referral</strong> <br><br>
-    Have an ambulance dispatched (note that this is a special form of transfer)
-    <br>
-    Or referral to other service for example, to pharmacy or GP <br><br>
-
-    <strong>Care advice</strong> <br>
-    for example, the Patient be given self-care instructions
-    <br>
-    These recommendation are carried by EMS system users outside of the CDS API interactions and as such the role of the CDS API ends here. 
-</p>
- -->
-
 
  <table>
     <tr>
         <td>
+            <p><strong>Patient contact</strong></p>
             <p>The patient contacts an NHS service. Contact may be
                 <ul>
                     <li>
@@ -85,16 +54,22 @@ A simplified patient journey through any UEC channel
         </td>
     </tr>
     <tr>
-        <td><p>The system user initiates this as a patient encounter on the EMS.</p>
+        <td>
+            <p><strong>Access to data</strong></p>
+            <p>The system user initiates this as a patient encounter on the EMS.</p>
         </td>
     </tr>
-
     <tr>
-        <td><p>At the start of the contact, the EMS establishes the reason for contact.</p></td>
+        <td>
+            <p>At the start of the contact, the EMS establishes the reason for contact.</p>
+        </td>
     </tr>
     <tr>
-        <td><p>The patient is triaged to determine the health need. <br>
-        Triage may be conducted by a non-clinical call handler, a clinician, or both. Some triage may be automated (using IVR, chatbots or other AI agents). Usually a Clinical Decision Support tool helps in this clinical triage and assessment.</p></td>
+        <td>
+            <p><strong>Triage and consult</strong></p>
+            <p>The patient is triaged to determine the health need. <br>
+        Triage may be conducted by a non-clinical call handler, a clinician, or both. Some triage may be automated (using IVR, chatbots or other AI agents). Usually a Clinical Decision Support tool helps in this clinical triage and assessment.</p>
+    </td>
     </tr>
     <tr>
         <td><p>Following triage, the CDSS recommends a triage outcome. <br> 

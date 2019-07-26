@@ -51,7 +51,8 @@ Yes, this can be done by populating the result, and setting the status of the re
 Yes.  The CDSS may have constructed internal logic such that a certain set of answers in a journey mean that the current `ServiceDefinition` is no longer appropriate, and that a different `ServiceDefinition` should be used.  For example, a patient may have started on a `ServiceDefinition` based on a presenting complaint of joint pain, but the patient’s answers indicate that the problem is more serious, and that a  `ServiceDefinition` designed for broken bones is more appropriate.  When this happens, the CDSS can direct the EMS to a new `ServiceDefinition` by sending back an `ActivityDefinition` in the `GuidanceResponse`, where the `ActivityDefinition` has the trigger of the new `ServiceDefinition` (which can then be found by the EMS).
 
 ## Evaluation
-How do I start the decision support process?
+
+### How do I start the decision support process?
 Asking a Clinical Decision Support System (CDSS) for a decision is done by invoking the `$evaluate` operation on a `ServiceDefinition`.  A CDSS will publish at least one `ServiceDefinition`, and can publish many different `ServiceDefinitions` – each of which is appropriate for a different clinical decision.  The CDSS will send back a `GuidanceResponse` as the reply to an `$evaluate` operation.
 
 ### How do I know which ServiceDefinition to choose?
