@@ -92,9 +92,9 @@ Each system should be able to work with contained and referenced resources, with
 
 The presenting complaint is a primary symptom that a patient states as the reason for seeking medical help. The presenting complaint is a subjective statement made by a patient describing the most significant or serious symptoms or signs of illness or dysfunction that caused him or her to seek health care.
 
-The presenting complaint may be used to trigger a particular workflow or routing within the CDSS.  This is consistent with any other information from the patient which is used to drive workflow in the CDSS, and as such, can be captured in the same way – that is, through the CDSS publishing a Questionnaire, which specifically asks about presenting complaint, and the EMS publishing the QuestionnaireResponse to the CDSS, capturing the patient's response.  This response can then be coded as an assertion, where appropriate, like any other QuestionnaireResponse.  As such, there is no special place in the CDS API to put the presenting complaint.
+The presenting complaint may be used to trigger a particular workflow or routing within the CDSS.  This is consistent with any other information from the patient which is used to drive workflow in the CDSS, and as such, can be captured in the same way – that is, through the CDSS publishing a `Questionnaire`, which specifically asks about presenting complaint, and the EMS publishing the `QuestionnaireResponse` to the CDSS, capturing the patient's response.  This response can then be coded as an assertion, where appropriate, like any other `QuestionnaireResponse`.  As such, there is no special place in the CDS API to put the presenting complaint.
 
-This Questionnaire has the same characteristics as any other Questionnaire, and may present the question as multiple choice, or even as a string type question – providing that the CDSS has the ability to parse, consume and act on this information.
+This `Questionnaire` has the same characteristics as any other `Questionnaire`, and may present the question as multiple choice, or even as a string type question – providing that the CDSS has the ability to parse, consume and act on this information.
 
 ### What is a chief concern? How is it identified?
 The Chief Concern is the most dominant clinical finding/condition or diagnosis the clinician or CDS has concerns about.  
@@ -125,7 +125,7 @@ Where the patient can select more than one choice (for example, a question like 
 ### How do I represent a ‘none of the above’ question?
 There may be questions where there are multiple options, or the user can choose ‘None of the above’, which can’t be selected if any other options are chosen, and should stop any other options being chosen at the same time.
 
-This can be represented through the Questionnaire extension option-exclusive [https://www.hl7.org/fhir/stu3/extension-questionnaire-optionexclusive.html](https://www.hl7.org/fhir/stu3/extension-questionnaire-optionexclusive.html)
+This can be represented through the `Questionnaire` extension option-exclusive [https://www.hl7.org/fhir/stu3/extension-questionnaire-optionexclusive.html](https://www.hl7.org/fhir/stu3/extension-questionnaire-optionexclusive.html)
 
 ### Is there a value set for Yes|No|Don’t Know?
 Yes, there is a standard set for this, which is commonly used in triage – see [https://www.hl7.org/fhir/stu3/questionnaire.html#2.38.5.7](https://www.hl7.org/fhir/stu3/questionnaire.html#2.38.5.7) for full details.
@@ -173,9 +173,9 @@ Contextual information can be carried as linked extensions, coded as type ‘con
 
 An example of DataRequirements is given below with notes:
 
-- There is no profile in the first DataRequirement (the QuestionnaireResponse) as we are (currently) using the STU3 profile for QuestionnaireResponse
+- There is no profile in the first DataRequirement (the `QuestionnaireResponse`) as we are (currently) using the STU3 profile for `QuestionnaireResponse`
 - The FHIR profiles for the CDS API are to be available in future iterations 
-- There is no requirement for the Questionnaire - the CDS doesn't need this, it just needs the QuestionnaireResponse, and we can identify the type of QuestionnaireResponse by saying that it has to be a response to the Questionnaire called "#PRE_STD_AD_DISCLAIMERS"
+- There is no requirement for the `Questionnaire` - the CDS doesn't need this, it just needs the `QuestionnaireResponse`, and we can identify the type of `QuestionnaireResponse` by saying that it has to be a response to the Questionnaire called "#PRE_STD_AD_DISCLAIMERS"
 - The second DataRequirement (for the practice) shows that this must be an Organization, further specified as a CareConnect Organization, where the Organization.identifier must be part of the ValueSet of odsOrganisationCode - that is, that it must be an ODS organisation
 - The patient, their age, and their gender are all specified independently
 - The valueCode for the gender is the Gender finding - could also be the UK reference set for Gender - 991391000000109
