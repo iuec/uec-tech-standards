@@ -24,9 +24,6 @@ entries:
       - title: Access patient information
         output: web
         subfolderitems:
-        # - title: Consume Patient Data Use Case
-        #   url: /CTP_Consume_Patient_Data_Use_Case.html
-        #   output: web
         - title: Summary Care Records
           url: /summary_care_record.html
           output: web, pdf
@@ -43,9 +40,6 @@ entries:
         - title: CDS API demo implementation
           url: cds-api-demo-implementation.html
           output: web, pdf
-        # - title: CDS API examples
-        #   url: /cds-api-examples.html
-        #   output: web, pdf
 
       - title: Complete encounter
         output: web
