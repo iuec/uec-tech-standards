@@ -89,12 +89,12 @@ Each system should be able to work with contained and referenced resources, with
 ## Elements
 
 ### How is the presenting complaint identified?
+
 The presenting complaint is a primary symptom that a patient states as the reason for seeking medical help. The presenting complaint is a subjective statement made by a patient describing the most significant or serious symptoms or signs of illness or dysfunction that caused him or her to seek health care.
 
-The patients’ presenting complaint will be identified by asking the patient directly what the problem is they are calling about. 
+The presenting complaint may be used to trigger a particular workflow or routing within the CDSS.  This is consistent with any other information from the patient which is used to drive workflow in the CDSS, and as such, can be captured in the same way – that is, through the CDSS publishing a Questionnaire, which specifically asks about presenting complaint, and the EMS publishing the QuestionnaireResponse to the CDSS, capturing the patient's response.  This response can then be coded as an assertion, where appropriate, like any other QuestionnaireResponse.  As such, there is no special place in the CDS API to put the presenting complaint.
 
-The presenting complaint does not have a specific place within the CDS API. Therefore, a `ServiceDefinition` with a 'null trigger' would present a questionnaire to capture this information. This may be a multiple choice question, or as free text providing the system has the ability to parse, consume and act on this information.
-
+This Questionnaire has the same characteristics as any other Questionnaire, and may present the question as multiple choice, or even as a string type question – providing that the CDSS has the ability to parse, consume and act on this information.
 
 ### What is a chief concern? How is it identified?
 The Chief Concern is the most dominant clinical finding/condition or diagnosis the clinician or CDS has concerns about.  
