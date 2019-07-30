@@ -89,17 +89,13 @@ entries:
     output: web
     folderitems:
     - title: Appointment booking API
-      url: /appointments.html
+      url: /appointment-booking-api.html
+      output: web, pdf
+    - title: Clinical Decision Support API
+      url: clinical_decision_support_api.html
       output: web, pdf
 
       subfolders:
-
-      - title: Clinical Decision Support API
-        output: web, pdf
-        subfolderitems:
-        - title: Clinical Decision Support API
-          url: clinical_decision_support_api.html
-          output: web, pdf
 
       - title: ITK Messaging
         output: web
