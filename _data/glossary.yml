@@ -6,7 +6,9 @@
   expansion: Accident and Emergency
   definition: An A&E department (also known as emergency department or casualty) deals with genuine life-threatening emergencies.
 - keyword: Alpha
-  definition: A development stage in iterative delivery to build a basic working system with limited functionality used to demonstrate to users 
+  definition: A development stage in iterative delivery where a project team takes new insights and findings from the [discovery](#discovery) phase and begins to experiment with solutions to a challenge. The alpha phase is about rapidly testing ideas to see what works and what doesn't.
+- keyword: Beta
+  definition: A development stage in iterative delivery where the learning from the [alpha phase](#alpha) is developed into a working service and tested with real users while minimising risk and maximising the potential to learn and iterate the service. 
 - keyword: Care Advice
   definition: Advice provided to the patients for management of symptoms
 - keyword: CCG
@@ -27,6 +29,8 @@
 - keyword: CTI
   expansion: Computer Telephony Integration 
   definition: Also called computer–telephone integration, CTI is a common name for any technology that allows interactions on a telephone and a computer to be integrated or coordinated. The term is predominantly used to describe desktop-based interaction for helping users be more efficient, though it can also refer to server-based functionality such as automatic call routing.  
+- keyword: Discovery
+  definition: The first stage of development in iterative delivery where a project team analyses a problem and conducts research to understand the users, needs and journeys that need to be considered when developing a solution.
 - keyword: Disposition
   definition: The perceived clinical need of a patient in the form of a skillset and time frame
 - keyword: EMS
@@ -63,7 +67,7 @@
   definition: Entity contracted by a commissioner to provide a service
 - keyword: SNOMED CT 
   expansion: Systemised Nomenclature of Medicine (Clinical Terms). 
-  definition: A structured clinical vocabulary for use in an electronic health record. It is the most comprehensive and precise clinical health terminology product in the world.
+  definition: A structured clinical vocabulary for use in an electronic health record. It is the most comprehensive and precise clinical health terminology product in the world. SNOMED CT is to be used as the single terminology in all care settings in England.
 - keyword: Supplier 
   definition: An entity providing a system or system components to Providers or the System user Person interacting with the system
 - keyword: Triage 
@@ -73,7 +77,7 @@
   definition: An area of Health Care services that primarily deals with urgent same day outpatient contacts for patient needs such as minor illness and injuries, and involves sign-posting and treatment of patients in settings such as 111, 999, OOH (Out Of Hours) GPs, A&E and minor injuries units, or through arrangement of urgent appointments (GP and Dental).
 - keyword: UTC
   expansion: Urgent Treatment Centres
-  definition: Medical treatment facility where patients can be treated for minor emergencies and injury.
+  definition: A medical treatment facility where patients can be treated for minor emergencies and injury. UTCs work alongside other parts of the urgent care network including primary care, community pharmacists, ambulance and other community-based services to provide a locally accessible and convenient alternative to A&E for patients who do not need to attend hospital. Commonality of service provision under the UTC name will increasingly end the current confusing range of options and simplify the system so patients know where to go and have clarity of which services are on offer wherever they are in the country.
 - keyword: WIC
   expansion: Walk-in centre
-  definition: NHS walk-in centres offer convenient access to a range of treatments. WICs are managed by Clinical Commissioning Groups (CCGs), dealing with minor illnesses and injuries
+  definition: NHS walk-in centres offer convenient access to a range of treatments. WICs are managed by Clinical Commissioning Groups (CCGs), dealing with minor illnesses and injuries. Walk-in centres are gradually being replaced by urgent treatment centres (UTCs).

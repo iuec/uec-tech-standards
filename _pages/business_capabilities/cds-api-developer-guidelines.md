@@ -72,9 +72,9 @@ Flag (need to elaborate?)
 
 ## FHIR Primer
 ### What are resources?
-Fast Healthcare Interoperability Resources (FHIR) is an international standard based around defining Resources.  These are objects which represent things of value to a healthcare environment.  Examples are patient, encounter, medication or diagnosis.  Much of the information transferred during a triage journey is described using resources.
+Fast Healthcare Interoperability Resources (FHIR) is an [international standard](http://hl7.org/fhir/STU3/overview.html) based around defining Resources.  These are objects which represent things of value to a healthcare environment.  Examples are [patient](http://hl7.org/fhir/STU3/patient.html), [encounter](http://hl7.org/fhir/STU3/encounter.html), [medication](http://hl7.org/fhir/STU3/medication.html) or [condition](http://hl7.org/fhir/STU3/condition.html).  Much of the information transferred during a triage journey is described using resources.
 
-In a message, resources will often be referenced from other resources.  For example, a diagnosis resource will have a reference to the patient that the diagnosis applies to.  The patient will be described in a resource.
+In a message, resources will often be referenced from other resources.  For example, a condition resource will have a reference to the patient that the condition applies to.  The patient will be described in a resource.
 
 ### What’s a contained resource?
 Referenced resources can be a reference (by id), where if more information from the referenced resource is needed, that resource can be fetched directly (through a GET operation).  Alternatively, the referenced resource can be provided in full in the primary resource.  This is referred to in FHIR as a contained resource.
