@@ -31,6 +31,12 @@ entries:
       - title: Clinical consultation
         output: web
         subfolderitems:
+        - title: CDS API Overview
+          url: /cds-api-overview.html
+          output: web, pdf
+        - title: CDS API developer guidelines
+          url: /cds-api-developer-guidelines.html
+          output: web, pdf
         - title: CDS API demo implementation
           url: cds-api-demo-implementation.html
           output: web, pdf
@@ -83,7 +89,7 @@ entries:
     output: web
     folderitems:
     - title: Appointment booking API
-      url: /appointments.html
+      url: /appointment-booking-api.html
       output: web, pdf
     - title: Clinical Decision Support API
       url: clinical_decision_support_api.html
