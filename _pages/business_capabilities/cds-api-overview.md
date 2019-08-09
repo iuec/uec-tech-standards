@@ -29,7 +29,7 @@ The aim of the CDS API is to enable EMS and CDSS interactions to support the int
 ## CDS API in a patient journey 
 The patient Journey starts when a patient contacts the NHS service with a health issue.  
 
-<p style="text-align:center;"><img src="/images/cds-api-simplified-patient-journey.png" alt="A simplified patient journey through any UEC channel" title="A simplified patient journey through any UEC channel" style="width:100%">
+<p style="text-align:center;"><img src="images/cds-api-simplified-patient-journey.png" alt="A simplified patient journey through any UEC channel" title="A simplified patient journey through any UEC channel" style="width:100%">
 <br>
 A simplified patient journey through any UEC channel
 </p>
@@ -107,7 +107,7 @@ A simplified patient journey through any UEC channel
 
 The scope of the CDS API encompasses the interactions between the EMS and CDSS using open standards.
 
-<p style="text-align:center;"><img src="/images/cds-api-operational-representation.png" alt="EMS CDSS Sample Operational representation" title="EMS CDSS Sample Operational representation" style="width:80%">
+<p style="text-align:center;"><img src="images/cds-api-operational-representation.png" alt="EMS CDSS Sample Operational representation" title="EMS CDSS Sample Operational representation" style="width:80%">
 <br>
 EMS CDSS Sample Operational representation
 </p>
