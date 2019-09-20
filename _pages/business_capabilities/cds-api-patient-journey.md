@@ -92,12 +92,9 @@ Claire is a Health Advisor for an NHS 111 Service Provider and has worked there 
           <p>Claire is presented with clinical decision support to assist her with the triage of Karen's leg injury.</p>
       </td>
       <td>
-
         <p>The EMS has patient age and gender details that partially meet the <code>ServiceDefinition.DataRequirements</code> and posts these to the CDSS in the <code>ServiceDefinition.$evaluate.inputData</code> element.</p>
 
         <p>This information is 'inspected' by the CDSS and is insufficient to render a result as the CDSS needs more information about the nature of Karen's injury. The CDSS identifies an appropriate <code>Questionnaire</code> resource to elicit more information about the patient's injury. The reference to the <code>Questionnaire</code> resource is returned to the EMS as part of the <code>GuidanceResponse</code>.</p>
-
-        <!-- <p>The CDSS references this <code>Questionnaire</code> in a <code>GuidanceResponse</code> resource returned to the EMS, and thus establishes a <a href="https://developer.nhs.uk/apis/cds-api-1-0-0/api_get_questionnaire.html">Questionnaire and Response interaction</a> sequence.</p> -->
     </td>
   </tr>
 
@@ -114,23 +111,8 @@ Claire is a Health Advisor for an NHS 111 Service Provider and has worked there 
           <p>The <code>GuidanceResponse.status</code> is set to 'data-required' and the reference to the next <code>Questionnaire</code> resource is populated in the <code>GuidanceResponse.dataRequirement</code> element.</p>  
           <p>The next <code>Questionnaire</code> is sent as a request for more information from the EMS. The EMS collects answers from the user and invokes $evaluate again, populating input data with the <code>QuestionnaireResponse</code> and all assertions received in the <code>GuidanceResponse.outputParameters</code>, as per the Restful behaviour described above.</p>
           <p>This loop is repeated until there is enough information for the CDSS to populate the result.</p> 
-
-
- <!--            <p>The responses to the CDSS questions from Karen are then communicated back by the EMS using the <code>QuestionnaireResponse</code>.</p> 
-
-            <p>The CDSS, in turn, reads the response and creates a clinical assertion as an <code>Observation</code> resource, and tags these to the next set of questions until there is enough information for it to conclude an outcome. </p> -->
         </td>
     </tr>
-   <!--  <tr>
-        <td>
-            <p>Using the questions available from the CDSS presented on her screen, Claire continues talking to Karen ruling out any blood loss, swelling of limbs, joint pains and deformity as directed by the CDSS question path.</p>
-            <p> She captures Karen's answers in the EMS, including any additional information as necessary, which are conveyed back to the CDSS. </p>
-        </td>
-        <td>
-            <p>The EMS continues invoking the <code>ServiceDefinition.$evaluate</code> operation referencing <code>QuestionnaireResponses</code> and any previous assertions (<code>Observation</code> resources) for the CDSS to evaluate.</p>
-            <p> The CDSS creates further assertions from the <code>QuestionnaireResponse</code> and determines whether a result can be provided.</p>
-        </td>
-    </tr> -->
 </table>
 
 ### 3. The CDSS provides a Result against a chief concern, post assessment
@@ -163,13 +145,6 @@ Claire is a Health Advisor for an NHS 111 Service Provider and has worked there 
            <li>Occurrence of 'within 24 hours'</li>
          </ul>
        </p>
-
-<!--           <p>
-          The CDSS reaches the stage where enough information is available to arrive at a triage outcome. The CDSS conveys this through the Result element within the <code>GuidanceResponse</code> resource. Since Karen's injury is only superficial, the CDSS is able to confirm the triage outcome or result of a Care advice of type "Self Care". 
-      </p>
-          <p>
-            The result element in <code>GuidanceResponse</code> is populated with a <code>RequestGroup</code> resource which will reference a <code>CarePlan</code> as the outcome of the triage journey. The <code>CarePlan</code> is of type "Self Care" Advice, and is indicated by the CareTeam.particpant element of the resource is referenced with only one instance of participant and the participant.role set to "Patient".
-        </p> -->
     </td> 
 </tr>
 <tr>
