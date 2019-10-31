@@ -43,6 +43,9 @@ entries:
         - title: CDS API demo implementation
           url: cds-api-demo-implementation.html
           output: web, pdf
+        - title: CDS API conformance overview
+          url: cds-api-conformance-overview.html
+          output: web, pdf
 
       - title: Complete encounter
         output: web
