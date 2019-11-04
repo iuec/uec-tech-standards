@@ -37,14 +37,14 @@ entries:
         - title: CDS API Patient Journey
           url: /cds-api-patient-journey.html
           output: web, pdf
-        - title: CDS API developer guidelines
+        - title: CDS API Developer guidelines
           url: /cds-api-developer-guidelines.html
           output: web, pdf
-        - title: CDS API demo implementation
-          url: cds-api-demo-implementation.html
+        - title: CDS API Demo implementation
+          url: /cds-api-demo-implementation.html
           output: web, pdf
-        - title: CDS API conformance overview
-          url: cds-api-conformance-overview.html
+        - title: CDS API Conformance overview
+          url: /cds-api-conformance-overview.html
           output: web, pdf
 
       - title: Complete encounter

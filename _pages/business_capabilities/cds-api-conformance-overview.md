@@ -3,17 +3,14 @@ title: Clinical Decision Support API Conformance Overview
 sidebar: overview_sidebar
 permalink: cds-api-conformance-overview.html
 toc: true
-summary: This page is a summary of the conformance approach NHS Digital is taking for assessing Clinical Systems conformance to the CDS API Implementation Guide 1.0.
+summary: A summary of the conformance approach NHS Digital is taking for assessing Clinical Systems conformance to the CDS API Implementation Guide 1.0.
 folder: business_capabilities
 ---
 
-## Summary
-This page is a summary of the conformance approach NHS Digital is taking for assessing Clinical Systems conformance to the CDS API Implementation Guide 1.0.
-
 ## Introduction
-UEC System Suppliers must undergo a Technical Conformance process to achieve CDS API Guide Conformance certification for their product. The purpose of CDS API Guide Conformance is for NHS Digital to validate that the developed product (Encounter Management System or Clinical Decision Support System) follows the <a href="https://developer.nhs.uk/apis/cds-api-1-0-0/">CDS API Implementation Guide</a> and is compliant with the guidance.  System suppliers will have access to a detailed requirements list and a Toolkit Workbench through which simple tests are carried out, to provide the required evidence to NHS Digital.
+UEC System Suppliers must undergo a technical Conformance process to achieve CDS API Guide Conformance certification for their product. The purpose of CDS API Guide Conformance is for NHS Digital to validate that the developed product (Encounter Management System or Clinical Decision Support System) follows the <a href="https://developer.nhs.uk/apis/cds-api-1-0-0/">CDS API Implementation Guide</a> and is compliant with the guidance.  System suppliers will have access to a detailed requirements list and a Toolkit Workbench through which simple tests are carried out, to provide the required evidence to NHS Digital.
 
-Please view the <a href="https://developer.nhs.uk/apis/uec-tech-standards/cds-api-overview.html">CDS API overview</a> for further information on the CDS API Implementation Guide.
+View the <a href="https://developer.nhs.uk/apis/uec-tech-standards/cds-api-overview.html">CDS API overview</a> for further information on the CDS API Implementation Guide.
 
 ## Basic Technical Overview
 The API service being assured is the technical message interaction between an Encounter Management System (EMS) and a Clinical Decision Support System (CDSS) using <a href="http://www.hl7.org/fhir/STU3/summary.html">FHIR STU3</a> as detailed in the <a href="https://developer.nhs.uk/apis/cds-api-1-0-0/">CDS API Implementation Guide</a>. 
@@ -92,14 +89,6 @@ The illustration below summarises the key stages and activities a UEC Technology
         <img src="images/cds-api-conformance-process-overview.jpg" alt="A process diagram detailing the key stanges and activities a UEC Technology supplier will go through in the conformance journey" title="CDS API Conformance process overview" usemap="#conformance-process-overview">
     </a>
 </p>
-<!-- <map name="conformance-process-overview">
-    <area target="" alt="1" title="1" href="http://google.com" coords="16,18,302,19,396,105,299,197,17,197" shape="poly">
-    <area target="" alt="2" title="2" href="" coords="317,17,626,15,721,104,624,194,313,195,411,104" shape="poly">
-    <area target="" alt="3" title="3" href="" coords="643,13,947,15,1044,104,952,191,642,192,733,105" shape="poly">
-    <area target="" alt="4" title="4" href="" coords="21,484,300,484,395,570,296,660,23,659" shape="poly">
-    <area target="" alt="5" title="5" href="http://google.co.uk" coords="317,485,614,485,711,568,613,660,310,658,406,571" shape="poly">
-    <area target="" alt="6" title="6" href="" coords="634,482,945,482,1041,571,946,657,624,659,722,568" shape="poly">
-</map> -->
 
 <ol>
     <li>
@@ -108,7 +97,7 @@ The illustration below summarises the key stages and activities a UEC Technology
     </li>
     <li>
         <strong>Access conformance resources</strong><br>
-        <p>The detailed conformance requirements list will be published on these pages of the NHS Digital developer site. The requirements list will detail all requirements that are needed to provide evidence against and achieve a passing level of conformance as determined by the NHS Digital.</p>
+        <p>The detailed conformance requirements list will be published on these pages of the NHS Digital developer site. The requirements list will detail all requirements that are needed to provide evidence against and achieve a passing level of conformance as determined by NHS Digital.</p>
         <p>A copy of the Toolkit Workbench Tool will be made available with test scripts for suppliers to develop their systems to, and generate conformance evidence.</p>
     </li>
     <li>
@@ -152,10 +141,10 @@ Suppliers undergoing conformance testing are required to provide:
 - Contact details of relevant individuals within the organisation
 - Details of the product and deployment scenarios
 - Technical API compliance evidence (the detailed requirements list will reference the automated tooling and associated tests to be executed)
-- A declaration regarding clinical safety to confirm the obligations under (DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems)[http://content.digital.nhs.uk/isce/publication/scci0129]
+- A declaration regarding clinical safety to confirm the obligations under [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](http://content.digital.nhs.uk/isce/publication/scci0129)
 
 
 ## Contact details
 
-To begin the process contact us at: <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>
+If you are an Urgent and Emergency Care technology supplier interested in achieving CDS API conformance for your product, please contact us at: <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>
 
