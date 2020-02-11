@@ -107,7 +107,7 @@ Development of the conformance requirements and technical tooling for suppliers 
 
 The test tooling will provide various technical test features, including the ability to validate HTTP headers, JWT, and FHIR base/profiled resources. The test tooling will also act as a technical HTTP endpoint stub, with pre-configured responses based on specific triggers.
 
-We welcome suppliers wishing to engage with the Conformance approach to contact us via the [Communication Channels](https://developer.nhs.uk/apis/cds-api-1-1-0/support_communications.html) to access these resources. 
+We welcome suppliers wishing to engage with the Conformance approach to contact us via the CDS API [Communication Channels](https://developer.nhs.uk/apis/cds-api/support_communications.html) to access these resources. 
 
 
 ## Pre-requisites for CDS API Guide Conformance
@@ -159,5 +159,5 @@ Useful links:
 
 ## Contact details
 
-To begin the process contact us at: <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>
+To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
