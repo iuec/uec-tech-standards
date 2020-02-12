@@ -65,9 +65,6 @@ entries:
         - title: Referral and transfer of care
           url: /referrals.html
           output: web
-        - title: Live wait times
-          url: /live_wait_times.html
-          output: web, pdf
 
       - title: Outcome data
         output: web
