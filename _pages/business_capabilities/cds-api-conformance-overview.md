@@ -78,7 +78,7 @@ The illustration below summarises the key stages and activities a UEC Technology
     <li>
         <strong>Submit conformance evidence</strong><br>
         <p>Once evidence has been collected against the requirements list this can be submitted to NHS Digital for assessment.</p>
-        <p>There may be a period of iteration where Suppliers will revise the submitted evidence until it satisfies our team.</p>
+        <p>There may be a period of iteration where Suppliers will revise the submitted evidence until it satisfies the requirements.</p>
         <p>At the end of the conformance assessment process a report is generated with details of the tests.</p>
     </li>
     <li>
@@ -154,6 +154,6 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDY1NTQ4NzMsMTg5NTE5MDY4MCw1MT
-E4OTE2NjVdfQ==
+eyJoaXN0b3J5IjpbMTU5OTkwNTY4OSwxODk1MTkwNjgwLDUxMT
+g5MTY2NV19
 -->
