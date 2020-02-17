@@ -10,9 +10,9 @@ folder: business_capabilities
 ## Introduction
 The CDS API Conformance Approach is used to evidence that a developed product is compliant with the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/).
 
-It allows UEC System Suppliers to demonstrate to NHS Digital that their developed product follows guidance correctly, and therefore is likely to be interoperable with other systems using the standard. Suppliers that successfully complete the Technical Conformance process will be granted CDS API Guide Conformance certification for their product. These systems and suppliers will also be listed on NHS Digital's [Conformance Catalogue](https://digital.nhs.uk/services/interoperability-toolkit/conformance/conformance-catalogue).
+It allows UEC System Suppliers to demonstrate to NHS Digital that their developed product follows guidance correctly, and therefore is likely to be interoperable with other systems using the standard. Suppliers that successfully complete the Technical Conformance process will be granted CDS API Guide Conformance certification for their product. These systems and suppliers will also be listed on NHS Digital's [Conformance Catalogue](https://digital.nhs.uk/services/interoperability-toolkit/conformance/conformance-catalogue).
 
-The approach centres around suppliers using a requirements list and then providing the required evidence to NHS Digital for assessment. Technical tooling will be provided by NHS Digital to help with the execution of test cases to demonstrate the requirements have been met. Evidence will be in the form of both test tooling log outputs and self-certifying statements.
+The approach centres around suppliers referencing a requirements list and providing the required evidence to NHS Digital for assessment. Technical tooling will be provided by NHS Digital to help with the execution of test cases to demonstrate the requirements have been met. Evidence will be in the form of both test tooling log outputs and self-certifying statements.
 
 The CDS API Conformance Approach will be applied to both Encounter Management Systems (EMS) and Clinical Decision Support Systems (CDSS).
 
@@ -20,7 +20,7 @@ Please view the [CDS API overview](https://developer.nhs.uk/apis/uec-tech-standa
 
 
 ## Basic Technical Overview
-The API service being assured is the technical message interaction between an Encounter Management System (EMS) and a Clinical Decision Support System (CDSS) using [FHIR STU3](http://www.hl7.org/fhir/STU3/summary.html) as detailed in the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/). 
+The API service being assured is the technical message interaction between an Encounter Management System (EMS) and a Clinical Decision Support System (CDSS) using [FHIR STU3](http://www.hl7.org/fhir/STU3/summary.html) as detailed in the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/). 
 
 ### Encounter Management System
 An Encounter Management System (EMS) is used for workflow management and to record, manage and track patient encounters of care through Urgent and Emergency Care (UEC) settings.
@@ -34,7 +34,7 @@ As per the <a href="https://developer.nhs.uk/apis/cds-api/overview_concepts.html
 - Initiate the search and selection of a <code>ServiceDefinition</code>
 - Initiate the evaluation of a <code>ServiceDefinition</code>
 - Read appropriate resources from the CDSS (e.g. <code>Questionnaire</code>)
-- Write (Create & Update) appropriate resources (e.g. <code>QuestionnaireResponse</code>)
+- Write (Create & Update) appropriate resources (e.g. <code>QuestionnaireResponse</code>)
 
 The Encounter Management System MAY:
 - Write (Create & Update) resources which are not core (e.g. <code>Condition</code>)
@@ -122,7 +122,7 @@ Suppliers undergoing conformance testing are required to provide:
 - Contact details of relevant individuals within the organisation
 - Details of the product and deployment scenarios
 - Technical API compliance evidence (the detailed requirements list will reference the automated tooling and associated tests to be executed)
-- A declaration regarding clinical safety to confirm the obligations under [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](http://content.digital.nhs.uk/isce/publication/scci0129)
+- A declaration regarding clinical safety to confirm the obligations under [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](http://content.digital.nhs.uk/isce/publication/scci0129)
 
 
 
@@ -161,3 +161,6 @@ Useful links:
 
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNTExODkxNjY1XX0=
+-->
