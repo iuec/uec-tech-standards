@@ -51,21 +51,13 @@ As per the <a href="https://developer.nhs.uk/apis/cds-api/overview_concepts.html
 - Read appropriate resources from the EMS (e.g. <code>QuestionnaireResponse</code>)
 - Write (Create & Update) appropriate resources (e.g. <code>Questionnaire</code>, <code>Observation</code>)
 
-## Conformance Approach
-As with all NHS Digital services, the approach to CDS API Guide Conformance must be efficient, appropriate to the level of risk involved, and demonstrate clear reasoning and rationale.
-
-Efficiency, appropriateness, and flexibility are key areas that have been considered when developing this conformance approach, examples being:
-
-- Efficiency by minimizing burden on the UEC Technology suppliers by providing test tooling capabilities, demo implementations and development guidance where possible
-- Appropriateness by mapping the technical compliance task to predetermined risks.
-
 
 ## Journey process
 The illustration below summarises the key stages and activities a UEC Technology supplier will go through in the conformance journey.
 
 <p style="text-align:center;">
     <a href="images/cds-api-conformance-process-overview.jpg">
-        <img src="images/cds-api-conformance-process-overview.jpg" alt="A process diagram detailing the key stanges and activities a UEC Technology supplier will go through in the conformance journey" title="CDS API Conformance process overview" usemap="#conformance-process-overview">
+        <img src="images/cds-api-conformance-process-overview.jpg" alt="A process diagram detailing the key stages and activities a UEC Technology supplier will go through in the conformance journey" title="CDS API Conformance process overview" usemap="#conformance-process-overview">
     </a>
 </p>
 
@@ -162,5 +154,6 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NTE5MDY4MCw1MTE4OTE2NjVdfQ==
+eyJoaXN0b3J5IjpbMTgwMTUzMjk3NCwxODk1MTkwNjgwLDUxMT
+g5MTY2NV19
 -->
