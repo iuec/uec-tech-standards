@@ -113,13 +113,14 @@ Suppliers undergoing conformance testing are expected to provide:
 
 - Contact details of relevant individuals within the organisation
 - Details of the product and deployment scenarios
-- Technical API compliance evidence (the detailed requirements list will reference the automated tooling and associated tests to be executed)
+- Technical API compliance evidence (the requirements list will reference the automated tooling and associated tests to be executed)
+- A declaration regarding whether the product or service is a medical device. If not a medical device then justification in line with the [Medicines and Healthcare products Regulatory Agency](https://www.gov.uk/guidance/medical-devices-conformity-assessment-and-the-ce-mark).
 - A declaration regarding clinical safety to confirm the obligations under [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](http://content.digital.nhs.uk/isce/publication/scci0129)
 
 
 
 ## Scope of the Conformance Approach
-The scope of the CDS API Conformance Approach is assuring that a system conforms to V1.1.1 of CDS API Implementation Guide. As such, it solely covers technical certification of a given product to this standard.
+The scope of the CDS API Conformance Approach is assuring that a system conforms to V1.1.1 of the CDS API Implementation Guide. As such, it solely covers technical certification of a given product to this standard.
 
 ## Out of scope of the Conformance Approach
 The following areas are out of the scope of the Implementation Guide and Conformance. We have provided useful links to assist individuals in making their own judgements on what additional assessments and accreditation may be needed.
@@ -154,6 +155,6 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYyMTM0MTg4LDE4OTUxOTA2ODAsNTExOD
-kxNjY1XX0=
+eyJoaXN0b3J5IjpbLTEzMTE3ODE3NzMsMTg5NTE5MDY4MCw1MT
+E4OTE2NjVdfQ==
 -->
