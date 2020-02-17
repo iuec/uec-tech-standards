@@ -90,16 +90,16 @@ The illustration below summarises the key stages and activities a UEC Technology
     <li>
         <strong>Tell us of any material change after go live</strong>
         <br>
-        <p>The conformance process tests systems at a point in time. If a Supplier system has a version increment that affects the implementation of the CDS API Guide in the product, then Suppliers can work with the Solutions Assurance team to retest the affected requirements in scope to achieve an uplift of the conformance status.</p>
+        <p>The conformance process tests systems at a point in time. If a Supplier system has a version increment that affects the implementation of the CDS API Guide in the product, then Suppliers must work with the Solutions Assurance team to retest the affected requirements in scope to achieve an uplift of the conformance status.</p>
     </li>
 </ol>
 
 ## Requirements list and technical tooling
 Development of the conformance requirements and technical tooling for suppliers to execute test cases to generate evidence is currently underway. These will be linked to from these pages once available for circulation.
 
-The test tooling will provide various technical test features, including the ability to validate HTTP headers, JWT, and FHIR base/profiled resources. The test tooling will also act as a technical HTTP endpoint stub, with pre-configured responses based on specific triggers.
+The test tooling will provide various technical test features, including the ability to validate HTTP headers, JWT, and FHIR base/profiled resources.
 
-We welcome suppliers wishing to engage with the Conformance approach to contact us via the CDS API [Communication Channels](https://developer.nhs.uk/apis/cds-api/support_communications.html) to access these resources. 
+We welcome suppliers wishing to engage with the Conformance approach to contact us via the CDS API [Communication Channels](https://developer.nhs.uk/apis/cds-api/support_communications.html) . 
 
 
 ## Pre-requisites for CDS API Guide Conformance
@@ -154,6 +154,6 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5OTkwNTY4OSwxODk1MTkwNjgwLDUxMT
-g5MTY2NV19
+eyJoaXN0b3J5IjpbLTE2ODYzMTQ0ODEsMTg5NTE5MDY4MCw1MT
+E4OTE2NjVdfQ==
 -->
