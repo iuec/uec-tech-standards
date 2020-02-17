@@ -126,11 +126,11 @@ The scope of the CDS API Conformance Approach is assuring that a system conforms
 The following areas are out of the scope of the Implementation Guide and Conformance. We have provided useful links to assist individuals in making their own judgements on what additional assessments and accreditation may be needed.
 
 ### Clinical safety and risk
-The Conformance Approach requires a declaration regarding clinical safety to confirm the obligations under [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems). However, management of clinical safety and risk his remains the responsibility of system manufacturers, which should seek assessments and accreditation appropriate for the nature and use of their product.
+The Conformance Approach requires a declaration regarding clinical safety to confirm the obligations under [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems). However, management of clinical safety and risk remains the responsibility of system manufacturers, which should seek assessments and accreditation appropriate for the nature and use of their product.
 
 Useful links:
 
-- NHS Digital: [DCB0160: Clinical Risk Management: its Application in the Deployment and Use of Health IT Systems](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0160-clinical-risk-management-its-application-in-the-deployment-and-use-of-health-it-systems)
+- NHS Digital: [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems)
 
 ### Medical Device assessment and regulation
 It is the responsibility of system manufacturers to ensure that any assessment or regulation of their product as a potential Medical Device is carried out.
@@ -155,6 +155,6 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTE3ODE3NzMsMTg5NTE5MDY4MCw1MT
-E4OTE2NjVdfQ==
+eyJoaXN0b3J5IjpbMTMwMTgxMjIyNiwxODk1MTkwNjgwLDUxMT
+g5MTY2NV19
 -->
