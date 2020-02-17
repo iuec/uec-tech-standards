@@ -3,14 +3,14 @@ title: Clinical Decision Support API Conformance Overview
 sidebar: overview_sidebar
 permalink: cds-api-conformance-overview.html
 toc: true
-summary: A summary of NHS Digital's Conformance Approach for assessing a System's conformance to the CDS API Implementation Guide.
+summary: A summary of NHS Digital's Conformance Approach for assessing a System's conformance to the CDS API Implementation Guide V1.1.1
 folder: business_capabilities
 ---
 
 ## Introduction
-The CDS API Conformance Approach can be used to validate whether or not a developed product is compliant with the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/).
+The CDS API Conformance Approach is used to evidence that a developed product is compliant with the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/).
 
-It allows NHS Digital to validate that a developed product follows guidance correctly, and therefore is likely to be compatible with other systems using the standard. Suppliers that successfully complete the Technical Conformance process will be granted CDS API Guide Conformance certification for their product. These systems and suppliers will also be listed on NHS Digital’s [Conformance Catalogue](https://digital.nhs.uk/services/interoperability-toolkit/conformance/conformance-catalogue).
+It allows UEC System Suppliers to demonstrate to NHS Digital that their developed product follows guidance correctly, and therefore is likely to be interoperable with other systems using the standard. Suppliers that successfully complete the Technical Conformance process will be granted CDS API Guide Conformance certification for their product. These systems and suppliers will also be listed on NHS Digital's [Conformance Catalogue](https://digital.nhs.uk/services/interoperability-toolkit/conformance/conformance-catalogue).
 
 The approach centres around suppliers using a requirements list and then providing the required evidence to NHS Digital for assessment. Technical tooling will be provided by NHS Digital to help with the execution of test cases to demonstrate the requirements have been met. Evidence will be in the form of both test tooling log outputs and self-certifying statements.
 
