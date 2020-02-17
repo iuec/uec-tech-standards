@@ -131,7 +131,7 @@ The Conformance Approach requires a declaration regarding clinical safety to con
 Useful links:
 
 - NHS Digital: [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems)
-- CDS API Implementation Guide - [Clinical Safety Case Report](https://developer.nhs.uk/apis/cds-api/clinical_safety.html).
+- CDS API Implementation Guide - [Clinical Safety Case Report](https://developer.nhs.uk/apis/cds-api/clinical_safety/).
 
 ### Medical Device assessment and regulation
 It is the responsibility of system manufacturers to ensure that any assessment or regulation of their product as a potential Medical Device is carried out.
@@ -140,6 +140,9 @@ Useful links:
 
 - Medicines and Healthcare products Regulatory Agency: [Medical devices regulation and safety](https://www.gov.uk/topic/medicines-medical-devices-blood/medical-devices-regulation-safety)
 - Medicines and Healthcare products Regulatory Agency: [Medical device stand-alone software including apps](https://www.gov.uk/government/publications/medical-devices-software-applications-apps)
+
+### Performance Testing
+
 
 ### Security
 The Implementation Guide features guidance on how an API should identify authorised access to an endpoint. However, this is just one aspect of information security and it remains the responsibility of system manufacturers to ensure safe and suitable security practices are followed.
@@ -156,6 +159,6 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NjE2ODU3OCwxODk1MTkwNjgwLDUxMT
-g5MTY2NV19
+eyJoaXN0b3J5IjpbOTQzOTY2OTQxLDE4OTUxOTA2ODAsNTExOD
+kxNjY1XX0=
 -->
