@@ -142,7 +142,7 @@ Useful links:
 - Medicines and Healthcare products Regulatory Agency: [Medical device stand-alone software including apps](https://www.gov.uk/government/publications/medical-devices-software-applications-apps)
 
 ### Performance Testing
-
+It is the responsibility of system manufacturers to ensure their systems 
 
 ### Security
 The Implementation Guide features guidance on how an API should identify authorised access to an endpoint. However, this is just one aspect of information security and it remains the responsibility of system manufacturers to ensure safe and suitable security practices are followed.
@@ -159,6 +159,6 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQzOTY2OTQxLDE4OTUxOTA2ODAsNTExOD
+eyJoaXN0b3J5IjpbNzU2NzgwMTUwLDE4OTUxOTA2ODAsNTExOD
 kxNjY1XX0=
 -->
