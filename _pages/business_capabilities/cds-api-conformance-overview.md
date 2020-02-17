@@ -131,7 +131,7 @@ The Conformance Approach requires a declaration regarding clinical safety to con
 Useful links:
 
 - NHS Digital: [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](https://digital.nhs.uk/data-and-information/information-standards/information-standards-and-data-collections-including-extractions/publications-and-notifications/standards-and-collections/dcb0129-clinical-risk-management-its-application-in-the-manufacture-of-health-it-systems)
-- [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api-1-0-0/).
+- CDS API Implementation Guide - [Clinical Safety Case Report](https://developer.nhs.uk/apis/cds-api/clinical_safety.html).
 
 ### Medical Device assessment and regulation
 It is the responsibility of system manufacturers to ensure that any assessment or regulation of their product as a potential Medical Device is carried out.
@@ -156,6 +156,6 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzEzMzcyNzcsMTg5NTE5MDY4MCw1MT
-E4OTE2NjVdfQ==
+eyJoaXN0b3J5IjpbMTY2NjE2ODU3OCwxODk1MTkwNjgwLDUxMT
+g5MTY2NV19
 -->
