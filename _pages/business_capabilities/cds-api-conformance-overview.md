@@ -73,7 +73,7 @@ The illustration below summarises the key stages and activities a UEC Technology
     </li>
     <li>
         <strong>Collect conformance evidence</strong><br>
-        <p>Using the conformance requirements list Suppliers can collate their evidence. Evidence will be in the form of self-certifying statements and TKW log outputs.</p>
+        <p>Using the conformance requirements list Suppliers can collate their evidence. Evidence will be in the form of self-certifying statements and technical tooling log outputs.</p>
     </li>
     <li>
         <strong>Submit conformance evidence</strong><br>
@@ -154,6 +154,6 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMTUzMjk3NCwxODk1MTkwNjgwLDUxMT
-g5MTY2NV19
+eyJoaXN0b3J5IjpbLTEyMDY1NTQ4NzMsMTg5NTE5MDY4MCw1MT
+E4OTE2NjVdfQ==
 -->
