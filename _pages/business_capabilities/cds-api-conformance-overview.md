@@ -10,9 +10,9 @@ folder: business_capabilities
 ## Introduction
 The CDS API Conformance Approach is used to evidence that a developed product is compliant with the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/).
 
-It allowsUEC System Suppliers must undergo a technical Conformance process to achieve CDS API Guide Conformance certification for their product. The purpose of CDS API Guide Conformance is for NHS Digital to validate that athe developed product follows guidance correctly, and therefore is likely to be compatible with other systems using the standard. Suppliers that successfully complete the Technical Conformance process will be granted CDS API Guide Conformance certification for their product. These systems and suppliers will also be listed on NHS Digital’s [Conformance Catalogue](https://digital.nhs.uk/services/interoperability-toolkit/conformance/conformance-catalogue).
+It allows UEC System Suppliers to demonstrate to NHS Digital that their developed product follows guidance correctly, and therefore is likely to be interoperable with other systems using the standard. Suppliers that successfully complete the Technical Conformance process will be granted CDS API Guide Conformance certification for their product. These systems and suppliers will also be listed on NHS Digital’s [Conformance Catalogue](https://digital.nhs.uk/services/interoperability-toolkit/conformance/conformance-catalogue).
 
-The approach centres around suppliers using a requirements list and then providing the required evidence to NHS Digital for assessment. Technical tooling will be provided by NHS Digital to help with the execution of test cases to demonstrate the requirements have been met. Evidence will be in the form of both test tooling log outputs and self-certifying statements.
+The approach centres around suppliers referencing a requirements list and providing the required evidence to NHS Digital for assessment. Technical tooling will be provided by NHS Digital to help with the execution of test cases to demonstrate the requirements have been met. Evidence will be in the form of both test tooling log outputs and self-certifying statements.
 
 The CDS API Conformance Approach will be applied to both Encounter Management Systems (EMS) and Clinical Decision Support Systems (CDSS).
 
@@ -210,5 +210,5 @@ To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net
 If you are an Urgent and Emergency Care technology supplier interested in achieving CDS API conformance for your product, please contact us at: <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NzkwNDA5M119
+eyJoaXN0b3J5IjpbLTE3MjM3MzEzOTldfQ==
 -->
