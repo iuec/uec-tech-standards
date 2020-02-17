@@ -3,7 +3,7 @@ title: Clinical Decision Support API Conformance Overview
 sidebar: overview_sidebar
 permalink: cds-api-conformance-overview.html
 toc: true
-summary: A summary of NHS Digital's Cthe conformance Aapproach NHS Digital is taking for assessing aClinical System's conformance to the CDS API Implementation Guide 1.0.
+summary: A summary of NHS Digital’s Conformance Approach for assessing a System's conformance to the CDS API Implementation Guide V1.1.1
 folder: business_capabilities
 ---
 
@@ -210,5 +210,5 @@ To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net
 If you are an Urgent and Emergency Care technology supplier interested in achieving CDS API conformance for your product, please contact us at: <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjM3MzEzOTldfQ==
+eyJoaXN0b3J5IjpbNzY4ODE4MzMwLC0xNzIzNzMxMzk5XX0=
 -->
