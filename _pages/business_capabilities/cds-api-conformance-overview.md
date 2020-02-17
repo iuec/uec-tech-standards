@@ -8,24 +8,24 @@ folder: business_capabilities
 ---
 
 ## Introduction
-The CDS API Conformance Approach can be used to validate whether or not a developed product is compliant with the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/).
+The CDS API Conformance Approach is used to evidence that a developed product is compliant with the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/).
 
-It allowsUEC System Suppliers must undergo a technical Conformance process to achieve CDS API Guide Conformance certification for their product. The purpose of CDS API Guide Conformance is for NHS Digital to validate that athe developed product follows guidance correctly, and therefore is likely to be compatible with other systems using the standard. Suppliers that successfully complete the Technical Conformance process will be granted CDS API Guide Conformance certification for their product. These systems and suppliers will also be listed on NHS Digital’s [Conformance Catalogue](https://digital.nhs.uk/services/interoperability-toolkit/conformance/conformance-catalogue).
+It allowsUEC System Suppliers must undergo a technical Conformance process to achieve CDS API Guide Conformance certification for their product. The purpose of CDS API Guide Conformance is for NHS Digital to validate that athe developed product follows guidance correctly, and therefore is likely to be compatible with other systems using the standard. Suppliers that successfully complete the Technical Conformance process will be granted CDS API Guide Conformance certification for their product. These systems and suppliers will also be listed on NHS Digital’s [Conformance Catalogue](https://digital.nhs.uk/services/interoperability-toolkit/conformance/conformance-catalogue).
 
 The approach centres around suppliers using a requirements list and then providing the required evidence to NHS Digital for assessment. Technical tooling will be provided by NHS Digital to help with the execution of test cases to demonstrate the requirements have been met. Evidence will be in the form of both test tooling log outputs and self-certifying statements.
 
 The CDS API Conformance Approach will be applied to both Encounter Management Systems (EMS) and Clinical Decision Support Systems (CDSS).
 
-Please view the [CDS API overview]((Encounter Management System or Clinical Decision Support System) follows the <a href="https://developer.nhs.uk/apis/cds-api-1-0-0/">CDS API Implementation Guide</a> and is compliant with the guidance.  System suppliers will have access to a detailed requirements list and a Toolkit Workbench through which simple tests are carried out, to provide the required evidence to NHS Digital.
+Please view the [CDS API overview]((Encounter Management System or Clinical Decision Support System) follows the <a href="https://developer.nhs.uk/apis/cds-api-1-0-0/">CDS API Implementation Guide</a> and is compliant with the guidance.  System suppliers will have access to a detailed requirements list and a Toolkit Workbench through which simple tests are carried out, to provide the required evidence to NHS Digital.
 
-View the <a href="https://developer.nhs.uk/apis/uec-tech-standards/cds-api-overview.html) ">CDS API overview</a> for further information on the CDS API Implementation Guide.
+View the <a href="https://developer.nhs.uk/apis/uec-tech-standards/cds-api-overview.html) ">CDS API overview</a> for further information on the CDS API Implementation Guide.
 
 
 ## Basic Technical Overview
-The API service being assured is the technical message interaction between an Encounter Management System (EMS) and a Clinical Decision Support System (CDSS) using [FHIR STU3](<a href="http://www.hl7.org/fhir/STU3/summary.html)">FHIR STU3</a> as detailed in the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/). 
+The API service being assured is the technical message interaction between an Encounter Management System (EMS) and a Clinical Decision Support System (CDSS) using [FHIR STU3](<a href="http://www.hl7.org/fhir/STU3/summary.html)">FHIR STU3</a> as detailed in the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/). 
 
 ### Encounter Management System
-An<a href="https://developer.nhs.uk/apis/cds-api-1-0-0/">CDS API Implementation Guide</a>. 
+An<a href="https://developer.nhs.uk/apis/cds-api-1-0-0/">CDS API Implementation Guide</a>. 
 
 The CDS API Implementation Guide supports the following interactions for both the EMS and the CDSS acting as either consumer or provider:
 
@@ -69,7 +69,7 @@ As per the <a href="https://developer.nhs.uk/apis/cds-api-1-0-0/overview_concept
 - Initiate the search and selection of a <code>ServiceDefinition</code>
 - Initiate the evaluation of a <code>ServiceDefinition</code>
 - Read appropriate resources from the CDSS (e.g. <code>Questionnaire</code>)
-- Write (Create & Update) appropriate resources (e.g. <code>QuestionnaireResponse</code>)
+- Write (Create & Update) appropriate resources (e.g. <code>QuestionnaireResponse</code>)
 
 The Encounter Management System MAY:
 - Write (Create & Update) resources which are not core (e.g. <code>Condition</code>)
@@ -168,7 +168,7 @@ Suppliers undergoing conformance testing are required to provide:
 - Contact details of relevant individuals within the organisation
 - Details of the product and deployment scenarios
 - Technical API compliance evidence (the detailed requirements list will reference the automated tooling and associated tests to be executed)
-- A declaration regarding clinical safety to confirm the obligations under [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](http://content.digital.nhs.uk/isce/publication/scci0129)
+- A declaration regarding clinical safety to confirm the obligations under [DCB0129 - Clinical Risk Management: its Application in the Manufacture of Health IT Systems](http://content.digital.nhs.uk/isce/publication/scci0129)
 
 
 
@@ -210,5 +210,5 @@ To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net
 If you are an Urgent and Emergency Care technology supplier interested in achieving CDS API conformance for your product, please contact us at: <a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MzAzMzA4N119
+eyJoaXN0b3J5IjpbLTY1NzkwNDA5M119
 -->
