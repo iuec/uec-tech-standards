@@ -20,7 +20,7 @@ Please view the [CDS API overview](https://developer.nhs.uk/apis/uec-tech-standa
 
 
 ## Basic Technical Overview
-The API service being assured is the technical message interaction between an Encounter Management System (EMS) and a Clinical Decision Support System (CDSS) using [FHIR STU3](http://www.hl7.org/fhir/STU3/summary.html) as detailed in the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/). 
+The API service being assured is the technical interaction between an Encounter Management System (EMS) and a Clinical Decision Support System (CDSS) using [FHIR STU3](http://www.hl7.org/fhir/STU3/summary.html) as detailed in the [CDS API Implementation Guide](https://developer.nhs.uk/apis/cds-api/). 
 
 ### Encounter Management System
 An Encounter Management System (EMS) is used for workflow management and to record, manage and track patient encounters of care through Urgent and Emergency Care (UEC) settings.
@@ -162,5 +162,5 @@ Useful links:
 To begin the process contact us at: <a href="mailto:uecdi@nhs.net">uecdi@nhs.net</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTExODkxNjY1XX0=
+eyJoaXN0b3J5IjpbMTg5NTE5MDY4MCw1MTE4OTE2NjVdfQ==
 -->
