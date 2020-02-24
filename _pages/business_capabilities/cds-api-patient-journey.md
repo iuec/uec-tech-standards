@@ -133,7 +133,6 @@ Claire is a Health Advisor for an NHS 111 Service Provider and has worked there 
           <p>Claire reaches the end of the questions and a triage outcome, which in this case is to have her leg examined by her GP within 24 hours, is displayed on screen.</p>
       </td>
       <td>
-
         <p>The CDSS has enough information to arrive at a triage outcome which determined that the patient required a primary care assessment within 24 hours.
         </p> 
         <p>The <code>GuidanceResponse.status</code> is set to 'success'.</p>
@@ -164,3 +163,6 @@ Claire is a Health Advisor for an NHS 111 Service Provider and has worked there 
 <p>The EMS displays the recommendation to Claire, who has no reason in her judgement to override the recommendation.  As the call happens during GP opening hours, Claire advises Karen to make an appointment with her GP.  Since the EMS is connected to the Personal Demographics Service (PDS), and Karen has been identified in the EMS, Claire can see Karen's registered GP.</p>
 
 <p>The EMS to CDSS interactions are concluded.</p>
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIwNTgxNDg5NTZdfQ==
+-->

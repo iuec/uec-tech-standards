@@ -148,6 +148,22 @@ If a set of questions should be displayed together, this can be shown through cr
 <!-- ### How do I ask a question where the user has to click on an image?
 
 ```javascript
+
+  {
+    "resourceType": "List",
+    "id": "prognosis",
+    "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <img src=\"#image\" alt=\"Family history diagram for Annie Proband\"/>\n    </div>"
+    },
+    "contained": [
+    {
+      "resourceType": "Binary",
+      "id": "image",
+      "contentType": "image/png",
+      "data": "iVBORw0KGgoAAAANSUh
+    }
+
     {
      "linkId": "41",
      "text": "Which colour do you prefer: red, blue, green or yellow?",
