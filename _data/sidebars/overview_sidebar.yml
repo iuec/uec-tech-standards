@@ -24,9 +24,6 @@ entries:
       - title: Access patient information
         output: web
         subfolderitems:
-        - title: Consume Patient Data Use Case
-          url: /CTP_Consume_Patient_Data_Use_Case.html
-          output: web
         - title: Summary Care Records
           url: /summary_care_record.html
           output: web, pdf
@@ -34,8 +31,20 @@ entries:
       - title: Clinical consultation
         output: web
         subfolderitems:
-        - title: Tranche 1 Solution Approach
-          url: /tranche_1_solution_approach.html
+        - title: CDS API Overview
+          url: /cds-api-overview.html
+          output: web, pdf
+        - title: CDS API Patient Journey
+          url: /cds-api-patient-journey.html
+          output: web, pdf
+        - title: CDS API Developer guidelines
+          url: /cds-api-developer-guidelines.html
+          output: web, pdf
+        - title: CDS API Demo implementation
+          url: /cds-api-demo-implementation.html
+          output: web, pdf
+        - title: CDS API Conformance overview
+          url: /cds-api-conformance-overview.html
           output: web, pdf
 
       - title: Complete encounter
@@ -86,7 +95,7 @@ entries:
     output: web
     folderitems:
     - title: Appointment booking API
-      url: /appointments.html
+      url: /appointment-booking-api.html
       output: web, pdf
     - title: Clinical Decision Support API
       url: clinical_decision_support_api.html
