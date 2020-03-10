@@ -112,7 +112,7 @@ The scope of the CDS API encompasses the interactions between the EMS and CDSS u
 EMS CDSS Sample Operational representation
 </p>
 
-The key requirement is to build APIs such that the two disparate systems interact, and by which the EMS can call the CDSS and get responses back through the API, following the HL7 FHIR standard detailed in the [CDSS API specification Implementation Guide v1.0](https://developer.nhs.uk/apis/cds-api-1-0-0/). 
+The key requirement is to build APIs such that the two disparate systems interact, and by which the EMS can call the CDSS and get responses back through the API, following the HL7 FHIR standard detailed in the [CDS API Implementation Guide v1.0](https://developer.nhs.uk/apis/cds-api-1-0-0/). 
 
 Below is a generic example workflow for the patient journey related interactions between the EMS and the CDSS for triage:
 
@@ -215,3 +215,6 @@ EMS - Encounter Management System
 
 CDSS - Clinical Decision Support System
  -->
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTcxOTg5MTYyXX0=
+-->
